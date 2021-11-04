@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class doctor extends Model
+class dmPatient extends Model
 {
     use HasFactory;
 
@@ -13,13 +13,15 @@ class doctor extends Model
 
     ];
 
-    public function user()
+    public function doctor()
     {
-        return $this->belongsTo(User::class);
+
+        return $this->belongsTo(doctor::class);
+
     }
 
-    public function dmPatients(){
-        return $this->hasMany(dmPatient::class);
+    public function consent(){
+        return $this->hasOne(consent::class);
     }
 
 }

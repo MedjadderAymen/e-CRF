@@ -20,44 +20,20 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
+                @can("patient_access")
 
-                <li class="sidebar-title">Forms &amp; Tables</li>
-                <li class="sidebar-item  has-sub">
-                    <a href="#" class='sidebar-link'>
-                        <i class="bi bi-pen-fill"></i>
-                        <span>Form Editor</span>
-                    </a>
-                    <ul class="submenu ">
-                        <li class="submenu-item ">
-                            <a href="form-editor-quill.html">Quill</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="form-editor-ckeditor.html">CKEditor</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="form-editor-summernote.html">Summernote</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="form-editor-tinymce.html">TinyMCE</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="sidebar-item  ">
-                    <a href="table.html" class='sidebar-link'>
-                        <i class="bi bi-grid-1x2-fill"></i>
-                        <span>Table</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item  ">
-                    <a href="table-datatable.html" class='sidebar-link'>
-                        <i class="bi bi-file-earmark-spreadsheet-fill"></i>
-                        <span>Datatable</span>
-                    </a>
-                </li>
-
-
+                    <li class="sidebar-item has-sub  {{request()->routeIs('dmPatients*') ? "active" : ""}} ">
+                        <a href="#" class='sidebar-link'>
+                            <i class="bi bi-file-break"></i>
+                            <span>Dossiers médiceaux</span>
+                        </a>
+                        <ul class="submenu {{request()->routeIs('dmPatients*') ? "active" : ""}} ">
+                            <li class="submenu-item  {{request()->routeIs('dmPatients*') ? "active" : ""}} ">
+                                <a href="{{route("dmPatients.index")}}">List des dossiers</a>
+                            </li>
+                        </ul>
+                    </li>
+                @endcan
             </ul>
         </div>
         <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
