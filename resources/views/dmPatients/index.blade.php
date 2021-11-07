@@ -15,7 +15,9 @@
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="bi bi-plug me-50"></i>Se déconnecter</a></li>
+                        <li class="breadcrumb-item"><a href="#"
+                                                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
+                                    class="bi bi-plug me-50"></i>Se déconnecter</a></li>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
@@ -28,17 +30,45 @@
         <div class="col-xl-12 col-md-12 col-sm-12">
             <div class="card">
                 <div class="card-content">
-                    <img src="{{asset("../theme/dist/assets/images/samples/cover.jpg")}}" style="height: 150px; object-fit: cover;" class="card-img-top img-fluid"
+                    <img src="{{asset("../theme/dist/assets/images/samples/cover.jpg")}}"
+                         style="height: 150px; object-fit: cover;" class="card-img-top img-fluid"
                          alt="vitalcare">
                     <div class="card-body">
                         <h5 class="card-title">List des DM patients</h5>
+                        <br>
+                        <!-- table hover -->
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Initials du patient</th>
+                                    <th>Identification</th>
+                                    <th>Consentement éclairé</th>
+                                    <th>Date</th>
+                                    <th>heure</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @if(count($dmPatients) > 0)
+                                    @foreach($dmPatients as $dmPatient)
+                                        <tr>
+                                            <td class="text-bold-500">{{$dmPatient->initial}}</td>
+                                            <td>{{$dmPatient->identification}}</td>
+                                            <td class="text-bold-500">{{$dmPatient->consent->consent_state ? "oui" : "non"}}</td>
+                                            <td>{{\Carbon\Carbon::parse($dmPatient->consent->signature_date)->toDateString()}}</td>
+                                            <td>{{\Carbon\Carbon::parse($dmPatient->consent->signature_hour)->toTimeString()}}</td>
+                                            <td><a href="{{route('dmPatients.show',['dmPatient'=>$dmPatient])}}"><i class="fa fa-database "></i>voir</a></td>
+                                        </tr>
+                                    @endforeach
+                                @else
+
+                                @endif
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
             </div>
         </div>
     </div>

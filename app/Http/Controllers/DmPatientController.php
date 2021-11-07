@@ -47,7 +47,7 @@ class DmPatientController extends Controller
     public function store(Request $request)
     {
 
-       // dd($request->all());
+       abort_if(Gate::denies("patient_show"), 403);
 
         $data = Validator::make($request->all(), [
             'initial' => ['string', 'required', 'max:255'],
@@ -104,12 +104,11 @@ class DmPatientController extends Controller
         } catch (\Exception $e) {
             DB::rollBack();
             Session::flash("error", $e->getMessage());
-            dd($e->getMessage());
             return redirect()->back();
         }
 
         DB::commit();
-        return $this->index();
+        return redirect()->route("dmPatients.index");
     }
 
     /**
@@ -118,9 +117,17 @@ class DmPatientController extends Controller
      * @param \App\Models\dmPatient $dmPatient
      * @return \Illuminate\Http\Response
      */
-    public function show(dmPatient $dmPatient)
+    public function show(dmPatient $dmPatient) : View
     {
-        //
+
+        abort_if(Gate::denies("patient_show"), 403);
+
+        $data=[
+            "dmPatient"=>$dmPatient
+        ];
+
+        return view('dmPatients.show', $data);
+
     }
 
     /**

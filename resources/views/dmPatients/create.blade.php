@@ -50,7 +50,7 @@
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="initial">Initials du patient</span>
                                         <input type="text" class="form-control" placeholder="..."
-                                               aria-label="initial" aria-describedby="initial"
+                                               aria-label="initial" aria-describedby="initial" required
                                                name="initial">
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="identification">identification</span>
                                         <input type="text" class="form-control" placeholder="..."
-                                               aria-label="identification" aria-describedby="identification"
+                                               aria-label="identification" aria-describedby="identification"  required
                                                name="identification">
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="signature_date">Date de signature</span>
                                         <input type="date" class="form-control" placeholder="..."
-                                               aria-label="signature_date" aria-describedby="signature_date"
+                                               aria-label="signature_date" aria-describedby="signature_date"  required
                                                name="signature_date">
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="signature_hour">Heure</span>
                                         <input type="time" class="form-control" placeholder="..."
-                                               aria-label="signature_hour" aria-describedby="signature_hour"
+                                               aria-label="signature_hour" aria-describedby="signature_hour" required
                                                name="signature_hour">
                                     </div>
                                 </div>
