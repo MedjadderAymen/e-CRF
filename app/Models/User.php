@@ -43,6 +43,24 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * Always capitalize the first name when we retrieve it
+     */
+    public function getNameAttribute($value)
+    {
+        return ucwords($value);
+    }
+
+
+
+    /**
+     * Always capitalize the first name when we save it to the database
+     */
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = ucwords($value);
+    }
+
     public function admin(){
         return $this->hasOne(admin::class);
     }

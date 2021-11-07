@@ -28,7 +28,11 @@
                             <span>Dossiers médiceaux</span>
                         </a>
                         <ul class="submenu {{request()->routeIs('dmPatients*') ? "active" : ""}} ">
-                            <li class="submenu-item  {{request()->routeIs('dmPatients*') ? "active" : ""}} ">
+
+                            <li class="submenu-item  {{request()->routeIs('dmPatients.create') ? "active" : ""}} ">
+                                <a href="{{route("dmPatients.create")}}">Ajouter DM</a>
+                            </li>
+                            <li class="submenu-item  {{request()->routeIs('dmPatients.index') ? "active" : ""}} ">
                                 <a href="{{route("dmPatients.index")}}">List des dossiers</a>
                             </li>
                         </ul>

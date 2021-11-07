@@ -29,5 +29,7 @@
 
 @include('layouts.bodyScripts')
 
+@yield('scripts')
+
 </body>
 </html>

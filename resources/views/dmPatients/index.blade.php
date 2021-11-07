@@ -11,8 +11,6 @@
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>DM Patients</h3>
-                <p class="text-subtitle text-muted">list des patients</p>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
@@ -33,12 +31,7 @@
                     <img src="{{asset("../theme/dist/assets/images/samples/cover.jpg")}}" style="height: 150px; object-fit: cover;" class="card-img-top img-fluid"
                          alt="vitalcare">
                     <div class="card-body">
-                        <h5 class="card-title">Be Single Minded</h5>
-                        <p class="card-text">
-                            Chocolate sesame snaps apple pie danish cupcake sweet roll jujubes
-                            tiramisu.Gummies
-                            bonbon apple pie fruitcake icing biscuit apple pie jelly-o sweet roll.
-                        </p>
+                        <h5 class="card-title">List des DM patients</h5>
                     </div>
                 </div>
                 <ul class="list-group list-group-flush">
