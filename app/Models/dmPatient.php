@@ -13,6 +13,10 @@ class dmPatient extends Model
 
     ];
 
+    protected $dates=[
+        "signature_date"
+    ];
+
     public function doctor()
     {
 
