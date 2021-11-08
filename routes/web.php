@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\{
     DmPatientController,
+    CrfController
 };
 
 /*
@@ -30,5 +31,8 @@ require __DIR__.'/auth.php';
 Route::middleware('auth')->group(function (){
 
     Route::resource("dmPatients", DmPatientController::class);
+    //Route::resource("crfs", CrfController::class);
+    Route::get("crfs/create/{dmPatient}", [CrfController::class, 'create'])->name('crfs.create');
+    Route::post("crfs/store/{dmPatient}", [CrfController::class, 'store'])->name('crfs.store');
 
 });

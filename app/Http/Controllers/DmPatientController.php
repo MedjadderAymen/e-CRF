@@ -36,9 +36,11 @@ class DmPatientController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(): View
+    public function create() : View
     {
         abort_if(Gate::denies("patient_create"), 403);
+
+
 
         return view('dmPatients.create');
     }
@@ -199,6 +201,10 @@ class DmPatientController extends Controller
                         $dmPatient->consent->q4 = null;
                         $dmPatient->consent->consent_person_name = null;
                         $dmPatient->consent->save();
+
+                        if (isset($dmPatient->consent->crf)){
+
+                        }
                     }
                     break;
             }
@@ -210,7 +216,7 @@ class DmPatientController extends Controller
         }
 
         DB::commit();
-        return redirect()->route("dmPatients.index");
+        return redirect()->route("dmPatients.show", ['dmPatient'=>$dmPatient]);
     }
 
     /**

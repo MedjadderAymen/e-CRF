@@ -11,6 +11,12 @@
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{route("dmPatients.index")}}">List DMs</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">DM Patient</li>
+                    </ol>
+                </nav>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
@@ -29,19 +35,16 @@
     <div class="page-content">
         <div class="col-xl-12 col-md-12 col-sm-12">
             <div class="card">
-                <div class="card-header">
-                    <h5 class="card-title">Horizontal Navs</h5>
-                </div>
                 <div class="card-body">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <a class="nav-link active" id="consent-tab" data-bs-toggle="tab" href="#consent"
-                               role="tab" aria-controls="consent" aria-selected="true">Home</a>
+                               role="tab" aria-controls="consent" aria-selected="true">Consentement éclairé</a>
                         </li>
-                        @if($dmPatient->consent->consent_state)
+                        @if($dmPatient->consent->consent_state && isset($dmPatient->consent->crf))
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile"
-                                   role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                                   role="tab" aria-controls="profile" aria-selected="false">Cahier d'observation</a>
                             </li>
                         @endif
                     </ul>
@@ -280,8 +283,13 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-12 d-flex justify-content-end">
+                                    @can("crf_create")
+                                        @if($dmPatient->consent->consent_state && !isset($dmPatient->consent->crf))
+                                            <a href="{{route('crfs.create',["dmPatient"=>$dmPatient])}}" class="btn me-1 mb-1 text-white" style="background-color: #20a49a">accéeder au Cahier D’observation</a>
+                                        @endif
+                                    @endcan
                                     <button type="submit"
-                                            class="btn btn-primary me-1 mb-1">Modifier
+                                            class="btn btn-primary me-1 mb-1" style="background-color: #0d4c92">Modifier les informations
                                     </button>
                                 </div>
                                 <hr>
@@ -295,7 +303,7 @@
                                 <hr>
                             </form>
                         </div>
-                        @if($dmPatient->consent->consent_state)
+                        @if($dmPatient->consent->crf != null)
                             <div class="tab-pane fade" id="profile" role="tabpanel"
                                  aria-labelledby="profile-tab">
                                 Integer interdum diam eleifend metus lacinia, quis gravida eros mollis.

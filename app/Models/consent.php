@@ -17,4 +17,8 @@ class consent extends Model
         return $this->belongsTo(dmPatient::class);
     }
 
+    public function crf(){
+        return $this->hasOne(crf::class);
+    }
+
 }
