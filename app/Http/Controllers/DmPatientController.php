@@ -202,9 +202,6 @@ class DmPatientController extends Controller
                         $dmPatient->consent->consent_person_name = null;
                         $dmPatient->consent->save();
 
-                        if (isset($dmPatient->consent->crf)){
-
-                        }
                     }
                     break;
             }

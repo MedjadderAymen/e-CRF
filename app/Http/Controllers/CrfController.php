@@ -42,10 +42,10 @@ class CrfController extends Controller
 
         abort_if(Gate::denies("crf_create"), 403);
 
-        $request['q14'] = $request['q141'] ?? $request['q142'];
+       // $request['q14'] = $request['q141'] ?? $request['q142'];
 
         $dmPatient->consent->crf()->create(
-            $request->except(['q141','q142'])
+            $request->all()
         );
 
         return redirect()->route('dmPatients.show',['dmPatient'=>$dmPatient]);
@@ -78,11 +78,19 @@ class CrfController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @param \App\Models\crf $crf
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
      */
     public function update(Request $request, crf $crf)
     {
-        //
+        abort_if(Gate::denies("crf_edit"), 403);
+
+        $request['consent_id']=$crf->consent_id;
+
+        $crf->updateOrFail($request->all());
+        $crf->save();
+
+        return redirect()->route('dmPatients.show',['dmPatient'=>$crf->consent->dmPatient]);
+
     }
 
     /**

@@ -29,7 +29,8 @@ class CreateCrvesTable extends Migration
             $table->string("q11")->nullable();
             $table->string("q12")->nullable();
             $table->string("q13")->nullable();
-            $table->string("q14")->nullable();
+            $table->string("q141")->nullable();
+            $table->string("q142")->nullable();
             $table->string("q15")->nullable();
             $table->string("q16")->nullable();
             $table->string("q17")->nullable();

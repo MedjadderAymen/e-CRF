@@ -34,5 +34,6 @@ Route::middleware('auth')->group(function (){
     //Route::resource("crfs", CrfController::class);
     Route::get("crfs/create/{dmPatient}", [CrfController::class, 'create'])->name('crfs.create');
     Route::post("crfs/store/{dmPatient}", [CrfController::class, 'store'])->name('crfs.store');
+    Route::put("crfs/update/{crf}", [CrfController::class, 'update'])->name('crfs.update');
 
 });
