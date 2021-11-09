@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
     DmPatientController,
     CrfController,
-    InclusionExclusionController
+    InclusionExclusionController,
+    DeviceLogController
 };
 
 /*
@@ -42,4 +43,8 @@ Route::middleware('auth')->group(function () {
     Route::get("inclusion_exclusion/create/{dmPatient}", [InclusionExclusionController::class, 'create'])->name('inclusion_exclusion.create');
     Route::post("inclusion_exclusion/store/{dmPatient}", [InclusionExclusionController::class, 'store'])->name('inclusion_exclusion.store');
     Route::put("inclusion_exclusion/update/{inclusion_exclusion}", [InclusionExclusionController::class, 'update'])->name('inclusion_exclusion.update');
+
+    Route::get("device_log/create/{dmPatient}", [DeviceLogController::class, 'create'])->name('device_log.create');
+    Route::post("device_log/store/{dmPatient}", [DeviceLogController::class, 'store'])->name('device_log.store');
+    Route::put("device_log/update/{device_log}", [DeviceLogController::class, 'update'])->name('device_log.update');
 });

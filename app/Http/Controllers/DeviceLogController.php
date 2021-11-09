@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\crf;
+use App\Models\deviceLog;
 use App\Models\dmPatient;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 
-class CrfController extends Controller
+class DeviceLogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,24 +27,22 @@ class CrfController extends Controller
      */
     public function create(dmPatient $dmPatient): View
     {
-
-        abort_if(Gate::denies("crf_create"), 403);
+        abort_if(Gate::denies("device_log_create"), 403);
 
         $data = [
             "dmPatient" => $dmPatient
         ];
 
-        return view('crf.create', $data);
+        return view('deviceLog.create', $data);
     }
+
 
     public function store(Request $request, dmPatient $dmPatient)
     {
+        abort_if(Gate::denies("device_log_create"), 403);
 
-        abort_if(Gate::denies("crf_create"), 403);
 
-        // $request['q14'] = $request['q141'] ?? $request['q142'];
-
-        $dmPatient->consent->crf()->create(
+        $dmPatient->consent->deviceLog()->create(
             $request->all()
         );
 
@@ -54,10 +52,10 @@ class CrfController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param \App\Models\crf $crf
+     * @param  \App\Models\deviceLog  $deviceLog
      * @return \Illuminate\Http\Response
      */
-    public function show(crf $crf)
+    public function show(deviceLog $deviceLog)
     {
         //
     }
@@ -65,10 +63,10 @@ class CrfController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \App\Models\crf $crf
+     * @param  \App\Models\deviceLog  $deviceLog
      * @return \Illuminate\Http\Response
      */
-    public function edit(crf $crf)
+    public function edit(deviceLog $deviceLog)
     {
         //
     }
@@ -76,30 +74,22 @@ class CrfController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\crf $crf
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\deviceLog  $deviceLog
+     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, crf $crf)
+    public function update(Request $request, deviceLog $deviceLog)
     {
-        abort_if(Gate::denies("crf_edit"), 403);
-
-        $request['consent_id'] = $crf->consent_id;
-
-        $crf->updateOrFail($request->all());
-        $crf->save();
-
-        return redirect()->route('dmPatients.show', ['dmPatient' => $crf->consent->dmPatient]);
-
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Models\crf $crf
+     * @param  \App\Models\deviceLog  $deviceLog
      * @return \Illuminate\Http\Response
      */
-    public function destroy(crf $crf)
+    public function destroy(deviceLog $deviceLog)
     {
         //
     }

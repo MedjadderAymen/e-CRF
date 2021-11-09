@@ -45,13 +45,13 @@ class InclusionExclusionController extends Controller
             $request->all()
         );
 
-        return redirect()->route('dmPatients.show',['dmPatient'=>$dmPatient]);
+        return redirect()->route('dmPatients.show', ['dmPatient' => $dmPatient]);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\InclusionExclusion  $inclusionExclusion
+     * @param \App\Models\InclusionExclusion $inclusionExclusion
      * @return \Illuminate\Http\Response
      */
     public function show(InclusionExclusion $inclusionExclusion)
@@ -62,7 +62,7 @@ class InclusionExclusionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\InclusionExclusion  $inclusionExclusion
+     * @param \App\Models\InclusionExclusion $inclusionExclusion
      * @return \Illuminate\Http\Response
      */
     public function edit(InclusionExclusion $inclusionExclusion)
@@ -75,18 +75,18 @@ class InclusionExclusionController extends Controller
     {
         abort_if(Gate::denies("inclusion_exclusion_core_form_edit"), 403);
 
-        $request['consent_id']=$inclusionExclusion->consent_id;
+        $request['consent_id'] = $inclusionExclusion->consent_id;
 
         $inclusionExclusion->updateOrFail($request->all());
         $inclusionExclusion->save();
 
-        return redirect()->route('dmPatients.show',['dmPatient'=>$inclusionExclusion->consent->dmPatient]);
+        return redirect()->route('dmPatients.show', ['dmPatient' => $inclusionExclusion->consent->dmPatient]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\InclusionExclusion  $inclusionExclusion
+     * @param \App\Models\InclusionExclusion $inclusionExclusion
      * @return \Illuminate\Http\Response
      */
     public function destroy(InclusionExclusion $inclusionExclusion)

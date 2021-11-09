@@ -25,4 +25,8 @@ class consent extends Model
         return $this->hasOne(InclusionExclusion::class);
     }
 
+    public function deviceLog(){
+        return $this->hasOne(deviceLog::class);
+    }
+
 }
