@@ -21,4 +21,8 @@ class consent extends Model
         return $this->hasOne(crf::class);
     }
 
+    public function inclusion_exclusion(){
+        return $this->hasOne(InclusionExclusion::class);
+    }
+
 }
