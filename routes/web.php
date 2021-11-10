@@ -6,7 +6,8 @@ use App\Http\Controllers\{
     DmPatientController,
     CrfController,
     InclusionExclusionController,
-    DeviceLogController
+    DeviceLogController,
+    ControlSolutionController
 };
 
 /*
@@ -40,11 +41,15 @@ Route::middleware('auth')->group(function () {
     Route::put("crfs/update/{crf}", [CrfController::class, 'update'])->name('crfs.update');
 
 
-    Route::get("inclusion_exclusion/create/{dmPatient}", [InclusionExclusionController::class, 'create'])->name('inclusion_exclusion.create');
-    Route::post("inclusion_exclusion/store/{dmPatient}", [InclusionExclusionController::class, 'store'])->name('inclusion_exclusion.store');
-    Route::put("inclusion_exclusion/update/{inclusion_exclusion}", [InclusionExclusionController::class, 'update'])->name('inclusion_exclusion.update');
+    Route::get("inclusion-exclusion/create/{dmPatient}", [InclusionExclusionController::class, 'create'])->name('inclusion_exclusion.create');
+    Route::post("inclusion-exclusion/store/{dmPatient}", [InclusionExclusionController::class, 'store'])->name('inclusion_exclusion.store');
+    Route::put("inclusion-exclusion/update/{inclusion_exclusion}", [InclusionExclusionController::class, 'update'])->name('inclusion_exclusion.update');
 
-    Route::get("device_log/create/{dmPatient}", [DeviceLogController::class, 'create'])->name('device_log.create');
-    Route::post("device_log/store/{dmPatient}", [DeviceLogController::class, 'store'])->name('device_log.store');
-    Route::put("device_log/update/{device_log}", [DeviceLogController::class, 'update'])->name('device_log.update');
+    Route::get("device-log/create/{dmPatient}", [DeviceLogController::class, 'create'])->name('device_log.create');
+    Route::post("device-log/store/{dmPatient}", [DeviceLogController::class, 'store'])->name('device_log.store');
+    Route::put("device-log/update/{device_log}", [DeviceLogController::class, 'update'])->name('device_log.update');
+
+    Route::get("control-solution/create/{dmPatient}", [ControlSolutionController::class, 'create'])->name('control_solution.create');
+    Route::post("control-solution/store/{dmPatient}", [ControlSolutionController::class, 'store'])->name('control_solution.store');
+    Route::put("control-solution/update/{control_solution}", [ControlSolutionController::class, 'update'])->name('control_solution.update');
 });

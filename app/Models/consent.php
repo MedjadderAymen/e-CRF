@@ -29,4 +29,8 @@ class consent extends Model
         return $this->hasOne(deviceLog::class);
     }
 
+    public function controlSolution(){
+        return $this->hasOne(controlSolution::class);
+    }
+
 }

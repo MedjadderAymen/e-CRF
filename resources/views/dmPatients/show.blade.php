@@ -63,6 +63,13 @@
                                     bandelettes - Log</a>
                             </li>
                         @endif
+                        @if($dmPatient->consent->consent_state && isset($dmPatient->consent->controlSolution))
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link " id="controlSolution-tab" data-bs-toggle="tab"
+                                   href="#controlSolution"
+                                   role="tab" aria-controls="controlSolution" aria-selected="false">Solution de contrôle et vérification pré test</a>
+                            </li>
+                        @endif
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="consent" role="tabpanel"
@@ -2029,8 +2036,101 @@
                                     <br>
                                     <hr>
                                     <div class="col-sm-12 d-flex justify-content-end">
-                                        <button type="submit" class="btn btn-primary me-1 mb-1">
-                                            Confirmer
+                                        @can("control_solution_create")
+                                            @if($dmPatient->consent->consent_state && !isset($dmPatient->consent->controlSolution))
+                                                <a href="{{route('control_solution.create',["dmPatient"=>$dmPatient])}}"
+                                                   class="btn me-1 mb-1 text-white" style="background-color: #20a49a">Solution de contrôle et vérification pré test</a>
+                                            @endif
+                                        @endcan
+                                        <button type="submit" class="btn btn-primary me-1 mb-1"
+                                                style="background-color: #0d4c92">
+                                            Modifier les informations
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        @endif
+                        @if($dmPatient->consent->controlSolution != null)
+                            <div class="tab-pane fade " id="controlSolution" role="tabpanel"
+                                 aria-labelledby="controlSolution-tab">
+                                <form
+                                    action="{{route('control_solution.update',['control_solution'=>$dmPatient->consent->controlSolution])}}"
+                                    method="POST"
+                                    enctype="multipart/form-data">
+                                    @csrf
+                                    @method('PUT')
+                                    <hr>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-1">
+                                            <div class="input-group mb-3">
+                                        <span class="input-group-text"
+                                              id="date">Date :</span>
+                                                <input type="date" class="form-control" placeholder="..."
+                                                       aria-label="date" aria-describedby="date" required value="{{$dmPatient->consent->controlSolution->date}}"
+                                                       name="date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-1">
+                                            <div class="input-group mb-3">
+                                        <span class="input-group-text"
+                                              id="q1">Glucomètre ( préciser A ou B) :</span>
+                                                <input type="text" class="form-control" placeholder="..." value="{{$dmPatient->consent->controlSolution->q1}}"
+                                                       aria-label="q1" aria-describedby="q1" required
+                                                       name="q1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-1">
+                                            <div class="input-group mb-3">
+                                        <span class="input-group-text"
+                                              id="identification">ID Patient :</span>
+                                                <input type="text" class="form-control" placeholder="..." disabled value="{{$dmPatient->identification}}"
+                                                       aria-label="identification" aria-describedby="identification">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-1">
+                                            <div class="input-group mb-3">
+                                        <span class="input-group-text"
+                                              id="q2">Solution de contrôle basse :</span>
+                                                <input type="text" class="form-control" placeholder="..." value="{{$dmPatient->consent->controlSolution->q2}}"
+                                                       aria-label="q2" aria-describedby="q2" required
+                                                       name="q2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-1">
+                                            <div class="input-group mb-3">
+                                        <span class="input-group-text"
+                                              id="q3">solution de contrôle élevée :</span>
+                                                <input type="text" class="form-control" placeholder="..." value="{{$dmPatient->consent->controlSolution->q3}}"
+                                                       aria-label="q3" aria-describedby="q3" required
+                                                       name="q3">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <hr>
+                                    <div class="col-sm-12 d-flex justify-content-end">
+                                        @can("control_solution_create")
+                                            @if($dmPatient->consent->consent_state && !isset($dmPatient->consent->controlSolution))
+                                                <a href="{{route('control_solution.create',["dmPatient"=>$dmPatient])}}"
+                                                   class="btn me-1 mb-1 text-white" style="background-color: #20a49a">Solution de contrôle et vérification pré test</a>
+                                            @endif
+                                        @endcan
+                                        <button type="submit" class="btn btn-primary me-1 mb-1"
+                                                style="background-color: #0d4c92">
+                                            Modifier les informations
                                         </button>
                                     </div>
                                 </form>
