@@ -71,16 +71,17 @@ class DeviceLogController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\deviceLog  $deviceLog
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, deviceLog $deviceLog)
     {
-        //
+        abort_if(Gate::denies("device_log_edit"), 403);
+
+        $request['consent_id'] = $deviceLog->consent_id;
+
+        $deviceLog->updateOrFail($request->all());
+        $deviceLog->save();
+
+        return redirect()->route('dmPatients.show', ['dmPatient' => $deviceLog->consent->dmPatient]);
     }
 
     /**
