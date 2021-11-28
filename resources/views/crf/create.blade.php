@@ -48,7 +48,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <h6>
-                                        Critères d’inclusion
+                                        CRITERE D'INCLUSION
                                     </h6>
                                 </div>
                             </div>
@@ -162,7 +162,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <h6>
-                                        Critères de non inclusion
+                                        CRITERE DE NON INCLUSION
                                     </h6>
                                 </div>
                             </div>
@@ -223,7 +223,7 @@
                             <div class="row">
                                 <div class="col-lg-6 mb-1">
                                     <h6>
-                                        Patient présentant un handicap physique à l’utilisation du lecteur Vital Check®
+                                        Patient présentant un handicap physique à l’utilisation dun lecteur de glycémie
                                         (ex : maladie de parkinson)
                                     </h6>
                                 </div>
@@ -415,7 +415,7 @@
                             <div class="row">
                                 <div class="col-lg-6 mb-1">
                                     <h6>
-                                        Sexe
+                                        Type de diabète
                                     </h6>
                                 </div>
                                 <div class="col-lg-3 mb-1">
@@ -675,7 +675,7 @@
                             <div class="row">
                                 <div class="col-lg-6 mb-1">
                                     <h6>
-                                        Utilisation d’une autre lecteur glycémique
+                                        Utilisation d’un autre lecteur glycémique
                                     </h6>
                                 </div>
                                 <div class="col-lg-3 mb-1">
@@ -698,28 +698,6 @@
                                 </div>
                             </div>
                             <br>
-                            <div class="row">
-                                <div class="col-lg-12 mb-1">
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="q22">N° de lot du glucomètre remis au patient pour les besoins de l’étude :</span>
-                                        <input type="number" class="form-control" placeholder="..."
-                                               aria-label="q22" aria-describedby="q22"
-                                               name="q22">
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-12 mb-1">
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="q23">N° de lot de la bandelette :</span>
-                                        <input type="number" class="form-control" placeholder="..."
-                                               aria-label="q23" aria-describedby="q23"
-                                               name="q23">
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
                             <hr>
                             <div class="row">
                                 <div class="col-lg-12">
@@ -733,7 +711,7 @@
                                 <div class="col-lg-12 mb-1">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text"
-                                              id="q24">Date de prélèvement au laboratoire :</span>
+                                              id="q24">Date de prélèvement au centre d'investigation :</span>
                                         <input type="date" class="form-control" placeholder="..."
                                                aria-label="q24" aria-describedby="q24"
                                                name="q24">
@@ -890,72 +868,6 @@
                                 </div>
                             </div>
                             <br>
-                            <div class="col-lg-6 mb-1">
-                                <h6>
-                                    Si oui, merci de remplir l’une des sections suivantes :
-                                </h6>
-                            </div>
-                            <br>
-                            <ol>
-                                <li>
-                                    <h6>
-                                        En cas d’hypoglycémie sévère
-                                    </h6>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-12 mb-1">
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text" id="q33">Glycémie veineuse (sang total) lue avec lecteur <strong>VITAL CHECK® MM-1200</strong> : </span>
-                                                <input type="number" class="form-control" placeholder="..."
-                                                       aria-label="q33" aria-describedby="q33"
-                                                       name="q33">
-                                                <span class="input-group-text">g/l</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-12 mb-1">
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text" id="q34">Glycémie veineuse mesurée, après centrifugation, avec l’automate du laboratoire : </span>
-                                                <input type="number" class="form-control" placeholder="..."
-                                                       aria-label="q34" aria-describedby="q34"
-                                                       name="q34">
-                                                <span class="input-group-text">g/l</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                </li>
-                                <li>
-                                    <h6>
-                                        En cas d’hyperglycémie sévère
-                                    </h6>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-12 mb-1">
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text" id="q35">Glycémie veineuse (sang total) lue avec lecteur <strong>VITAL CHECK® MM-1200</strong> : </span>
-                                                <input type="number" class="form-control" placeholder="..."
-                                                       aria-label="q35" aria-describedby="q35"
-                                                       name="q35">
-                                                <span class="input-group-text">g/l</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-12 mb-1">
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text" id="q36">Glycémie veineuse mesurée, après centrifugation, avec l’automate du laboratoire : </span>
-                                                <input type="number" class="form-control" placeholder="..."
-                                                       aria-label="q36" aria-describedby="q36"
-                                                       name="q36">
-                                                <span class="input-group-text">g/l</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                </li>
-                            </ol>
                             <hr>
                             <div class="row">
                                 <div class="col-lg-12">

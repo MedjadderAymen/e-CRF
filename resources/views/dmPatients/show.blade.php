@@ -47,14 +47,6 @@
                                    role="tab" aria-controls="crf" aria-selected="false">Cahier d'observation</a>
                             </li>
                         @endif
-                        @if($dmPatient->consent->consent_state && isset($dmPatient->consent->inclusion_exclusion))
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link " id="inclusion_exclusion-tab" data-bs-toggle="tab"
-                                   href="#inclusion_exclusion"
-                                   role="tab" aria-controls="inclusion_exclusion" aria-selected="false">Critères
-                                    Inclusion/Exclusion</a>
-                            </li>
-                        @endif
                         @if($dmPatient->consent->consent_state && isset($dmPatient->consent->deviceLog))
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link " id="device_log-tab" data-bs-toggle="tab"
@@ -67,7 +59,8 @@
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link " id="controlSolution-tab" data-bs-toggle="tab"
                                    href="#controlSolution"
-                                   role="tab" aria-controls="controlSolution" aria-selected="false">Solution de contrôle et vérification pré test</a>
+                                   role="tab" aria-controls="controlSolution" aria-selected="false">Solution de contrôle
+                                    et vérification pré test</a>
                             </li>
                         @endif
                     </ul>
@@ -529,8 +522,8 @@
                                     <div class="row">
                                         <div class="col-lg-6 mb-1">
                                             <h6>
-                                                Patient présentant un handicap physique à l’utilisation du lecteur Vital
-                                                Check®
+                                                Patient présentant un handicap physique à l’utilisation d'un lécteur
+                                                glycémique
                                                 (ex : maladie de parkinson)
                                             </h6>
                                         </div>
@@ -735,7 +728,7 @@
                                     <div class="row">
                                         <div class="col-lg-6 mb-1">
                                             <h6>
-                                                Sexe
+                                                Type de diabète
                                             </h6>
                                         </div>
                                         <div class="col-lg-3 mb-1">
@@ -1048,31 +1041,6 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <div class="row">
-                                        <div class="col-lg-12 mb-1">
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text" id="q22">N° de lot du glucomètre remis au patient pour les besoins de l’étude :</span>
-                                                <input type="number" class="form-control" placeholder="..."
-                                                       value="{{$dmPatient->consent->crf->q22}}"
-                                                       aria-label="q22" aria-describedby="q22"
-                                                       name="q22">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-12 mb-1">
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text"
-                                                      id="q23">N° de lot de la bandelette :</span>
-                                                <input type="number" class="form-control" placeholder="..."
-                                                       value="{{$dmPatient->consent->crf->q23}}"
-                                                       aria-label="q23" aria-describedby="q23"
-                                                       name="q23">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
                                     <hr>
                                     <div class="row">
                                         <div class="col-lg-12">
@@ -1086,7 +1054,7 @@
                                         <div class="col-lg-12 mb-1">
                                             <div class="input-group mb-3">
                                         <span class="input-group-text"
-                                              id="q24">Date de prélèvement au laboratoire :</span>
+                                              id="q24">Date de prélèvement au centre d'investigation :</span>
                                                 <input type="date" class="form-control" placeholder="..."
                                                        value="{{$dmPatient->consent->crf->q24}}"
                                                        aria-label="q24" aria-describedby="q24"
@@ -1254,76 +1222,6 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <div class="col-lg-6 mb-1">
-                                        <h6>
-                                            Si oui, merci de remplir l’une des sections suivantes :
-                                        </h6>
-                                    </div>
-                                    <br>
-                                    <ol>
-                                        <li>
-                                            <h6>
-                                                En cas d’hypoglycémie sévère
-                                            </h6>
-                                            <br>
-                                            <div class="row">
-                                                <div class="col-lg-12 mb-1">
-                                                    <div class="input-group mb-3">
-                                                        <span class="input-group-text" id="q33">Glycémie veineuse (sang total) lue avec lecteur <strong>VITAL CHECK® MM-1200</strong> : </span>
-                                                        <input type="number" class="form-control" placeholder="..."
-                                                               value="{{$dmPatient->consent->crf->q33}}"
-                                                               aria-label="q33" aria-describedby="q33"
-                                                               name="q33">
-                                                        <span class="input-group-text">g/l</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-12 mb-1">
-                                                    <div class="input-group mb-3">
-                                                        <span class="input-group-text" id="q34">Glycémie veineuse mesurée, après centrifugation, avec l’automate du laboratoire : </span>
-                                                        <input type="number" class="form-control" placeholder="..."
-                                                               value="{{$dmPatient->consent->crf->q34}}"
-                                                               aria-label="q34" aria-describedby="q34"
-                                                               name="q34">
-                                                        <span class="input-group-text">g/l</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <br>
-                                        </li>
-                                        <li>
-                                            <h6>
-                                                En cas d’hyperglycémie sévère
-                                            </h6>
-                                            <br>
-                                            <div class="row">
-                                                <div class="col-lg-12 mb-1">
-                                                    <div class="input-group mb-3">
-                                                        <span class="input-group-text" id="q35">Glycémie veineuse (sang total) lue avec lecteur <strong>VITAL CHECK® MM-1200</strong> : </span>
-                                                        <input type="number" class="form-control" placeholder="..."
-                                                               value="{{$dmPatient->consent->crf->q35}}"
-                                                               aria-label="q35" aria-describedby="q35"
-                                                               name="q35">
-                                                        <span class="input-group-text">g/l</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-12 mb-1">
-                                                    <div class="input-group mb-3">
-                                                        <span class="input-group-text" id="q36">Glycémie veineuse mesurée, après centrifugation, avec l’automate du laboratoire : </span>
-                                                        <input type="number" class="form-control" placeholder="..."
-                                                               value="{{$dmPatient->consent->crf->q36}}"
-                                                               aria-label="q36" aria-describedby="q36"
-                                                               name="q36">
-                                                        <span class="input-group-text">g/l</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <br>
-                                        </li>
-                                    </ol>
                                     <hr>
                                     <div class="row">
                                         <div class="col-lg-12">
@@ -1430,423 +1328,6 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <hr>
-                                    <div class="col-sm-12 d-flex justify-content-end">
-                                        @can("inclusion_exclusion_core_form_create")
-                                            @if($dmPatient->consent->consent_state && !isset($dmPatient->consent->inclusion_exclusion))
-                                                <a href="{{route('inclusion_exclusion.create',["dmPatient"=>$dmPatient])}}"
-                                                   class="btn me-1 mb-1 text-white" style="background-color: #20a49a">ajouter
-                                                    Etude d'Inclusion Exlusion</a>
-                                            @endif
-                                        @endcan
-                                        <button type="submit" class="btn btn-primary me-1 mb-1"
-                                                style="background-color: #0d4c92">
-                                            Modifier les informations
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        @endif
-                        @if($dmPatient->consent->inclusion_exclusion != null)
-                            <div class="tab-pane fade " id="inclusion_exclusion" role="tabpanel"
-                                 aria-labelledby="inclusion_exclusion-tab">
-                                <form
-                                    action="{{route('inclusion_exclusion.update',['inclusion_exclusion'=>$dmPatient->consent->inclusion_exclusion])}}"
-                                    method="POST"
-                                    enctype="multipart/form-data">
-                                    @csrf
-                                    @method("PUT")
-
-                                    <hr>
-                                    <div class="row text-center">
-                                        <div class="col-lg-12">
-                                            <h6 style="font-style: italic">
-                                                Vital Check® performance
-                                            </h6>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-12 mb-1">
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text" id="visit_date">Date de visite :</span>
-                                                <input type="date" class="form-control" placeholder="..."
-                                                       value="{{$dmPatient->consent->inclusion_exclusion->visit_date}}"
-                                                       aria-label="visit_date" aria-describedby="visit_date"
-                                                       name="visit_date">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-1">
-                                            <h6>
-                                                Type de visite :
-                                            </h6>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="visit_type"
-                                                       @if($dmPatient->consent->inclusion_exclusion->visit_type == "Screening") checked
-                                                       @endif
-                                                       id="visit_type1" value="Screening">
-                                                <label class="form-check-label" for="visit_type1">
-                                                    Screening
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="visit_type"
-                                                       @if($dmPatient->consent->inclusion_exclusion->visit_type == "Baseline") checked
-                                                       @endif
-                                                       id="visit_type2" value="Baseline">
-                                                <label class="form-check-label" for="visit_type2">
-                                                    Baseline
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <h6>
-                                                Critères d’inclusion
-                                            </h6>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <h6>
-                                                Le Participant doit remplir les conditions suivantes :
-                                            </h6>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-1">
-                                            <h6>
-                                                Age > 19 ans
-                                            </h6>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q1"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q1 == "oui") checked
-                                                       @endif
-                                                       id="q11" value="oui">
-                                                <label class="form-check-label" for="q11">
-                                                    Oui
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q1"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q1 == "non") checked
-                                                       @endif
-                                                       id="q12" value="non">
-                                                <label class="form-check-label" for="q12">
-                                                    Non
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-1">
-                                            <h6>
-                                                Diabète de type 1 ou diabète de type 2
-                                            </h6>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q2"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q2 == "oui") checked
-                                                       @endif
-                                                       id="q21" value="oui">
-                                                <label class="form-check-label" for="q21">
-                                                    Oui
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q2"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q2 == "non") checked
-                                                       @endif
-                                                       id="q22" value="non">
-                                                <label class="form-check-label" for="q22">
-                                                    Non
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-1">
-                                            <h6>
-                                                Consentement éclairé
-                                            </h6>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q3"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q3 == "oui") checked
-                                                       @endif
-                                                       id="q31" value="oui">
-                                                <label class="form-check-label" for="q31">
-                                                    Oui
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q3"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q3 == "non") checked
-                                                       @endif
-                                                       id="q32" value="non">
-                                                <label class="form-check-label" for="q32">
-                                                    Non
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <h6>
-                                                Exclusion Criteria
-                                            </h6>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <h6>
-                                                Le Participant NE doit remplir les conditions suivantes :
-                                            </h6>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-1">
-                                            <h6>
-                                                Grossesse / Allaitement
-                                            </h6>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q4"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q4 == "oui") checked
-                                                       @endif
-                                                       id="q41" value="oui">
-                                                <label class="form-check-label" for="q41">
-                                                    Oui
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q4"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q4 == "non") checked
-                                                       @endif
-                                                       id="q42" value="non">
-                                                <label class="form-check-label" for="q42">
-                                                    Non
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-1">
-                                            <h6>
-                                                Pathologies associées graves
-                                            </h6>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q5"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q5 == "oui") checked
-                                                       @endif
-                                                       id="q51" value="oui">
-                                                <label class="form-check-label" for="q51">
-                                                    Oui
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q5"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q5 == "non") checked
-                                                       @endif
-                                                       id="q52" value="non">
-                                                <label class="form-check-label" for="q52">
-                                                    Non
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-1">
-                                            <h6>
-                                                Non perception des hypoglycémies
-                                            </h6>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q6"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q6 == "oui") checked
-                                                       @endif
-                                                       id="q61" value="oui">
-                                                <label class="form-check-label" for="q61">
-                                                    Oui
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q6"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q6 == "non") checked
-                                                       @endif
-                                                       id="q62" value="non">
-                                                <label class="form-check-label" for="q62">
-                                                    Non
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-1">
-                                            <h6>
-                                                Patient présentant une atteinte psychologique ou psychiatrique
-                                            </h6>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q7"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q7 == "oui") checked
-                                                       @endif
-                                                       id="q71" value="oui">
-                                                <label class="form-check-label" for="q71">
-                                                    Oui
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q7"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q7 == "non") checked
-                                                       @endif
-                                                       id="q72" value="non">
-                                                <label class="form-check-label" for="q72">
-                                                    Non
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-1">
-                                            <h6>
-                                                Patient illettré
-                                            </h6>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q8"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q8 == "oui") checked
-                                                       @endif
-                                                       id="q81" value="oui">
-                                                <label class="form-check-label" for="q81">
-                                                    Oui
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q8"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q8 == "non") checked
-                                                       @endif
-                                                       id="q82" value="non">
-                                                <label class="form-check-label" for="q82">
-                                                    Non
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-1">
-                                            <h6>
-                                                Patient ayant déjà participé à une étude de recherche bio médicale
-                                            </h6>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q9"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q9 == "oui") checked
-                                                       @endif
-                                                       id="q91" value="oui">
-                                                <label class="form-check-label" for="q91">
-                                                    Oui
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q9"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q9 == "non") checked
-                                                       @endif
-                                                       id="q92" value="non">
-                                                <label class="form-check-label" for="q92">
-                                                    Non
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-1">
-                                            <h6>
-                                                Le participant a-t-il rempli les conditions d'éligibilité pour cette
-                                                étude
-                                            </h6>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q10"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q10 == "oui") checked
-                                                       @endif
-                                                       id="q101" value="oui">
-                                                <label class="form-check-label" for="q101">
-                                                    Oui
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 mb-1">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="q10"
-                                                       @if($dmPatient->consent->inclusion_exclusion->q10 == "non") checked
-                                                       @endif
-                                                       id="q102" value="non">
-                                                <label class="form-check-label" for="q102">
-                                                    Non
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-
                                     <hr>
                                     <div class="col-sm-12 d-flex justify-content-end">
                                         @can("device_log_create")
@@ -2039,7 +1520,8 @@
                                         @can("control_solution_create")
                                             @if($dmPatient->consent->consent_state && !isset($dmPatient->consent->controlSolution))
                                                 <a href="{{route('control_solution.create',["dmPatient"=>$dmPatient])}}"
-                                                   class="btn me-1 mb-1 text-white" style="background-color: #20a49a">Solution de contrôle et vérification pré test</a>
+                                                   class="btn me-1 mb-1 text-white" style="background-color: #20a49a">Solution
+                                                    de contrôle et vérification pré test</a>
                                             @endif
                                         @endcan
                                         <button type="submit" class="btn btn-primary me-1 mb-1"
@@ -2067,7 +1549,8 @@
                                         <span class="input-group-text"
                                               id="date">Date :</span>
                                                 <input type="date" class="form-control" placeholder="..."
-                                                       aria-label="date" aria-describedby="date" required value="{{$dmPatient->consent->controlSolution->date}}"
+                                                       aria-label="date" aria-describedby="date" required
+                                                       value="{{$dmPatient->consent->controlSolution->date}}"
                                                        name="date">
                                             </div>
                                         </div>
@@ -2076,63 +1559,89 @@
                                     <div class="row">
                                         <div class="col-lg-12 mb-1">
                                             <div class="input-group mb-3">
-                                        <span class="input-group-text"
-                                              id="q1">Glucomètre ( préciser A ou B) :</span>
-                                                <input type="text" class="form-control" placeholder="..." value="{{$dmPatient->consent->controlSolution->q1}}"
-                                                       aria-label="q1" aria-describedby="q1" required
-                                                       name="q1">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect01">Glucomètre ( préciser A ou B) :</label>
+                                                <select class="form-select" id="inputGroupSelect01" name="q1">
+                                                    <option
+                                                        @if($dmPatient->consent->controlSolution->q1 == "Numéro de série A" ) selected
+                                                        @endif value="Numéro de série A">Numéro de série A
+                                                    </option>
+                                                    <option
+                                                        @if($dmPatient->consent->controlSolution->q1 == "Numéro de série B" ) selected
+                                                        @endif value="Numéro de série B">Numéro de série B
+                                                    </option>
+                                                </select>
                                             </div>
                                         </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-12 mb-1">
-                                            <div class="input-group mb-3">
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-lg-12 mb-1">
+                                                <div class="input-group mb-3">
                                         <span class="input-group-text"
                                               id="identification">ID Patient :</span>
-                                                <input type="text" class="form-control" placeholder="..." disabled value="{{$dmPatient->identification}}"
-                                                       aria-label="identification" aria-describedby="identification">
+                                                    <input type="text" class="form-control" placeholder="..." disabled
+                                                           value="{{$dmPatient->identification}}"
+                                                           aria-label="identification"
+                                                           aria-describedby="identification">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-12 mb-1">
-                                            <div class="input-group mb-3">
-                                        <span class="input-group-text"
-                                              id="q2">Solution de contrôle basse :</span>
-                                                <input type="text" class="form-control" placeholder="..." value="{{$dmPatient->consent->controlSolution->q2}}"
-                                                       aria-label="q2" aria-describedby="q2" required
-                                                       name="q2">
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-lg-12 mb-1">
+                                                <div class="input-group mb-3">
+                                                    <label class="input-group-text"
+                                                           for="inputGroupSelect01">Solution de contrôle basse
+                                                        conforme:</label>
+                                                    <select class="form-select" id="inputGroupSelect01" name="q2">
+                                                        <option
+                                                            @if($dmPatient->consent->controlSolution->q2 == "Oui" ) selected
+                                                            @endif value="Oui">Oui
+                                                        </option>
+                                                        <option
+                                                            @if($dmPatient->consent->controlSolution->q2 == "Non" ) selected
+                                                            @endif value="Non">Non
+                                                        </option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-12 mb-1">
-                                            <div class="input-group mb-3">
-                                        <span class="input-group-text"
-                                              id="q3">solution de contrôle élevée :</span>
-                                                <input type="text" class="form-control" placeholder="..." value="{{$dmPatient->consent->controlSolution->q3}}"
-                                                       aria-label="q3" aria-describedby="q3" required
-                                                       name="q3">
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-lg-12 mb-1">
+                                                <div class="input-group mb-3">
+                                                    <label class="input-group-text"
+                                                           for="inputGroupSelect01">Solution de contrôle élevée
+                                                        conforme:</label>
+                                                    <select class="form-select" id="inputGroupSelect01" name="q3">
+                                                        <option
+                                                            @if($dmPatient->consent->controlSolution->q3 == "Oui" ) selected
+                                                            @endif value="Oui">Oui
+                                                        </option>
+                                                        <option
+                                                            @if($dmPatient->consent->controlSolution->q3 == "Non" ) selected
+                                                            @endif value="Non">Non
+                                                        </option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <br>
-                                    <hr>
-                                    <div class="col-sm-12 d-flex justify-content-end">
-                                        @can("control_solution_create")
-                                            @if($dmPatient->consent->consent_state && !isset($dmPatient->consent->controlSolution))
-                                                <a href="{{route('control_solution.create',["dmPatient"=>$dmPatient])}}"
-                                                   class="btn me-1 mb-1 text-white" style="background-color: #20a49a">Solution de contrôle et vérification pré test</a>
-                                            @endif
-                                        @endcan
-                                        <button type="submit" class="btn btn-primary me-1 mb-1"
-                                                style="background-color: #0d4c92">
-                                            Modifier les informations
-                                        </button>
-                                    </div>
+                                        <br>
+                                        <hr>
+                                        <div class="col-sm-12 d-flex justify-content-end">
+                                            @can("control_solution_create")
+                                                @if($dmPatient->consent->consent_state && !isset($dmPatient->consent->controlSolution))
+                                                    <a href="{{route('control_solution.create',["dmPatient"=>$dmPatient])}}"
+                                                       class="btn me-1 mb-1 text-white"
+                                                       style="background-color: #20a49a">Solution de contrôle et
+                                                        vérification pré test</a>
+                                                @endif
+                                            @endcan
+                                            <button type="submit" class="btn btn-primary me-1 mb-1"
+                                                    style="background-color: #0d4c92">
+                                                Modifier les informations
+                                            </button>
+                                        </div>
                                 </form>
                             </div>
                         @endif

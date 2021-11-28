@@ -59,11 +59,12 @@
                             <div class="row">
                                 <div class="col-lg-12 mb-1">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text"
-                                              id="q1">Glucomètre ( préciser A ou B) :</span>
-                                        <input type="text" class="form-control" placeholder="..."
-                                               aria-label="q1" aria-describedby="q1" required
-                                               name="q1">
+                                        <label class="input-group-text"
+                                               for="inputGroupSelect01" >Glucomètre ( préciser A ou B) :</label>
+                                        <select class="form-select" id="inputGroupSelect01" name="q1">
+                                            <option value="Numéro de série A">Numéro de série A</option>
+                                            <option value="Numéro de série B">Numéro de série B</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -82,11 +83,12 @@
                             <div class="row">
                                 <div class="col-lg-12 mb-1">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text"
-                                              id="q2">Solution de contrôle basse :</span>
-                                        <input type="text" class="form-control" placeholder="..."
-                                               aria-label="q2" aria-describedby="q2" required
-                                               name="q2">
+                                        <label class="input-group-text"
+                                               for="inputGroupSelect01">Solution de contrôle basse conforme:</label>
+                                        <select class="form-select" id="inputGroupSelect01" name="q2">
+                                            <option value="Oui">Oui</option>
+                                            <option value="Non">Non</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -94,11 +96,12 @@
                             <div class="row">
                                 <div class="col-lg-12 mb-1">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text"
-                                              id="q3">solution de contrôle élevée :</span>
-                                        <input type="text" class="form-control" placeholder="..."
-                                               aria-label="q3" aria-describedby="q3" required
-                                               name="q3">
+                                        <label class="input-group-text"
+                                               for="inputGroupSelect01">solution de contrôle élevée conforme:</label>
+                                        <select class="form-select" id="inputGroupSelect01" name="q3">
+                                            <option value="Oui">Oui</option>
+                                            <option value="Non">Non</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
