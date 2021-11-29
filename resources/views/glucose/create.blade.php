@@ -111,27 +111,141 @@
                             </div>
                             <br>
                             <div class="row">
-                                <div class="col-lg-12 mb-1">
+                                <div class="col-lg-12">
+                                    <h6>
+                                        Valeur YSI 1
+                                    </h6>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+
+                                <div class="col-lg-4 mb-1">
                                     <div class="input-group mb-3">
                                         <label class="input-group-text"
-                                               for="inputGroupSelect01" >Valeur YSI 1 :</label>
-                                        <select class="form-select" id="inputGroupSelect01" name="ysi_one_value">
-                                            @foreach($ysi_ones as $ysi_one)
-                                                <option value="{{$ysi_one}}">{{$ysi_one}}</option>
-                                            @endforeach
-                                        </select>
+                                               for="inputGroupSelect01">Valeur YSI 1 (Lot 1 - Gluco A) :</label>
+                                        <input type="text" class="form-control" placeholder="..."
+                                               aria-label="text" aria-describedby="ysi_one_value_lot_one_gluco_a" required
+                                               name="ysi_one_value_lot_one_gluco_a">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text"
+                                               for="inputGroupSelect01">Valeur YSI 1 (Lot 2 - Gluco A) :</label>
+                                        <input type="text" class="form-control" placeholder="..."
+                                               aria-label="text" aria-describedby="ysi_one_value_lot_two_gluco_a" required
+                                               name="ysi_one_value_lot_two_gluco_a">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text"
+                                               for="inputGroupSelect01">Valeur YSI 1 (Lot 3 - Gluco A) :</label>
+                                        <input type="text" class="form-control" placeholder="..."
+                                               aria-label="text" aria-describedby="ysi_one_value_lot_three_gluco_a" required
+                                               name="ysi_one_value_lot_three_gluco_a">
                                     </div>
                                 </div>
                             </div>
                             <br>
                             <div class="row">
-                                <div class="col-lg-12 mb-1">
+
+                                <div class="col-lg-4 mb-1">
                                     <div class="input-group mb-3">
                                         <label class="input-group-text"
-                                               for="inputGroupSelect01">Valeur YSI 2 ( control de stabilité) :</label>
+                                               for="inputGroupSelect01">Valeur YSI 1 (Lot 1 - Gluco B) :</label>
                                         <input type="text" class="form-control" placeholder="..."
-                                               aria-label="date" aria-describedby="ysi_two_value" required
-                                               name="ysi_two_value">
+                                               aria-label="text" aria-describedby="ysi_one_value_lot_one_gluco_b" required
+                                               name="ysi_one_value_lot_one_gluco_b">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text"
+                                               for="inputGroupSelect01">Valeur YSI 1 (Lot 2 - Gluco B) :</label>
+                                        <input type="text" class="form-control" placeholder="..."
+                                               aria-label="text" aria-describedby="ysi_one_value_lot_two_gluco_b" required
+                                               name="ysi_one_value_lot_two_gluco_b">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text"
+                                               for="inputGroupSelect01">Valeur YSI 1 (Lot 3 - Gluco B) :</label>
+                                        <input type="text" class="form-control" placeholder="..."
+                                               aria-label="text" aria-describedby="ysi_one_value_lot_three_gluco_b" required
+                                               name="ysi_one_value_lot_three_gluco_b">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h6>
+                                        Valeur YSI 2
+                                    </h6>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+
+                                <div class="col-lg-4 mb-1">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text"
+                                               for="inputGroupSelect01">Valeur YSI 2 (Lot 1 - Gluco A) :</label>
+                                        <input type="text" class="form-control" placeholder="..."
+                                               aria-label="text" aria-describedby="ysi_two_value_lot_one_gluco_a" required
+                                               name="ysi_two_value_lot_one_gluco_a">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text"
+                                               for="inputGroupSelect01">Valeur YSI 2 (Lot 2 - Gluco A) :</label>
+                                        <input type="text" class="form-control" placeholder="..."
+                                               aria-label="text" aria-describedby="ysi_two_value_lot_two_gluco_a" required
+                                               name="ysi_two_value_lot_two_gluco_a">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text"
+                                               for="inputGroupSelect01">Valeur YSI 2 (Lot 3 - Gluco A) :</label>
+                                        <input type="text" class="form-control" placeholder="..."
+                                               aria-label="text" aria-describedby="ysi_two_value_lot_three_gluco_a" required
+                                               name="ysi_two_value_lot_three_gluco_a">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+
+                                <div class="col-lg-4 mb-1">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text"
+                                               for="inputGroupSelect01">Valeur YSI 2 (Lot 1 - Gluco B) :</label>
+                                        <input type="text" class="form-control" placeholder="..."
+                                               aria-label="text" aria-describedby="ysi_two_value_lot_one_gluco_b" required
+                                               name="ysi_two_value_lot_one_gluco_b">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text"
+                                               for="inputGroupSelect01">Valeur YSI 2 (Lot 2 - Gluco B) :</label>
+                                        <input type="text" class="form-control" placeholder="..."
+                                               aria-label="text" aria-describedby="ysi_two_value_lot_two_gluco_b" required
+                                               name="ysi_two_value_lot_two_gluco_b">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text"
+                                               for="inputGroupSelect01">Valeur YSI 2 (Lot 3 - Gluco B) :</label>
+                                        <input type="text" class="form-control" placeholder="..."
+                                               aria-label="text" aria-describedby="ysi_two_value_lot_three_gluco_b" required
+                                               name="ysi_two_value_lot_three_gluco_b">
                                     </div>
                                 </div>
                             </div>

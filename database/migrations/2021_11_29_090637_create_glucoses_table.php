@@ -23,8 +23,21 @@ class CreateGlucosesTable extends Migration
             $table->string("solution_control_a");
             $table->string("solution_control_b");
             $table->string("analyse_date");
-            $table->string("ysi_one_value");
-            $table->string("ysi_two_value");
+
+            $table->string("ysi_one_value_lot_one_gluco_a");
+            $table->string("ysi_one_value_lot_one_gluco_b");
+            $table->string("ysi_one_value_lot_two_gluco_a");
+            $table->string("ysi_one_value_lot_two_gluco_b");
+            $table->string("ysi_one_value_lot_three_gluco_a");
+            $table->string("ysi_one_value_lot_three_gluco_b");
+            //*********************************************************
+            $table->string("ysi_two_value_lot_one_gluco_a");
+            $table->string("ysi_two_value_lot_two_gluco_a");
+            $table->string("ysi_two_value_lot_three_gluco_a");
+            $table->string("ysi_two_value_lot_one_gluco_b");
+            $table->string("ysi_two_value_lot_two_gluco_b");
+            $table->string("ysi_two_value_lot_three_gluco_b");
+
             $table->string("identity")->default("glyc vitalcheck");
             $table->foreign("consent_id")->on("consents")->references("id")->onDelete("cascade");
             $table->timestamps();
