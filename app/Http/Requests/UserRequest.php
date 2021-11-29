@@ -43,7 +43,7 @@ class UserRequest extends FormRequest
             'name' => ['required'],
             'email' => $emailRule,
             'password' => $passwordRule,
-            'role' => ['required'],
+            'role' => ['required', 'in:Super Admin,Admin,Doctor'],
         ];
     }
 

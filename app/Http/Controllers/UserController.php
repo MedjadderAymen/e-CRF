@@ -16,17 +16,17 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() : View
+    public function index(): View
     {
-        abort_if(Gate::denies("user_access"),403);
+        abort_if(Gate::denies("user_access"), 403);
 
-        $users=User::all();
+        $users = User::all();
 
-        $data=[
-          "users"=>$users
+        $data = [
+            "users" => $users
         ];
 
-        return view("users.index",$data);
+        return view("users.index", $data);
 
     }
 
@@ -35,30 +35,43 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create() : View
+    public function create(): View
     {
-        abort_if(Gate::denies("user_access"),403);
+        abort_if(Gate::denies("user_access"), 403);
 
-        $roles=Role::all()->pluck('name');
+        $roles = Role::all()->pluck('name');
 
-        $data=[
-            "roles"=>$roles
+        $data = [
+            "roles" => $roles
         ];
 
-        return view("users.create",$data);
+        return view("users.create", $data);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(UserRequest $request)
     {
-        abort_if(Gate::denies("user_access"),403);
+        abort_if(Gate::denies("user_access"), 403);
 
-        $user=User::create($request->validated());
+        $user = User::create($request->validated());
+
+        switch ($request['role']) {
+            case "Super Admin":
+                $user->admin()->create([
+
+                ]);
+                break;
+
+            case "Admin":
+            case "Doctor":
+                $user->doctor()->create([]);
+                break;
+        }
 
         $user->assignRole($request['role']);
 
@@ -72,24 +85,24 @@ class UserController extends Controller
      * @param User $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user) : View
+    public function show(User $user): View
     {
-        abort_if(Gate::denies("user_access"),403);
+        abort_if(Gate::denies("user_access"), 403);
 
-        $roles=Role::all()->pluck('name');
+        $roles = Role::all()->pluck('name');
 
-        $data=[
-            "user"=>$user,
-            "roles"=>$roles
+        $data = [
+            "user" => $user,
+            "roles" => $roles
         ];
 
-        return view("users.show",$data);
+        return view("users.show", $data);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -102,21 +115,34 @@ class UserController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @param User $user
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(UserRequest $request, User $user)
     {
-        abort_if(Gate::denies("user_update"),403);
+        abort_if(Gate::denies("user_update"), 403);
 
         $user->updateOrFail($request->validated());
 
-        return redirect()->route("users.show",$user);
+        switch ($request['role']) {
+
+            case "Admin":
+            case "Doctor":
+                $user->doctor()->create([]);
+                break;
+        }
+
+        $user->removeRole($user->getRoleNames()[0]);
+
+        $user->assignRole($request['role']);
+
+
+        return redirect()->route("users.show", $user);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
