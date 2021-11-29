@@ -86,6 +86,12 @@ class PermissionsSeed extends Seeder
             'control_solution_show',
             'control_solution_delete',
             'control_solution_access',
+
+            'glucose_create',
+            'glucose_edit',
+            'glucose_show',
+            'glucose_delete',
+            'glucose_access',
         ];
 
         foreach ($permissions as $permission) {
@@ -135,6 +141,12 @@ class PermissionsSeed extends Seeder
             'control_solution_show',
             'control_solution_delete',
             'control_solution_access',
+
+            'glucose_create',
+            'glucose_edit',
+            'glucose_show',
+            'glucose_delete',
+            'glucose_access',
 
         ];
 

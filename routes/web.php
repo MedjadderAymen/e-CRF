@@ -7,7 +7,8 @@ use App\Http\Controllers\{
     CrfController,
     InclusionExclusionController,
     DeviceLogController,
-    ControlSolutionController
+    ControlSolutionController,
+    GlucoseController
 };
 
 /*
@@ -52,4 +53,8 @@ Route::middleware('auth')->group(function () {
     Route::get("control-solution/create/{dmPatient}", [ControlSolutionController::class, 'create'])->name('control_solution.create');
     Route::post("control-solution/store/{dmPatient}", [ControlSolutionController::class, 'store'])->name('control_solution.store');
     Route::put("control-solution/update/{control_solution}", [ControlSolutionController::class, 'update'])->name('control_solution.update');
+
+    Route::get("glucose/create/{dmPatient}", [GlucoseController::class, 'create'])->name('glucose.create');
+    Route::post("glucose/store/{dmPatient}", [GlucoseController::class, 'store'])->name('glucose.store');
+    Route::put("glucose/update/{glucose}", [GlucoseController::class, 'update'])->name('glucose.update');
 });

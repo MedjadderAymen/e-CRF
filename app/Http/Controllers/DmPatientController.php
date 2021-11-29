@@ -124,8 +124,15 @@ class DmPatientController extends Controller
 
         abort_if(Gate::denies("patient_show"), 403);
 
+        $stripes=["Lot 1", "Lot 2", "Lot 3"];
+        $glucometers=["Gluco A", "Gluco B"];
+        $ysi_ones=["Lot 1 - Gluco A", "Lot 1 - Gluco B","Lot 2 - Gluco A", "Lot 2 - Gluco B","Lot 3 - Gluco A", "Lot 3 - Gluco B" ];
+
         $data = [
-            "dmPatient" => $dmPatient
+            "dmPatient" => $dmPatient,
+            "stripes"=>$stripes,
+            "glucometers"=>$glucometers,
+            "ysi_ones"=>$ysi_ones,
         ];
 
         return view('dmPatients.show', $data);

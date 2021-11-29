@@ -33,4 +33,8 @@ class consent extends Model
         return $this->hasOne(controlSolution::class);
     }
 
+    public function glucose(){
+        return $this->hasOne(Glucose::class);
+    }
+
 }

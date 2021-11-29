@@ -63,6 +63,13 @@
                                     et vérification pré test</a>
                             </li>
                         @endif
+                        @if($dmPatient->consent->consent_state && isset($dmPatient->consent->glucose))
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link " id="glucose-tab" data-bs-toggle="tab"
+                                   href="#glucose"
+                                   role="tab" aria-controls="glucose" aria-selected="false">Analyses Glycémie</a>
+                            </li>
+                        @endif
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="consent" role="tabpanel"
@@ -1629,12 +1636,11 @@
                                         <br>
                                         <hr>
                                         <div class="col-sm-12 d-flex justify-content-end">
-                                            @can("control_solution_create")
-                                                @if($dmPatient->consent->consent_state && !isset($dmPatient->consent->controlSolution))
-                                                    <a href="{{route('control_solution.create',["dmPatient"=>$dmPatient])}}"
+                                            @can("glucose_create")
+                                                @if($dmPatient->consent->consent_state && !isset($dmPatient->consent->glucose))
+                                                    <a href="{{route('glucose.create',["dmPatient"=>$dmPatient])}}"
                                                        class="btn me-1 mb-1 text-white"
-                                                       style="background-color: #20a49a">Solution de contrôle et
-                                                        vérification pré test</a>
+                                                       style="background-color: #20a49a">Analyses Glycémie</a>
                                                 @endif
                                             @endcan
                                             <button type="submit" class="btn btn-primary me-1 mb-1"
@@ -1642,6 +1648,119 @@
                                                 Modifier les informations
                                             </button>
                                         </div>
+                                    </div>
+                                </form>
+                            </div>
+                        @endif
+                        @if($dmPatient->consent->glucose != null)
+                            <div class="tab-pane fade " id="glucose" role="tabpanel"
+                                 aria-labelledby="glucose-tab">
+                                <form
+                                    action="{{route('glucose.update',['glucose'=>$dmPatient->consent->glucose])}}"
+                                    method="POST"
+                                    enctype="multipart/form-data">
+                                    @csrf
+                                    @method('PUT')
+                                    <hr>
+                                    <br>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-1">
+                                            <div class="input-group mb-3">
+                                        <span class="input-group-text"
+                                              id="date">Date de l'analyse :</span>
+                                                <input type="date" class="form-control" placeholder="..."
+                                                       aria-label="analyse_date" aria-describedby="analyse_date" required value="{{$dmPatient->consent->glucose->analyse_date}}"
+                                                       name="analyse_date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-1">
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect01" >Bandelettes :</label>
+                                                <select class="form-select" id="inputGroupSelect01" name="strips">
+                                                    @foreach($stripes as $stripe)
+                                                        <option @if($dmPatient->consent->glucose->strips == $stripe) selected @endif value="{{$stripe}}">{{$stripe}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-1">
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect01" >Glucomètre :</label>
+                                                <select class="form-select" id="inputGroupSelect01" name="glucometer">
+                                                    @foreach($glucometers as $glucometer)
+                                                        <option @if($dmPatient->consent->glucose->glucometer == $glucometer) selected @endif value="{{$glucometer}}">{{$glucometer}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-1">
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect01">Solution Contrôle A :</label>
+                                                <input type="text" class="form-control" placeholder="..."
+                                                       aria-label="solution_control_a" aria-describedby="solution_control_a" required value="{{$dmPatient->consent->glucose->solution_control_a}}"
+                                                       name="solution_control_a">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-1">
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect01">Solution Contrôle B :</label>
+                                                <input type="text" class="form-control" placeholder="..."
+                                                       aria-label="solution_control_b" aria-describedby="solution_control_b" required value="{{$dmPatient->consent->glucose->solution_control_b}}"
+                                                       name="solution_control_b">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-1">
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect01" >Valeur YSI 1 :</label>
+                                                <select class="form-select" id="inputGroupSelect01" name="ysi_one_value">
+                                                    @foreach($ysi_ones as $ysi_one)
+                                                        <option @if($dmPatient->consent->glucose->ysi_one_value == $ysi_one) selected @endif value="{{$ysi_one}}">{{$ysi_one}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-1">
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect01">Valeur YSI 2 ( control de stabilité) :</label>
+                                                <input type="text" class="form-control" placeholder="..."
+                                                       aria-label="date" aria-describedby="ysi_two_value" required value="{{$dmPatient->consent->glucose->ysi_two_value}}"
+                                                       name="ysi_two_value">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <hr>
+                                    <div class="col-sm-12 d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-primary me-1 mb-1"
+                                                style="background-color: #0d4c92">
+                                            Modifier les informations
+                                        </button>
+                                    </div>
                                 </form>
                             </div>
                         @endif
