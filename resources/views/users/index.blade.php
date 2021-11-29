@@ -34,43 +34,29 @@
                          style="height: 150px; object-fit: cover;" class="card-img-top img-fluid"
                          alt="vitalcare">
                     <div class="card-body">
-                        <h5 class="card-title">List des DM patients</h5>
+                        <h5 class="card-title">List des utilisateurs</h5>
                         <br>
                         <!-- table hover -->
                         <div class="table-responsive">
                             <table class="table table-hover">
                                 <thead>
                                 <tr>
-                                    <th>Initials du patient</th>
-                                    <th>Identification</th>
-                                    @if(auth()->user()->hasRole(['Admin', 'Super Admin']))
-                                        <th>Docteur</th>
-                                    @endcan
-                                    <th>Consentement éclairé</th>
-                                    <th>Date</th>
-                                    <th>heure</th>
+                                    <th>Nom</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
                                     <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @if(count($dmPatients) > 0)
-                                    @foreach($dmPatients as $dmPatient)
+                                    @foreach($users as $user)
                                         <tr>
-                                            <td class="text-bold-500">{{$dmPatient->initial}}</td>
-                                            <td>{{$dmPatient->identification}}</td>
-                                            @if(auth()->user()->hasRole(['Admin', 'Super Admin']))
-                                                <td class="text-bold-500">{{$dmPatient->doctor->user->name}}</td>
-                                            @endcan
-                                            <td class="text-bold-500">{{$dmPatient->consent->consent_state ? "oui" : "non"}}</td>
-                                            <td>{{\Carbon\Carbon::parse($dmPatient->consent->signature_date)->toDateString()}}</td>
-                                            <td>{{\Carbon\Carbon::parse($dmPatient->consent->signature_hour)->toTimeString()}}</td>
-                                            <td><a href="{{route('dmPatients.show',['dmPatient'=>$dmPatient])}}"><i
+                                            <td class="text-bold-500">{{$user->name}}</td>
+                                            <td>{{$user->email}}</td>
+                                            <td>{{$user->getRoleNames()[0]}}</td>
+                                            <td><a href="{{route('users.show',['user'=>$user])}}"><i
                                                         class="fa fa-database "></i>voir</a></td>
                                         </tr>
                                     @endforeach
-                                @else
-
-                                @endif
                                 </tbody>
                             </table>
                         </div>

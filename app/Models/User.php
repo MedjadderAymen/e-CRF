@@ -51,8 +51,6 @@ class User extends Authenticatable
         return ucwords($value);
     }
 
-
-
     /**
      * Always capitalize the first name when we save it to the database
      */
@@ -61,11 +59,13 @@ class User extends Authenticatable
         $this->attributes['name'] = ucwords($value);
     }
 
-    public function admin(){
+    public function admin()
+    {
         return $this->hasOne(admin::class);
     }
 
-    public function doctor(){
+    public function doctor()
+    {
         return $this->hasOne(doctor::class);
     }
 }

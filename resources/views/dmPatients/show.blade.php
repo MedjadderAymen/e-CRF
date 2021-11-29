@@ -1127,7 +1127,7 @@
                                                        value="{{$dmPatient->consent->crf->q27}}"
                                                        aria-label="q27" aria-describedby="q27"
                                                        name="q27">
-                                                <span class="input-group-text">g/l</span>
+                                                <span class="input-group-text">mg/dL</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1135,7 +1135,7 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <h6 style="font-style: initial">
-                                                Echantillon du tube 01 (analyse immédiate)
+                                                Echantillon du tube 01 (La centrifugation doit se faire dans un délai de 30 minutes après prélèvement capillaire pour l'analyse immédiate)
                                             </h6>
                                         </div>
                                     </div>
@@ -1144,7 +1144,7 @@
                                         <div class="col-lg-12 mb-1">
                                             <div class="input-group mb-3">
                                         <span class="input-group-text"
-                                              id="q28">Heure de prélèvement capillaire  :</span>
+                                              id="q28">Heure de Centrifugation :</span>
                                                 <input type="time" class="form-control" placeholder="..."
                                                        value="{{\Carbon\Carbon::parse($dmPatient->consent->crf->q28)->toTimeString()}}"
                                                        aria-label="q28" aria-describedby="q28"
@@ -1162,7 +1162,7 @@
                                                        value="{{$dmPatient->consent->crf->q29}}"
                                                        aria-label="q29" aria-describedby="q29"
                                                        name="q29">
-                                                <span class="input-group-text">g/l</span>
+                                                <span class="input-group-text">mg/dL</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1170,7 +1170,7 @@
                                     <div class="row">
                                         <div class="col-lg-12 mb-1">
                                             <div class="input-group mb-3">
-                                                <span class="input-group-text" id="q30">Heure de l’analyse sur l’automate YSI 2300 : </span>
+                                                <span class="input-group-text" id="q30">Heure de l’analyse sur l’automate YSI 2500 : </span>
                                                 <input type="time" class="form-control" placeholder="..."
                                                        value="{{\Carbon\Carbon::parse($dmPatient->consent->crf->q30)->toTimeString()}}"
                                                        aria-label="q30" aria-describedby="q30"
@@ -1182,12 +1182,12 @@
                                     <div class="row">
                                         <div class="col-lg-12 mb-1">
                                             <div class="input-group mb-3">
-                                                <span class="input-group-text" id="q31">Glycémie plasmatique , après centrifugation, avec l’automate YSI : </span>
+                                                <span class="input-group-text" id="q31">Glycémie plasmatique , après centrifugation, avec l’automate YSI 2500 : </span>
                                                 <input type="number" class="form-control" placeholder="..."
                                                        value="{{$dmPatient->consent->crf->q31}}"
                                                        aria-label="q31" aria-describedby="q31"
                                                        name="q31">
-                                                <span class="input-group-text">g/l</span>
+                                                <span class="input-group-text">mg/dL</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1712,6 +1712,7 @@
                                                 <input type="text" class="form-control" placeholder="..."
                                                        aria-label="solution_control_a" aria-describedby="solution_control_a" required value="{{$dmPatient->consent->glucose->solution_control_a}}"
                                                        name="solution_control_a">
+                                                <span class="input-group-text">mg/dL</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1724,6 +1725,7 @@
                                                 <input type="text" class="form-control" placeholder="..."
                                                        aria-label="solution_control_b" aria-describedby="solution_control_b" required value="{{$dmPatient->consent->glucose->solution_control_b}}"
                                                        name="solution_control_b">
+                                                <span class="input-group-text">mg/dL</span>
                                             </div>
                                         </div>
                                     </div>

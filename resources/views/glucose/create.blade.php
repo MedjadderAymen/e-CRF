@@ -92,6 +92,7 @@
                                         <input type="text" class="form-control" placeholder="..."
                                                aria-label="solution_control_a" aria-describedby="solution_control_a" required
                                                name="solution_control_a">
+                                        <span class="input-group-text">mg/dL</span>
                                     </div>
                                 </div>
                             </div>
@@ -104,6 +105,7 @@
                                         <input type="text" class="form-control" placeholder="..."
                                                aria-label="solution_control_b" aria-describedby="solution_control_b" required
                                                name="solution_control_b">
+                                        <span class="input-group-text">mg/dL</span>
                                     </div>
                                 </div>
                             </div>

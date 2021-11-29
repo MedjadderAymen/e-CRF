@@ -103,7 +103,9 @@ class PermissionsSeed extends Seeder
         //gets all permissions vie Gate::before rule; see AuthServiceProvider
         Role::create(['name' => 'Super Admin']);
 
-        $role = Role::create(['name' => 'Doctor']);
+        $roleDoctor = Role::create(['name' => 'Doctor']);
+
+        $roleAdmin = Role::create(['name' => 'Admin']);
 
         $doctorPermissions = [
             'patient_create',
@@ -151,7 +153,8 @@ class PermissionsSeed extends Seeder
         ];
 
         foreach ($doctorPermissions as $permission){
-            $role->givePermissionTo($permission);
+            $roleDoctor->givePermissionTo($permission);
+            $roleAdmin->givePermissionTo($permission);
         }
 
     }

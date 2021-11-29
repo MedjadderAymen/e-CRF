@@ -38,6 +38,23 @@
                         </ul>
                     </li>
                 @endcan
+                @can("user_access")
+                    <li class="sidebar-item has-sub  {{request()->routeIs('users*') ? "active" : ""}} ">
+                        <a href="#" class='sidebar-link'>
+                            <i class="bi bi-person-badge-fill"></i>
+                            <span>Comptes utilisateurs</span>
+                        </a>
+                        <ul class="submenu {{request()->routeIs('users*') ? "active" : ""}} ">
+
+                            <li class="submenu-item  {{request()->routeIs('users.create') ? "active" : ""}} ">
+                                <a href="{{route("users.create")}}">Ajouter Compte</a>
+                            </li>
+                            <li class="submenu-item  {{request()->routeIs('users.index') ? "active" : ""}} ">
+                                <a href="{{route("users.index")}}">List des utilisateurs</a>
+                            </li>
+                        </ul>
+                    </li>
+                @endcan
             </ul>
         </div>
         <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>

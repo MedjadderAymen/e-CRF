@@ -8,7 +8,8 @@ use App\Http\Controllers\{
     InclusionExclusionController,
     DeviceLogController,
     ControlSolutionController,
-    GlucoseController
+    GlucoseController,
+    UserController
 };
 
 /*
@@ -23,7 +24,7 @@ use App\Http\Controllers\{
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route("login");
 });
 
 Route::get('/dashboard', function () {
@@ -57,4 +58,6 @@ Route::middleware('auth')->group(function () {
     Route::get("glucose/create/{dmPatient}", [GlucoseController::class, 'create'])->name('glucose.create');
     Route::post("glucose/store/{dmPatient}", [GlucoseController::class, 'store'])->name('glucose.store');
     Route::put("glucose/update/{glucose}", [GlucoseController::class, 'update'])->name('glucose.update');
+
+    Route::resource("users", UserController::class);
 });
