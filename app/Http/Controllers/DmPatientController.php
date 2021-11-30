@@ -117,7 +117,7 @@ class DmPatientController extends Controller
         }
 
         DB::commit();
-        return redirect()->route("dmPatients.index");
+        return redirect()->route("dmPatients.show",$dm_patient);
     }
 
     /**

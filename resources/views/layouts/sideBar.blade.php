@@ -14,12 +14,14 @@
         <div class="sidebar-menu">
             <ul class="menu">
 
+                @if(auth()->user()->hasRole('Super Admin'))
                 <li class="sidebar-item {{request()->routeIs('dashboard*') ? "active" : ""}} ">
                     <a href="{{route("dashboard")}}" class='sidebar-link'>
                         <i class="bi bi-grid-fill"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
+                @endif
                 @can("patient_access")
 
                     <li class="sidebar-item has-sub  {{request()->routeIs('dmPatients*') ? "active" : ""}} ">

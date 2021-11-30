@@ -309,8 +309,8 @@
                                     @can("crf_create")
                                         @if($dmPatient->consent->consent_state && !isset($dmPatient->consent->crf))
                                             <a href="{{route('crfs.create',["dmPatient"=>$dmPatient])}}"
-                                               class="btn me-1 mb-1 text-white" style="background-color: #20a49a">accéeder
-                                                au Cahier D’observation</a>
+                                               class="btn me-1 mb-1 text-white" style="background-color: #20a49a">accéder
+                                                au Cahier d’Observation</a>
                                         @endif
                                     @endcan
                                     <button type="submit"
