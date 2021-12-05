@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\dmPatient;
+use App\Models\doctor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -134,12 +135,14 @@ class DmPatientController extends Controller
         $stripes = ["Lot 1", "Lot 2", "Lot 3"];
         $glucometers = ["Gluco A", "Gluco B"];
         $ysi_ones = ["Lot 1 - Gluco A", "Lot 1 - Gluco B", "Lot 2 - Gluco A", "Lot 2 - Gluco B", "Lot 3 - Gluco A", "Lot 3 - Gluco B"];
+        $doctors=doctor::all();
 
         $data = [
             "dmPatient" => $dmPatient,
             "stripes" => $stripes,
             "glucometers" => $glucometers,
             "ysi_ones" => $ysi_ones,
+            "doctors" => $doctors
         ];
 
         return view('dmPatients.show', $data);

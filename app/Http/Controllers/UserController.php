@@ -123,14 +123,6 @@ class UserController extends Controller
 
         $user->updateOrFail($request->validated());
 
-      /*  switch ($request['role']) {
-
-            case "Admin":
-            case "Doctor":
-                $user->doctor()->create([]);
-                break;
-        }*/
-
         $user->removeRole($user->getRoleNames()[0]);
 
         $user->assignRole($request['role']);

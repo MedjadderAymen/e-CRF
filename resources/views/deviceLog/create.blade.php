@@ -138,11 +138,13 @@
                             <div class="row">
                                 <div class="col-lg-12 mb-1">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text"
-                                              id="q6">Realisation de la lecture (initials) :</span>
-                                        <input type="text" class="form-control" placeholder="..."
-                                               aria-label="q6" aria-describedby="q6"
-                                               name="q6">
+                                        <label class="input-group-text"
+                                               for="q6">Realisation de la lecture :</label>
+                                        <select class="form-select" id="q6" name="q6">
+                                            @foreach($doctors as $doctor)
+                                                <option value="{{$doctor->user->name}}">{{$doctor->user->name}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                             </div>

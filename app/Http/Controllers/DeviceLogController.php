@@ -30,10 +30,11 @@ class DeviceLogController extends Controller
     {
         abort_if(Gate::denies("device_log_create"), 403);
 
-        $doctor = doctor::all();
+        $doctors = doctor::all();
 
         $data = [
-            "dmPatient" => $dmPatient
+            "dmPatient" => $dmPatient,
+            "doctors" => $doctors
         ];
 
         return view('deviceLog.create', $data);
@@ -55,7 +56,7 @@ class DeviceLogController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\deviceLog  $deviceLog
+     * @param \App\Models\deviceLog $deviceLog
      * @return \Illuminate\Http\Response
      */
     public function show(deviceLog $deviceLog)
@@ -66,7 +67,7 @@ class DeviceLogController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\deviceLog  $deviceLog
+     * @param \App\Models\deviceLog $deviceLog
      * @return \Illuminate\Http\Response
      */
     public function edit(deviceLog $deviceLog)
@@ -90,7 +91,7 @@ class DeviceLogController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\deviceLog  $deviceLog
+     * @param \App\Models\deviceLog $deviceLog
      * @return \Illuminate\Http\Response
      */
     public function destroy(deviceLog $deviceLog)

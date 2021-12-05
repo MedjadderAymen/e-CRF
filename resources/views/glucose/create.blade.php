@@ -125,7 +125,7 @@
                                         <label class="input-group-text"
                                                for="inputGroupSelect01">Valeur YSI 1 (Lot 1 - Gluco A) :</label>
                                         <input type="text" class="form-control" placeholder="..."
-                                               aria-label="text" aria-describedby="ysi_one_value_lot_one_gluco_a" required
+                                               aria-label="text" aria-describedby="ysi_one_value_lot_one_gluco_a"
                                                name="ysi_one_value_lot_one_gluco_a">
                                     </div>
                                 </div>
@@ -134,7 +134,7 @@
                                         <label class="input-group-text"
                                                for="inputGroupSelect01">Valeur YSI 1 (Lot 2 - Gluco A) :</label>
                                         <input type="text" class="form-control" placeholder="..."
-                                               aria-label="text" aria-describedby="ysi_one_value_lot_two_gluco_a" required
+                                               aria-label="text" aria-describedby="ysi_one_value_lot_two_gluco_a"
                                                name="ysi_one_value_lot_two_gluco_a">
                                     </div>
                                 </div>
@@ -143,7 +143,7 @@
                                         <label class="input-group-text"
                                                for="inputGroupSelect01">Valeur YSI 1 (Lot 3 - Gluco A) :</label>
                                         <input type="text" class="form-control" placeholder="..."
-                                               aria-label="text" aria-describedby="ysi_one_value_lot_three_gluco_a" required
+                                               aria-label="text" aria-describedby="ysi_one_value_lot_three_gluco_a"
                                                name="ysi_one_value_lot_three_gluco_a">
                                     </div>
                                 </div>
@@ -156,7 +156,7 @@
                                         <label class="input-group-text"
                                                for="inputGroupSelect01">Valeur YSI 1 (Lot 1 - Gluco B) :</label>
                                         <input type="text" class="form-control" placeholder="..."
-                                               aria-label="text" aria-describedby="ysi_one_value_lot_one_gluco_b" required
+                                               aria-label="text" aria-describedby="ysi_one_value_lot_one_gluco_b"
                                                name="ysi_one_value_lot_one_gluco_b">
                                     </div>
                                 </div>
@@ -165,7 +165,7 @@
                                         <label class="input-group-text"
                                                for="inputGroupSelect01">Valeur YSI 1 (Lot 2 - Gluco B) :</label>
                                         <input type="text" class="form-control" placeholder="..."
-                                               aria-label="text" aria-describedby="ysi_one_value_lot_two_gluco_b" required
+                                               aria-label="text" aria-describedby="ysi_one_value_lot_two_gluco_b"
                                                name="ysi_one_value_lot_two_gluco_b">
                                     </div>
                                 </div>
@@ -174,7 +174,7 @@
                                         <label class="input-group-text"
                                                for="inputGroupSelect01">Valeur YSI 1 (Lot 3 - Gluco B) :</label>
                                         <input type="text" class="form-control" placeholder="..."
-                                               aria-label="text" aria-describedby="ysi_one_value_lot_three_gluco_b" required
+                                               aria-label="text" aria-describedby="ysi_one_value_lot_three_gluco_b"
                                                name="ysi_one_value_lot_three_gluco_b">
                                     </div>
                                 </div>
@@ -195,7 +195,7 @@
                                         <label class="input-group-text"
                                                for="inputGroupSelect01">Valeur YSI 2 (Lot 1 - Gluco A) :</label>
                                         <input type="text" class="form-control" placeholder="..."
-                                               aria-label="text" aria-describedby="ysi_two_value_lot_one_gluco_a" required
+                                               aria-label="text" aria-describedby="ysi_two_value_lot_one_gluco_a"
                                                name="ysi_two_value_lot_one_gluco_a">
                                     </div>
                                 </div>
@@ -204,7 +204,7 @@
                                         <label class="input-group-text"
                                                for="inputGroupSelect01">Valeur YSI 2 (Lot 2 - Gluco A) :</label>
                                         <input type="text" class="form-control" placeholder="..."
-                                               aria-label="text" aria-describedby="ysi_two_value_lot_two_gluco_a" required
+                                               aria-label="text" aria-describedby="ysi_two_value_lot_two_gluco_a"
                                                name="ysi_two_value_lot_two_gluco_a">
                                     </div>
                                 </div>
@@ -213,7 +213,7 @@
                                         <label class="input-group-text"
                                                for="inputGroupSelect01">Valeur YSI 2 (Lot 3 - Gluco A) :</label>
                                         <input type="text" class="form-control" placeholder="..."
-                                               aria-label="text" aria-describedby="ysi_two_value_lot_three_gluco_a" required
+                                               aria-label="text" aria-describedby="ysi_two_value_lot_three_gluco_a"
                                                name="ysi_two_value_lot_three_gluco_a">
                                     </div>
                                 </div>
@@ -226,7 +226,7 @@
                                         <label class="input-group-text"
                                                for="inputGroupSelect01">Valeur YSI 2 (Lot 1 - Gluco B) :</label>
                                         <input type="text" class="form-control" placeholder="..."
-                                               aria-label="text" aria-describedby="ysi_two_value_lot_one_gluco_b" required
+                                               aria-label="text" aria-describedby="ysi_two_value_lot_one_gluco_b"
                                                name="ysi_two_value_lot_one_gluco_b">
                                     </div>
                                 </div>
@@ -235,7 +235,7 @@
                                         <label class="input-group-text"
                                                for="inputGroupSelect01">Valeur YSI 2 (Lot 2 - Gluco B) :</label>
                                         <input type="text" class="form-control" placeholder="..."
-                                               aria-label="text" aria-describedby="ysi_two_value_lot_two_gluco_b" required
+                                               aria-label="text" aria-describedby="ysi_two_value_lot_two_gluco_b"
                                                name="ysi_two_value_lot_two_gluco_b">
                                     </div>
                                 </div>
@@ -244,7 +244,7 @@
                                         <label class="input-group-text"
                                                for="inputGroupSelect01">Valeur YSI 2 (Lot 3 - Gluco B) :</label>
                                         <input type="text" class="form-control" placeholder="..."
-                                               aria-label="text" aria-describedby="ysi_two_value_lot_three_gluco_b" required
+                                               aria-label="text" aria-describedby="ysi_two_value_lot_three_gluco_b"
                                                name="ysi_two_value_lot_three_gluco_b">
                                     </div>
                                 </div>

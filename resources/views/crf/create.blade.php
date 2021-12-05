@@ -438,6 +438,45 @@
                                 </div>
                             </div>
                             <br>
+                            <div class="row">
+                                <div class="col-lg-12 mb-1">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text"
+                                              id="q151">HbA1c :</span>
+                                        <input type="number" class="form-control" placeholder="..."
+                                               aria-label="q151" aria-describedby="q151" required
+                                               name="q151">
+                                        <span class="input-group-text">%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-12 mb-1">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text"
+                                              id="q152">Hématocrite :</span>
+                                        <input type="number" class="form-control" placeholder="..."
+                                               aria-label="q152" aria-describedby="q152" required
+                                               name="q152">
+                                        <span class="input-group-text">%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-12 mb-1">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text"
+                                              id="q153">Triglycérides :</span>
+                                        <input type="number" class="form-control" placeholder="..."
+                                               aria-label="q153" aria-describedby="q153" required
+                                               name="q153">
+                                        <span class="input-group-text">mg/dL</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
                             <hr>
                             <div class="row">
                                 <div class="col-lg-12">
@@ -756,9 +795,9 @@
                             <div class="row">
                                 <div class="col-lg-12 mb-1">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text" id="q26">Heure de prélèvement capillaire :</span>
+                                        <span class="input-group-text">Heure de prélèvement capillaire :</span>
                                         <input type="time" class="form-control" placeholder="..."
-                                               aria-label="q26" aria-describedby="q26"
+                                               aria-label="q26" aria-describedby="q26" id="q26" required
                                                name="q26">
                                     </div>
                                 </div>
@@ -780,7 +819,8 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <h6 style="font-style: initial">
-                                        Echantillon du tube 01 (La centrifugation doit se faire dans un délai de 30 minutes après prélèvement capillaire pour l'analyse immédiate)
+                                        Echantillon du tube 01 (La centrifugation doit se faire dans un délai de 30
+                                        minutes après prélèvement capillaire pour l'analyse immédiate)
                                     </h6>
                                 </div>
                             </div>
@@ -788,11 +828,10 @@
                             <div class="row">
                                 <div class="col-lg-12 mb-1">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text"
-                                              id="q28">Heure de Centrifugation :</span>
+                                        <span class="input-group-text">Heure de Centrifugation :</span>
                                         <input type="time" class="form-control" placeholder="..."
-                                               aria-label="q28" aria-describedby="q28"
-                                               name="q28">
+                                               aria-label="q28" aria-describedby="q28" id="q28" onchange="checkHour()"
+                                               name="q28" required>
                                     </div>
                                 </div>
                             </div>
@@ -984,12 +1023,23 @@
 
     <script>
 
-        function acceptConsent() {
-            var x = document.getElementById('consent_accepted');
-            var y = document.getElementById('consent_refused');
+        function checkHour() {
+            var x = document.getElementById('q26');
+            var y = document.getElementById('q28');
 
-            x.style.display = 'block';
-            y.style.display = 'none';
+            /*x.style.display = 'block';
+            y.style.display = 'none';*/
+
+
+            var diff = Math.abs(new Date('2021/12/12 ' + x.value) - new Date('2021/12/12 ' + y.value));
+
+            var minutes = Math.floor((diff / 1000) / 60);
+
+            if (minutes > 30) {
+                y.value = "";
+                alert("l'Heure de Centrifugation ne doit pas passer 30Min aprés l'heure de prélèvement capillaire")
+            }
+
 
         }
 
