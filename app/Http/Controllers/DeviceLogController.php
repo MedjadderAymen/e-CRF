@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\deviceLog;
 use App\Models\dmPatient;
+use App\Models\doctor;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
@@ -28,6 +29,8 @@ class DeviceLogController extends Controller
     public function create(dmPatient $dmPatient): View
     {
         abort_if(Gate::denies("device_log_create"), 403);
+
+        $doctor = doctor::all();
 
         $data = [
             "dmPatient" => $dmPatient
