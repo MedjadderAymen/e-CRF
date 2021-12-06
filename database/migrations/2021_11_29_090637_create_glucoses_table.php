@@ -24,19 +24,23 @@ class CreateGlucosesTable extends Migration
             $table->string("solution_control_b");
             $table->string("analyse_date");
 
-            $table->string("ysi_one_value_lot_one_gluco_a");
-            $table->string("ysi_one_value_lot_one_gluco_b");
-            $table->string("ysi_one_value_lot_two_gluco_a");
-            $table->string("ysi_one_value_lot_two_gluco_b");
-            $table->string("ysi_one_value_lot_three_gluco_a");
-            $table->string("ysi_one_value_lot_three_gluco_b");
-            //*********************************************************
-            $table->string("ysi_two_value_lot_one_gluco_a");
-            $table->string("ysi_two_value_lot_two_gluco_a");
-            $table->string("ysi_two_value_lot_three_gluco_a");
-            $table->string("ysi_two_value_lot_one_gluco_b");
-            $table->string("ysi_two_value_lot_two_gluco_b");
-            $table->string("ysi_two_value_lot_three_gluco_b");
+            $table->string("ysi_one_value")->nullable();
+            $table->string("ysi_one_value_lot_a_gluco_a_bandelette")->nullable();
+            $table->string("ysi_one_value_lot_a_gluco_a_bandelette_result")->nullable();
+            $table->string("ysi_one_value_lot_a_gluco_b_bandelette")->nullable();
+            $table->string("ysi_one_value_lot_a_gluco_b_bandelette_result")->nullable();
+
+            $table->string("ysi_two_value")->nullable();
+            $table->string("ysi_two_value_lot_b_gluco_a_bandelette")->nullable();
+            $table->string("ysi_two_value_lot_b_gluco_a_bandelette_result")->nullable();
+            $table->string("ysi_two_value_lot_b_gluco_b_bandelette")->nullable();
+            $table->string("ysi_two_value_lot_b_gluco_b_bandelette_result")->nullable();
+
+            $table->string("ysi_three_value")->nullable();
+            $table->string("ysi_three_value_lot_c_gluco_a_bandelette")->nullable();
+            $table->string("ysi_three_value_lot_c_gluco_a_bandelette_result")->nullable();
+            $table->string("ysi_three_value_lot_c_gluco_b_bandelette")->nullable();
+            $table->string("ysi_three_value_lot_c_gluco_b_bandelette_result")->nullable();
 
             $table->string("identity")->default("glyc vitalcheck");
             $table->foreign("consent_id")->on("consents")->references("id")->onDelete("cascade");

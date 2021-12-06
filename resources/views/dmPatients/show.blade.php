@@ -1785,139 +1785,193 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <h6>
-                                                Valeur YSI 1
+                                                YSI 1
                                             </h6>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
-
-                                        <div class="col-lg-4 mb-1">
+                                        <div class="col-lg-12 mb-1">
                                             <div class="input-group mb-3">
                                                 <label class="input-group-text"
-                                                       for="inputGroupSelect01">Valeur YSI 1 (Lot 1 - Gluco A) :</label>
-                                                <input type="text" class="form-control" placeholder="..."
-                                                       aria-label="text" aria-describedby="ysi_one_value_lot_one_gluco_a"  value="{{$dmPatient->consent->glucose->ysi_one_value_lot_one_gluco_a}}"
-                                                       name="ysi_one_value_lot_one_gluco_a">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mb-1">
-                                            <div class="input-group mb-3">
-                                                <label class="input-group-text"
-                                                       for="inputGroupSelect01">Valeur YSI 1 (Lot 2 - Gluco A) :</label>
-                                                <input type="text" class="form-control" placeholder="..."
-                                                       aria-label="text" aria-describedby="ysi_one_value_lot_two_gluco_a"  value="{{$dmPatient->consent->glucose->ysi_one_value_lot_two_gluco_a}}"
-                                                       name="ysi_one_value_lot_two_gluco_a">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mb-1">
-                                            <div class="input-group mb-3">
-                                                <label class="input-group-text"
-                                                       for="inputGroupSelect01">Valeur YSI 1 (Lot 3 - Gluco A) :</label>
-                                                <input type="text" class="form-control" placeholder="..."
-                                                       aria-label="text" aria-describedby="ysi_one_value_lot_three_gluco_a"  value="{{$dmPatient->consent->glucose->ysi_one_value_lot_three_gluco_a}}"
-                                                       name="ysi_one_value_lot_three_gluco_a">
+                                                       for="inputGroupSelect01">Valeur YSI 1:</label>
+                                                <input type="number" class="form-control" placeholder="..." value="{{$dmPatient->consent->glucose->ysi_one_value}}"
+                                                       aria-label="text" aria-describedby="ysi_one_value"
+                                                       name="ysi_one_value">
                                             </div>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
-
-                                        <div class="col-lg-4 mb-1">
+                                        <div class="col-lg-6 mb-1">
                                             <div class="input-group mb-3">
                                                 <label class="input-group-text"
-                                                       for="inputGroupSelect01">Valeur YSI 1 (Lot 1 - Gluco B) :</label>
-                                                <input type="text" class="form-control" placeholder="..."
-                                                       aria-label="text" aria-describedby="ysi_one_value_lot_one_gluco_b"  value="{{$dmPatient->consent->glucose->ysi_one_value_lot_one_gluco_b}}"
-                                                       name="ysi_one_value_lot_one_gluco_b">
+                                                       for="inputGroupSelect01" >Lot A - Gluco A :</label>
+                                                <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11"
+                                                       aria-label="text" aria-describedby="ysi_one_value_lot_a_gluco_a_bandelette" value="{{$dmPatient->consent->glucose->ysi_one_value_lot_a_gluco_a_bandelette}}"
+                                                       name="ysi_one_value_lot_a_gluco_a_bandelette">
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 mb-1">
+                                        <div class="col-lg-6 mb-1">
                                             <div class="input-group mb-3">
                                                 <label class="input-group-text"
-                                                       for="inputGroupSelect01">Valeur YSI 1 (Lot 2 - Gluco B) :</label>
-                                                <input type="text" class="form-control" placeholder="..."
-                                                       aria-label="text" aria-describedby="ysi_one_value_lot_two_gluco_b"  value="{{$dmPatient->consent->glucose->ysi_one_value_lot_two_gluco_b}}"
-                                                       name="ysi_one_value_lot_two_gluco_b">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mb-1">
-                                            <div class="input-group mb-3">
-                                                <label class="input-group-text"
-                                                       for="inputGroupSelect01">Valeur YSI 1 (Lot 3 - Gluco B) :</label>
-                                                <input type="text" class="form-control" placeholder="..."
-                                                       aria-label="text" aria-describedby="ysi_one_value_lot_three_gluco_b"  value="{{$dmPatient->consent->glucose->ysi_one_value_lot_three_gluco_b}}"
-                                                       name="ysi_one_value_lot_three_gluco_b">
+                                                       for="inputGroupSelect01">Résultat :</label>
+                                                <input type="number" class="form-control" placeholder="..."
+                                                       aria-label="text" aria-describedby="ysi_one_value_lot_a_gluco_a_bandelette_result" value="{{$dmPatient->consent->glucose->ysi_one_value_lot_a_gluco_a_bandelette_result}}"
+                                                       name="ysi_one_value_lot_a_gluco_a_bandelette_result">
+                                                <span class="input-group-text">mg/dL</span>
                                             </div>
                                         </div>
                                     </div>
                                     <br>
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-1">
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect01" >Lot A - Gluco B :</label>
+                                                <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11"
+                                                       aria-label="text" aria-describedby="ysi_one_value_lot_a_gluco_b_bandelette" value="{{$dmPatient->consent->glucose->ysi_one_value_lot_a_gluco_b_bandelette}}"
+                                                       name="ysi_one_value_lot_a_gluco_b_bandelette">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 mb-1">
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect01">Résultat :</label>
+                                                <input type="number" class="form-control" placeholder="..."
+                                                       aria-label="text" aria-describedby="ysi_one_value_lot_a_gluco_b_bandelette_result" value="{{$dmPatient->consent->glucose->ysi_one_value_lot_a_gluco_b_bandelette_result}}"
+                                                       name="ysi_one_value_lot_a_gluco_b_bandelette_result">
+                                                <span class="input-group-text">mg/dL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <hr>
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <h6>
-                                                Valeur YSI 2
+                                                YSI 2
                                             </h6>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
-
-                                        <div class="col-lg-4 mb-1">
+                                        <div class="col-lg-12 mb-1">
                                             <div class="input-group mb-3">
                                                 <label class="input-group-text"
-                                                       for="inputGroupSelect01">Valeur YSI 2 (Lot 1 - Gluco A) :</label>
-                                                <input type="text" class="form-control" placeholder="..."
-                                                       aria-label="text" aria-describedby="ysi_two_value_lot_one_gluco_a"  value="{{$dmPatient->consent->glucose->ysi_two_value_lot_one_gluco_a}}"
-                                                       name="ysi_two_value_lot_one_gluco_a">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mb-1">
-                                            <div class="input-group mb-3">
-                                                <label class="input-group-text"
-                                                       for="inputGroupSelect01">Valeur YSI 2 (Lot 2 - Gluco A) :</label>
-                                                <input type="text" class="form-control" placeholder="..."
-                                                       aria-label="text" aria-describedby="ysi_two_value_lot_two_gluco_a"  value="{{$dmPatient->consent->glucose->ysi_two_value_lot_two_gluco_a}}"
-                                                       name="ysi_two_value_lot_two_gluco_a">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mb-1">
-                                            <div class="input-group mb-3">
-                                                <label class="input-group-text"
-                                                       for="inputGroupSelect01">Valeur YSI 2 (Lot 3 - Gluco A) :</label>
-                                                <input type="text" class="form-control" placeholder="..."
-                                                       aria-label="text" aria-describedby="ysi_two_value_lot_three_gluco_a"  value="{{$dmPatient->consent->glucose->ysi_two_value_lot_three_gluco_a}}"
-                                                       name="ysi_two_value_lot_three_gluco_a">
+                                                       for="inputGroupSelect01">Valeur YSI 2:</label>
+                                                <input type="number" class="form-control" placeholder="..." value="{{$dmPatient->consent->glucose->ysi_two_value}}"
+                                                       aria-label="text" aria-describedby="ysi_two_value"
+                                                       name="ysi_two_value">
                                             </div>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
-
-                                        <div class="col-lg-4 mb-1">
+                                        <div class="col-lg-6 mb-1">
                                             <div class="input-group mb-3">
                                                 <label class="input-group-text"
-                                                       for="inputGroupSelect01">Valeur YSI 2 (Lot 1 - Gluco B) :</label>
-                                                <input type="text" class="form-control" placeholder="..."
-                                                       aria-label="text" aria-describedby="ysi_two_value_lot_one_gluco_b"  value="{{$dmPatient->consent->glucose->ysi_two_value_lot_one_gluco_b}}"
-                                                       name="ysi_two_value_lot_one_gluco_b">
+                                                       for="inputGroupSelect01" >Lot B - Gluco A :</label>
+                                                <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11" value="{{$dmPatient->consent->glucose->ysi_two_value_lot_b_gluco_a_bandelette}}"
+                                                       aria-label="text" aria-describedby="ysi_two_value_lot_b_gluco_a_bandelette"
+                                                       name="ysi_two_value_lot_b_gluco_a_bandelette">
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 mb-1">
+                                        <div class="col-lg-6 mb-1">
                                             <div class="input-group mb-3">
                                                 <label class="input-group-text"
-                                                       for="inputGroupSelect01">Valeur YSI 2 (Lot 2 - Gluco B) :</label>
-                                                <input type="text" class="form-control" placeholder="..."
-                                                       aria-label="text" aria-describedby="ysi_two_value_lot_two_gluco_b"   value="{{$dmPatient->consent->glucose->ysi_two_value_lot_two_gluco_b}}"
-                                                       name="ysi_two_value_lot_two_gluco_b">
+                                                       for="inputGroupSelect01">Résultat :</label>
+                                                <input type="number" class="form-control" placeholder="..."
+                                                       aria-label="text" aria-describedby="ysi_two_value_lot_b_gluco_a_bandelette_result" value="{{$dmPatient->consent->glucose->ysi_two_value_lot_b_gluco_a_bandelette_result}}"
+                                                       name="ysi_two_value_lot_b_gluco_a_bandelette_result">
+                                                <span class="input-group-text">mg/dL</span>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 mb-1">
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-1">
                                             <div class="input-group mb-3">
                                                 <label class="input-group-text"
-                                                       for="inputGroupSelect01">Valeur YSI 2 (Lot 3 - Gluco B) :</label>
-                                                <input type="text" class="form-control" placeholder="..."
-                                                       aria-label="text" aria-describedby="ysi_two_value_lot_three_gluco_b"   value="{{$dmPatient->consent->glucose->ysi_two_value_lot_three_gluco_b}}"
-                                                       name="ysi_two_value_lot_three_gluco_b">
+                                                       for="inputGroupSelect01" >Lot B - Gluco B :</label>
+                                                <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11" value="{{$dmPatient->consent->glucose->ysi_two_value_lot_b_gluco_b_bandelette}}"
+                                                       aria-label="text" aria-describedby="ysi_two_value_lot_b_gluco_b_bandelette"
+                                                       name="ysi_two_value_lot_b_gluco_b_bandelette">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 mb-1">
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect01">Résultat :</label>
+                                                <input type="number" class="form-control" placeholder="..."
+                                                       aria-label="text" aria-describedby="ysi_two_value_lot_b_gluco_b_bandelette_result" value="{{$dmPatient->consent->glucose->ysi_two_value_lot_b_gluco_b_bandelette_result}}"
+                                                       name="ysi_two_value_lot_b_gluco_b_bandelette_result">
+                                                <span class="input-group-text">mg/dL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h6>
+                                                YSI 3
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-1">
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect01">Valeur YSI 3:</label>
+                                                <input type="number" class="form-control" placeholder="..." value="{{$dmPatient->consent->glucose->ysi_three_value}}"
+                                                       aria-label="text" aria-describedby="ysi_three_value"
+                                                       name="ysi_three_value">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-1">
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect01" >Lot C - Gluco A :</label>
+                                                <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11" value="{{$dmPatient->consent->glucose->ysi_three_value_lot_c_gluco_a_bandelette}}"
+                                                       aria-label="text" aria-describedby="ysi_three_value_lot_c_gluco_a_bandelette"
+                                                       name="ysi_three_value_lot_c_gluco_a_bandelette">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 mb-1">
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect01">Résultat :</label>
+                                                <input type="number" class="form-control" placeholder="..."
+                                                       aria-label="text" aria-describedby="ysi_three_value_lot_c_gluco_a_bandelette_result" value="{{$dmPatient->consent->glucose->ysi_three_value_lot_c_gluco_a_bandelette_result}}"
+                                                       name="ysi_three_value_lot_c_gluco_a_bandelette_result">
+                                                <span class="input-group-text">mg/dL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-1">
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect01" >Lot C - Gluco B :</label>
+                                                <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11" value="{{$dmPatient->consent->glucose->ysi_three_value_lot_c_gluco_b_bandelette}}"
+                                                       aria-label="text" aria-describedby="ysi_three_value_lot_c_gluco_b_bandelette"
+                                                       name="ysi_three_value_lot_c_gluco_b_bandelette">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 mb-1">
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect01">Résultat :</label>
+                                                <input type="number" class="form-control" placeholder="..."
+                                                       aria-label="text" aria-describedby="ysi_three_value_lot_c_gluco_b_bandelette_result" value="{{$dmPatient->consent->glucose->ysi_three_value_lot_c_gluco_b_bandelette_result}}"
+                                                       name="ysi_three_value_lot_c_gluco_b_bandelette_result">
+                                                <span class="input-group-text">mg/dL</span>
                                             </div>
                                         </div>
                                     </div>

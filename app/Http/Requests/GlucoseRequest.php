@@ -31,18 +31,25 @@ class GlucoseRequest extends FormRequest
             'solution_control_a' => ['required', 'string'],
             'solution_control_b' => ['required', 'string'],
             'analyse_date' => ['required', 'string'],
-            'ysi_one_value_lot_one_gluco_a' => ['required', 'string'],
-            'ysi_one_value_lot_one_gluco_b' => ['required', 'string'],
-            'ysi_one_value_lot_two_gluco_a' => ['required', 'string'],
-            'ysi_one_value_lot_two_gluco_b' => ['required', 'string'],
-            'ysi_one_value_lot_three_gluco_a' => ['required', 'string'],
-            'ysi_one_value_lot_three_gluco_b' => ['required', 'string'],
-            'ysi_two_value_lot_one_gluco_a' => ['required', 'string'],
-            'ysi_two_value_lot_two_gluco_a' => ['required', 'string'],
-            'ysi_two_value_lot_three_gluco_a' => ['required', 'string'],
-            'ysi_two_value_lot_one_gluco_b' => ['required', 'string'],
-            'ysi_two_value_lot_two_gluco_b' => ['required', 'string'],
-            'ysi_two_value_lot_three_gluco_b' => ['required', 'string'],
+
+            "ysi_one_value" => ['required', 'string'],
+            "ysi_one_value_lot_a_gluco_a_bandelette" => ['required', 'string'],
+            "ysi_one_value_lot_a_gluco_a_bandelette_result" => ['required', 'string'],
+            "ysi_one_value_lot_a_gluco_b_bandelette" => ['required', 'string'],
+            "ysi_one_value_lot_a_gluco_b_bandelette_result" => ['required', 'string'],
+
+            "ysi_two_value" => ['required', 'string'],
+            "ysi_two_value_lot_b_gluco_a_bandelette" => ['required', 'string'],
+            "ysi_two_value_lot_b_gluco_a_bandelette_result" => ['required', 'string'],
+            "ysi_two_value_lot_b_gluco_b_bandelette" => ['required', 'string'],
+            "ysi_two_value_lot_b_gluco_b_bandelette_result" => ['required', 'string'],
+
+            "ysi_three_value" => ['required', 'string'],
+            "ysi_three_value_lot_c_gluco_a_bandelette" => ['required', 'string'],
+            "ysi_three_value_lot_c_gluco_a_bandelette_result" => ['required', 'string'],
+            "ysi_three_value_lot_c_gluco_b_bandelette" => ['required', 'string'],
+            "ysi_three_value_lot_c_gluco_b_bandelette_result" => ['required', 'string'],
+
         ];
     }
 
