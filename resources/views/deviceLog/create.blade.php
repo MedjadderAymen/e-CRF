@@ -197,6 +197,18 @@
                                 </div>
                             </div>
                             <br>
+                            <div class="row">
+                                <div class="col-lg-12 mb-1">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text"
+                                              id="q10">Date d'ouverture' :</span>
+                                        <input type="date" class="form-control" placeholder="..."
+                                               aria-label="q10" aria-describedby="q10"
+                                               name="q10">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
                             <hr>
                             <div class="col-sm-12 d-flex justify-content-end">
                                 <button type="submit" class="btn btn-primary me-1 mb-1">

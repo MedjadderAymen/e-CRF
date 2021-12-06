@@ -25,6 +25,7 @@ class CreateDeviceLogsTable extends Migration
             $table->string("q7")->nullable();
             $table->string("q8")->nullable();
             $table->string("q9")->nullable();
+            $table->string("q10")->nullable();
             $table->foreign("consent_id")->on("consents")->references("id")->onDelete("cascade");
             $table->timestamps();
         });
