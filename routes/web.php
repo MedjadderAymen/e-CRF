@@ -9,7 +9,8 @@ use App\Http\Controllers\{
     DeviceLogController,
     ControlSolutionController,
     GlucoseController,
-    UserController
+    UserController,
+    ExcelController
 };
 
 /*
@@ -66,3 +67,5 @@ Route::middleware(['basicAuth'])->group(function () {
     });
 
 });
+
+Route::get('export_report', [ExcelController::class, 'export_mapping'])->name('patient.export_report');
