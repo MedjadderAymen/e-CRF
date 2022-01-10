@@ -89,7 +89,7 @@ class DmPatientController extends Controller
                             'consent_state' => 1,
                             'signature_date' => $request['signature_date'],
                             'signature_hour' => $request['signature_hour'],
-                            'comment' => $request['comment'],
+                            'comment' => $request['comment'] ?? "",
                             'q1' => $request['q1'],
                             'q2' => $request['q2'],
                             'q3' => $request['q3'],
@@ -105,7 +105,7 @@ class DmPatientController extends Controller
                             'consent_state' => 0,
                             'signature_date' => $request['signature_date'],
                             'signature_hour' => $request['signature_hour'],
-                            'comment' => $request['comment'],
+                            'comment' => $request['comment'] ?? "",
                         ]);
                     }
                     break;
@@ -194,7 +194,7 @@ class DmPatientController extends Controller
                         $dmPatient->consent->consent_state = 1;
                         $dmPatient->consent->signature_date = $request['signature_date'];
                         $dmPatient->consent->signature_hour = $request['signature_hour'];
-                        $dmPatient->consent->comment = $request['comment'];
+                        $dmPatient->consent->comment = $request['comment'] ?? "";
                         $dmPatient->consent->q1 = $request['q1'];
                         $dmPatient->consent->q2 = $request['q2'];
                         $dmPatient->consent->q3 = $request['q3'];
@@ -210,7 +210,7 @@ class DmPatientController extends Controller
                         $dmPatient->consent->consent_state = 0;
                         $dmPatient->consent->signature_date = $request['signature_date'];
                         $dmPatient->consent->signature_hour = $request['signature_hour'];
-                        $dmPatient->consent->comment = $request['comment'];
+                        $dmPatient->consent->comment = $request['comment'] ?? "";
 
                         $dmPatient->consent->q1 = null;
                         $dmPatient->consent->q2 = null;
