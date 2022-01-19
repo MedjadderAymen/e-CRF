@@ -443,7 +443,7 @@
                                     <div class="input-group mb-3">
                                         <span class="input-group-text"
                                               id="q151">HbA1c :</span>
-                                        <input type="number" class="form-control" placeholder="..."
+                                        <input type="number" step="0.1" class="form-control" placeholder="..."
                                                aria-label="q151" aria-describedby="q151" required
                                                name="q151">
                                         <span class="input-group-text">%</span>

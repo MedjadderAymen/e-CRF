@@ -16,7 +16,7 @@ class PatientsExport implements FromCollection, WithHeadings, WithMapping
      */
     public function collection()
     {
-        return consent::all()->where("consent_state", "=", true);
+        return consent::whereHas('glucose')->where("consent_state", "=", true)->get();
     }
 
     public function headings(): array

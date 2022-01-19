@@ -57,9 +57,26 @@ class CrfController extends Controller
      * @param \App\Models\crf $crf
      * @return \Illuminate\Http\Response
      */
-    public function show(crf $crf)
+    public function show(crf $crf): View
     {
-        //
+
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param dmPatient $dmPatient
+     * @return View
+     */
+    public function print(dmPatient $dmPatient): View
+    {
+        abort_if(Gate::denies("crf_show"), 403);
+
+        $date=[
+          "dmPatient"=>$dmPatient
+        ];
+
+        return view('crf.print', $date);
     }
 
     /**

@@ -45,6 +45,7 @@ Route::middleware(['basicAuth'])->group(function () {
         Route::get("crfs/create/{dmPatient}", [CrfController::class, 'create'])->name('crfs.create');
         Route::post("crfs/store/{dmPatient}", [CrfController::class, 'store'])->name('crfs.store');
         Route::put("crfs/update/{crf}", [CrfController::class, 'update'])->name('crfs.update');
+        Route::get("crfs/print/{dmPatient}", [CrfController::class, 'print'])->name('crfs.print');
 
 
         Route::get("inclusion-exclusion/create/{dmPatient}", [InclusionExclusionController::class, 'create'])->name('inclusion_exclusion.create');
@@ -66,6 +67,6 @@ Route::middleware(['basicAuth'])->group(function () {
         Route::resource("users", UserController::class);
     });
 
-});
+    Route::get('export_report', [ExcelController::class, 'export_mapping'])->name('patient.export_report')->middleware('auth');
 
-Route::get('export_report', [ExcelController::class, 'export_mapping'])->name('patient.export_report');
+});
