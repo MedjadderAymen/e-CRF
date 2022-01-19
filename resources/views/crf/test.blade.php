@@ -24,7 +24,7 @@
             <div class="row justify-content-end align-right">
                 <div class="col-6 text-center">
                     <h5>
-                        N° Patient :{{$dmPatient->identification}}
+                        N° Patient :--
                     </h5>
                 </div>
             </div>
@@ -90,76 +90,6 @@
             <br>
             <br>
             <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="row justify-content-center align-center">
-                <div class="col-6 text-center">
-                    <h5>
-                        INSTRUCTIONS DE REMPLISSAGE DU CAHIER D’OBSERVATION
-                    </h5>
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="table-responsive">
-                <table class="table table-hover">
-                    <tbody>
-                    <tr>
-                        <td class="text-bold-500">I.</td>
-                        <td class="text-bold-500"><p>Veuillez écrire lisiblement en lettres majuscules et utiliser un stylo à bille noir.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-bold-500">II.</td>
-                        <td class="text-bold-500"><p>Inscrivez un chiffre par case et en lettres capitales sans abréviation ni symbole.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-bold-500" >III.</td>
-                        <td class="text-bold-500">
-                            <p>1) Toutes les cases doivent être remplies.</p>
-                            <p>2) Si une valeur a moins de chiffres que le nombre de cases prévues, le dernier chiffre doit être inscrit dans la case de droite, le chiffre «0 » dans
-                                les cases non utilisées (ex. 002 et Non 2).</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-bold-500">IV.</td>
-                        <td class="text-bold-500">
-                            <p>Si un examen spécifique n’a pas été effectué, inscrivez « ND » (Not Done).</p>
-                            <p>Si une requête n’est pas applicable, veuillez inscrire « NA » (Non applicable).</p>
-                            <p>Si une donnée n’est pas connue, veuillez inscrire « NK» (Unknown).</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-bold-500">VI.</td>
-                        <td class="text-bold-500">
-                            <p>Pour toute modification du cahier d’observation :</p>
-                            <p>   - veuillez barrer la mauvaise réponse initiale.</p>
-                            <p>   - inscrivez la réponse correcte au plus près de la réponse barrée.</p>
-                            <p>   - paraphez et datez la correction.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-bold-500">VII.</td>
-                        <td class="text-bold-500">
-                            <p>Merci de bien vouloir reporter en haut de chaque page le n° de centre et le n° du patient.</p>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
@@ -171,7 +101,7 @@
                     <tr>
                         <td colspan="4">Etude Vital Check® 2021/ISO</td>
                         <td colspan="4">VISITE D’INCLUSION</td>
-                        <td colspan="4">N° Patient {{$dmPatient->identification}}</td>
+                        <td colspan="4">N° Patient --</td>
                     </tr>
                     </tbody>
                 </table>
@@ -194,7 +124,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q1"
-                               @if($dmPatient->consent->crf->q1 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q1 == "oui")  @endif
                                id="q11" value="oui">
                         <label class="form-check-label" for="q11">
                             Oui
@@ -204,7 +134,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q1"
-                               @if($dmPatient->consent->crf->q1 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q1 == "non")  @endif
                                id="q12" value="non">
                         <label class="form-check-label" for="q12">
                             Non
@@ -222,7 +152,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q2"
-                               @if($dmPatient->consent->crf->q2 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q2 == "oui")  @endif
                                id="q21" value="oui">
                         <label class="form-check-label" for="q21">
                             Oui
@@ -232,7 +162,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q2"
-                               @if($dmPatient->consent->crf->q2 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q2 == "non")  @endif
                                id="q22" value="non">
                         <label class="form-check-label" for="q22">
                             Non
@@ -252,7 +182,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q3"
-                               @if($dmPatient->consent->crf->q3 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q3 == "oui")  @endif
                                id="q31" value="oui">
                         <label class="form-check-label" for="q31">
                             Oui
@@ -262,7 +192,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q3"
-                               @if($dmPatient->consent->crf->q3 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q3 == "non")  @endif
                                id="q32" value="non">
                         <label class="form-check-label" for="q32">
                             Non
@@ -280,7 +210,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q4"
-                               @if($dmPatient->consent->crf->q4 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q4 == "oui")  @endif
                                id="q41" value="oui">
                         <label class="form-check-label" for="q41">
                             Oui
@@ -290,7 +220,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q4"
-                               @if($dmPatient->consent->crf->q4 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q4 == "non")  @endif
                                id="q42" value="non">
                         <label class="form-check-label" for="q42">
                             Non
@@ -318,7 +248,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q5"
-                               @if($dmPatient->consent->crf->q5 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q5 == "oui")  @endif
                                id="q51" value="oui">
                         <label class="form-check-label" for="q51">
                             Oui
@@ -328,7 +258,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q5"
-                               @if($dmPatient->consent->crf->q5 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q5 == "non")  @endif
                                id="q52" value="non">
                         <label class="form-check-label" for="q52">
                             Non
@@ -346,7 +276,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q6"
-                               @if($dmPatient->consent->crf->q6 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q6 == "oui")  @endif
                                id="q61" value="oui">
                         <label class="form-check-label" for="q61">
                             Oui
@@ -356,7 +286,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q6"
-                               @if($dmPatient->consent->crf->q6 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q6 == "non")  @endif
                                id="q62" value="non">
                         <label class="form-check-label" for="q62">
                             Non
@@ -368,7 +298,7 @@
             <div class="row">
                 <div class="col-lg-6 mb-1">
                     <p class="text-gray-600">
-                         <strong>NB: </strong>Un seul « NON » pour les critères d’inclusion ou un seul « OUI » pour les critères de non inclusion exclut le volontaire
+                        <strong>NB: </strong>Un seul « NON » pour les critères d’inclusion ou un seul « OUI » pour les critères de non inclusion exclut le volontaire
                     </p>
                 </div>
             </div>
@@ -387,7 +317,7 @@
                     <tr>
                         <td colspan="4">Etude Vital Check® 2021/ISO</td>
                         <td colspan="4">VISITE D’INCLUSION</td>
-                        <td colspan="4">N° Patient {{$dmPatient->identification}}</td>
+                        <td colspan="4">N° Patient --</td>
                     </tr>
                     </tbody>
                 </table>
@@ -404,7 +334,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q7"
-                               @if($dmPatient->consent->crf->q7 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q7 == "oui")  @endif
                                id="q71" value="oui">
                         <label class="form-check-label" for="q71">
                             Oui
@@ -414,7 +344,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q7"
-                               @if($dmPatient->consent->crf->q7 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q7 == "non")  @endif
                                id="q72" value="non">
                         <label class="form-check-label" for="q72">
                             Non
@@ -432,7 +362,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q8"
-                               @if($dmPatient->consent->crf->q8 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q8 == "oui")  @endif
                                id="q81" value="oui">
                         <label class="form-check-label" for="q81">
                             Oui
@@ -442,7 +372,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q8"
-                               @if($dmPatient->consent->crf->q8 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q8 == "non")  @endif
                                id="q82" value="non">
                         <label class="form-check-label" for="q82">
                             Non
@@ -460,7 +390,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q9"
-                               @if($dmPatient->consent->crf->q9 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q9 == "oui")  @endif
                                id="q91" value="oui">
                         <label class="form-check-label" for="q91">
                             Oui
@@ -470,7 +400,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q9"
-                               @if($dmPatient->consent->crf->q9 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q9 == "non")  @endif
                                id="q92" value="non">
                         <label class="form-check-label" for="q92">
                             Non
@@ -488,7 +418,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q9"
-                               @if($dmPatient->consent->crf->q9 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q9 == "oui")  @endif
                                id="q91" value="oui">
                         <label class="form-check-label" for="q91">
                             Oui
@@ -498,7 +428,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q9"
-                               @if($dmPatient->consent->crf->q9 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q9 == "non")  @endif
                                id="q92" value="non">
                         <label class="form-check-label" for="q92">
                             Non
@@ -516,7 +446,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q9"
-                               @if($dmPatient->consent->crf->q9 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q9 == "oui")  @endif
                                id="q91" value="oui">
                         <label class="form-check-label" for="q91">
                             Oui
@@ -526,7 +456,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q9"
-                               @if($dmPatient->consent->crf->q9 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q9 == "non")  @endif
                                id="q92" value="non">
                         <label class="form-check-label" for="q92">
                             Non
@@ -555,8 +485,8 @@
                 <div class="col-lg-6 mb-1">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="q10">Date de la visite :</span>
-                        <input type="date" class="form-control" placeholder="..."
-                               value="{{\Carbon\Carbon::parse($dmPatient->consent->crf->q10)->toDateString()}}"
+                        <input type="text" class="form-control" placeholder="..."
+                               value="--/--/----"
                                aria-label="q10" aria-describedby="q10" required
                                name="q10">
                     </div>
@@ -565,8 +495,8 @@
                     <div class="input-group mb-3">
                                         <span class="input-group-text"
                                               id="q11">Date de signature du consentement :</span>
-                        <input type="date" class="form-control" placeholder="..."
-                               value="{{\Carbon\Carbon::parse($dmPatient->consent->crf->q11)->toDateString()}}"
+                        <input type="text" class="form-control" placeholder="..."
+                               value="--/--/----"
                                aria-label="q11" aria-describedby="q11" required
                                name="q11">
                     </div>
@@ -584,7 +514,7 @@
                     <tr>
                         <td colspan="4">Etude Vital Check® 2021/ISO</td>
                         <td colspan="4">VISITE D’INCLUSION</td>
-                        <td colspan="4">N° Patient {{$dmPatient->identification}}</td>
+                        <td colspan="4">N° Patient --</td>
                     </tr>
                     </tbody>
                 </table>
@@ -607,7 +537,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q12"
-                               @if($dmPatient->consent->crf->q12 == "male") checked @endif
+                               @if($dmPatient->consent->crf->q12 == "male")  @endif
                                id="q121" value="male">
                         <label class="form-check-label" for="q121">
                             Homme
@@ -617,7 +547,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q12"
-                               @if($dmPatient->consent->crf->q12 == "female") checked @endif
+                               @if($dmPatient->consent->crf->q12 == "female")  @endif
                                id="q122" value="female">
                         <label class="form-check-label" for="q122">
                             Femme
@@ -630,8 +560,8 @@
                 <div class="col-lg-12 mb-1">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="q13">Date de naissance :</span>
-                        <input type="date" class="form-control" placeholder="..."
-                               value="{{\Carbon\Carbon::parse($dmPatient->consent->crf->q13)->toDateString()}}"
+                        <input type="text" class="form-control" placeholder="..."
+                               value="--/--/----"
                                aria-label="q13" aria-describedby="q13" required
                                name="q13">
                     </div>
@@ -656,7 +586,7 @@
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="q141">Ans :</span>
                         <input type="number" class="form-control" placeholder="..."
-                               value="{{$dmPatient->consent->crf->q141}}"
+                               value=""
                                aria-label="q141" aria-describedby="q141"
                                name="q141">
                     </div>
@@ -670,7 +600,7 @@
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="q142">Mois :</span>
                         <input type="number" class="form-control" placeholder="..."
-                               value="{{$dmPatient->consent->crf->q142}}"
+                               value=""
                                aria-label="q142" aria-describedby="q142"
                                name="q142">
                     </div>
@@ -686,7 +616,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q15"
-                               @if($dmPatient->consent->crf->q15 == "DT1") checked @endif
+                               @if($dmPatient->consent->crf->q15 == "DT1")  @endif
                                id="q151" value="DT1">
                         <label class="form-check-label" for="q151">
                             DT1
@@ -696,7 +626,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q15"
-                               @if($dmPatient->consent->crf->q15 == "DT2") checked @endif
+                               @if($dmPatient->consent->crf->q15 == "DT2")  @endif
                                id="q152" value="DT2">
                         <label class="form-check-label" for="q152">
                             DT2
@@ -712,7 +642,7 @@
                                               id="q151">HbA1c :</span>
                         <input type="number" step="0.1" class="form-control" placeholder="..."
                                aria-label="q151" aria-describedby="q151" required
-                               value="{{$dmPatient->consent->crf->q151}}"
+                               value=""
                                name="q151">
                         <span class="input-group-text">%</span>
                     </div>
@@ -726,7 +656,7 @@
                                               id="q152">Hématocrite :</span>
                         <input type="number" class="form-control" placeholder="..."
                                aria-label="q152" aria-describedby="q152" required
-                               value="{{$dmPatient->consent->crf->q152}}"
+                               value=""
                                name="q152">
                         <span class="input-group-text">%</span>
                     </div>
@@ -740,7 +670,7 @@
                                               id="q153">Triglycérides :</span>
                         <input type="number" class="form-control" placeholder="..."
                                aria-label="q153" aria-describedby="q153" required
-                               value="{{$dmPatient->consent->crf->q153}}"
+                               value=""
                                name="q153">
                         <span class="input-group-text">mg/dL</span>
                     </div>
@@ -761,7 +691,7 @@
                     <tr>
                         <td colspan="4">Etude Vital Check® 2021/ISO</td>
                         <td colspan="4">VISITE D’INCLUSION</td>
-                        <td colspan="4">N° Patient {{$dmPatient->identification}}</td>
+                        <td colspan="4">N° Patient --</td>
                     </tr>
                     </tbody>
                 </table>
@@ -784,7 +714,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q16"
-                               @if($dmPatient->consent->crf->q16 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q16 == "oui")  @endif
                                id="q161" value="oui">
                         <label class="form-check-label" for="q161">
                             Oui
@@ -794,7 +724,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q16"
-                               @if($dmPatient->consent->crf->q16 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q16 == "non")  @endif
                                id="q162" value="non">
                         <label class="form-check-label" for="q162">
                             Non
@@ -812,7 +742,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q17"
-                               @if($dmPatient->consent->crf->q17 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q17 == "oui")  @endif
                                id="q171" value="oui">
                         <label class="form-check-label" for="q171">
                             Oui
@@ -822,7 +752,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q17"
-                               @if($dmPatient->consent->crf->q17 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q17 == "non")  @endif
                                id="q172" value="non">
                         <label class="form-check-label" for="q172">
                             Non
@@ -837,7 +767,7 @@
                 <div class="col-lg-4 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q18"
-                               @if($dmPatient->consent->crf->q18 == "Insuline Lente") checked
+                               @if($dmPatient->consent->crf->q18 == "Insuline Lente")
                                @endif
                                id="q181" value="Insuline Lente">
                         <label class="form-check-label" for="q181">
@@ -848,7 +778,7 @@
                 <div class="col-lg-4 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q18"
-                               @if($dmPatient->consent->crf->q18 == "Insuline Semi Lente") checked
+                               @if($dmPatient->consent->crf->q18 == "Insuline Semi Lente")
                                @endif
                                id="q182" value="Insuline Semi Lente">
                         <label class="form-check-label" for="q182">
@@ -859,7 +789,7 @@
                 <div class="col-lg-4 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q18"
-                               @if($dmPatient->consent->crf->q18 == "Insuline rapide") checked
+                               @if($dmPatient->consent->crf->q18 == "Insuline rapide")
                                @endif
                                id="q183" value="Insuline rapide">
                         <label class="form-check-label" for="q183">
@@ -870,7 +800,7 @@
                 <div class="col-lg-4 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q18"
-                               @if($dmPatient->consent->crf->q18 == "Insuline pré mélangée ") checked
+                               @if($dmPatient->consent->crf->q18 == "Insuline pré mélangée ")
                                @endif
                                id="q183" value="Insuline pré mélangée ">
                         <label class="form-check-label" for="q183">
@@ -886,7 +816,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q19"
-                               @if($dmPatient->consent->crf->q19 == "1 injection") checked
+                               @if($dmPatient->consent->crf->q19 == "1 injection")
                                @endif
                                id="q191" value="1 injection">
                         <label class="form-check-label" for="q191">
@@ -897,7 +827,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q19"
-                               @if($dmPatient->consent->crf->q19 == "2 injections") checked
+                               @if($dmPatient->consent->crf->q19 == "2 injections")
                                @endif
                                id="q192" value="2 injections">
                         <label class="form-check-label" for="q192">
@@ -908,7 +838,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q19"
-                               @if($dmPatient->consent->crf->q19 == "3 injections") checked
+                               @if($dmPatient->consent->crf->q19 == "3 injections")
                                @endif
                                id="q193" value="3 injections">
                         <label class="form-check-label" for="q193">
@@ -919,7 +849,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q19"
-                               @if($dmPatient->consent->crf->q19 == ">3 injections") checked
+                               @if($dmPatient->consent->crf->q19 == ">3 injections")
                                @endif
                                id="q194" value=">3 injections">
                         <label class="form-check-label" for="q194">
@@ -938,7 +868,7 @@
                 <div class="col-lg-1 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q19b"
-                               @if($dmPatient->consent->crf->q19b == "1") checked @endif
+                               @if($dmPatient->consent->crf->q19b == "1")  @endif
                                id="q19b1" value="1">
                         <label class="form-check-label" for="q19b1">
                             1
@@ -948,7 +878,7 @@
                 <div class="col-lg-1 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q19b"
-                               @if($dmPatient->consent->crf->q19b == "2") checked @endif
+                               @if($dmPatient->consent->crf->q19b == "2")  @endif
                                id="q19b2" value="2">
                         <label class="form-check-label" for="q19b2">
                             2
@@ -958,7 +888,7 @@
                 <div class="col-lg-1 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q19b"
-                               @if($dmPatient->consent->crf->q19b == "3") checked @endif
+                               @if($dmPatient->consent->crf->q19b == "3")  @endif
                                id="q19b3" value="3">
                         <label class="form-check-label" for="q19b3">
                             3
@@ -968,7 +898,7 @@
                 <div class="col-lg-1 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q19b"
-                               @if($dmPatient->consent->crf->q19b == "4") checked @endif
+                               @if($dmPatient->consent->crf->q19b == "4")  @endif
                                id="q19b4" value="4">
                         <label class="form-check-label" for="q19b4">
                             4
@@ -978,7 +908,7 @@
                 <div class="col-lg-1 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q19b"
-                               @if($dmPatient->consent->crf->q19b == ">4") checked @endif
+                               @if($dmPatient->consent->crf->q19b == ">4")  @endif
                                id="q19b5" value=">4">
                         <label class="form-check-label" for="q19b5">
                             >4
@@ -1005,7 +935,7 @@
                     <tr>
                         <td colspan="4">Etude Vital Check® 2021/ISO</td>
                         <td colspan="4">VISITE D’INCLUSION</td>
-                        <td colspan="4">N° Patient {{$dmPatient->identification}}</td>
+                        <td colspan="4">N° Patient --</td>
                     </tr>
                     </tbody>
                 </table>
@@ -1028,7 +958,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q20"
-                               @if($dmPatient->consent->crf->q20 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q20 == "oui")  @endif
                                id="q201" value="oui">
                         <label class="form-check-label" for="q201">
                             Oui
@@ -1038,7 +968,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q20"
-                               @if($dmPatient->consent->crf->q20 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q20 == "non")  @endif
                                id="q202" value="non">
                         <label class="form-check-label" for="q202">
                             Non
@@ -1052,8 +982,8 @@
                     <div class="input-group mb-3">
                                         <span class="input-group-text"
                                               id="q21">Si oui, date de début d’utilisation :</span>
-                        <input type="date" class="form-control" placeholder="..."
-                               value="{{$dmPatient->consent->crf->q21}}"
+                        <input type="text" class="form-control" placeholder="..."
+                               value="--/--/----"
                                aria-label="q21" aria-describedby="q21"
                                name="q21">
                     </div>
@@ -1070,7 +1000,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q21b"
-                               @if($dmPatient->consent->crf->q21b == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q21b == "oui")  @endif
                                id="q21b1" value="oui">
                         <label class="form-check-label" for="q21b1">
                             Oui
@@ -1080,7 +1010,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q21b"
-                               @if($dmPatient->consent->crf->q21b == "non") checked @endif
+                               @if($dmPatient->consent->crf->q21b == "non")  @endif
                                id="q21b2" value="non">
                         <label class="form-check-label" for="q21b2">
                             Non
@@ -1102,8 +1032,8 @@
                     <div class="input-group mb-3">
                                         <span class="input-group-text"
                                               id="q24">Date de prélèvement au centre d'investigation :</span>
-                        <input type="date" class="form-control" placeholder="..."
-                               value="{{$dmPatient->consent->crf->q24}}"
+                        <input type="text" class="form-control" placeholder="..."
+                               value="--/--/----"
                                aria-label="q24" aria-describedby="q24"
                                name="q24">
                     </div>
@@ -1119,7 +1049,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q25"
-                               @if($dmPatient->consent->crf->q25 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q25 == "oui")  @endif
                                id="q251" value="oui">
                         <label class="form-check-label" for="q251">
                             Oui
@@ -1129,7 +1059,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q25"
-                               @if($dmPatient->consent->crf->q25 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q25 == "non")  @endif
                                id="q252" value="non">
                         <label class="form-check-label" for="q252">
                             Non
@@ -1150,8 +1080,8 @@
                 <div class="col-lg-12 mb-1">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="q26">Heure de prélèvement capillaire :</span>
-                        <input type="time" class="form-control" placeholder="..."
-                               value="{{\Carbon\Carbon::parse($dmPatient->consent->crf->q26)->toTimeString()}}"
+                        <input type="text" class="form-control" placeholder="..."
+                               value="--:--"
                                aria-label="q26" aria-describedby="q26"
                                name="q26">
                     </div>
@@ -1164,7 +1094,7 @@
                                         <span class="input-group-text"
                                               id="q27">Glycémie capillaire lue avec lecteur <strong> VITAL CHECK® MM-1200</strong> : </span>
                         <input type="number" class="form-control" placeholder="..."
-                               value="{{$dmPatient->consent->crf->q27}}"
+                               value=""
                                aria-label="q27" aria-describedby="q27"
                                name="q27">
                         <span class="input-group-text">mg/dL</span>
@@ -1187,7 +1117,7 @@
                     <tr>
                         <td colspan="4">Etude Vital Check® 2021/ISO</td>
                         <td colspan="4">VISITE D’INCLUSION</td>
-                        <td colspan="4">N° Patient {{$dmPatient->identification}}</td>
+                        <td colspan="4">N° Patient --</td>
                     </tr>
                     </tbody>
                 </table>
@@ -1207,8 +1137,8 @@
                     <div class="input-group mb-3">
                                         <span class="input-group-text"
                                               id="q28">Heure de Centrifugation :</span>
-                        <input type="time" class="form-control" placeholder="..."
-                               value="{{\Carbon\Carbon::parse($dmPatient->consent->crf->q28)->toTimeString()}}"
+                        <input type="text" class="form-control" placeholder="..."
+                               value="--/--/----"
                                aria-label="q28" aria-describedby="q28"
                                name="q28">
                     </div>
@@ -1220,8 +1150,8 @@
                     <div class="input-group mb-3">
                                         <span class="input-group-text"
                                               id="q29">Glycémie capillaire lue avec lecteur <strong> VITAL CHECK® MM-1200</strong> : </span>
-                        <input type="number" class="form-control" placeholder="..."
-                               value="{{$dmPatient->consent->crf->q29}}"
+                        <input type="text" class="form-control" placeholder="..."
+                               value="--/--/----"
                                aria-label="q29" aria-describedby="q29"
                                name="q29">
                         <span class="input-group-text">mg/dL</span>
@@ -1233,8 +1163,8 @@
                 <div class="col-lg-12 mb-1">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="q30">Heure de l’analyse sur l’automate YSI 2500 : </span>
-                        <input type="time" class="form-control" placeholder="..."
-                               value="{{\Carbon\Carbon::parse($dmPatient->consent->crf->q30)->toTimeString()}}"
+                        <input type="text" class="form-control" placeholder="..."
+                               value="--/--/----"
                                aria-label="q30" aria-describedby="q30"
                                name="q30">
                     </div>
@@ -1246,7 +1176,7 @@
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="q31">Glycémie plasmatique , après centrifugation, avec l’automate YSI 2500 : </span>
                         <input type="number" class="form-control" placeholder="..."
-                               value="{{$dmPatient->consent->crf->q31}}"
+                               value=""
                                aria-label="q31" aria-describedby="q31"
                                name="q31">
                         <span class="input-group-text">mg/dL</span>
@@ -1272,7 +1202,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q32"
-                               @if($dmPatient->consent->crf->q32 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q32 == "oui")  @endif
                                id="q321" value="oui">
                         <label class="form-check-label" for="q321">
                             Oui
@@ -1282,7 +1212,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q32"
-                               @if($dmPatient->consent->crf->q32 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q32 == "non")  @endif
                                id="q322" value="non">
                         <label class="form-check-label" for="q322">
                             Non
@@ -1302,8 +1232,21 @@
             <div class="row">
                 <div class="col-lg-12 mb-1">
                     <div class="input-group mb-3">
+                                        <span class="input-group-text"
+                                              id="q28">Date du prélèvement :</span>
+                        <input type="text" class="form-control" placeholder="..."
+                               value="--/--/----"
+                               aria-label="q28" aria-describedby="q28"
+                               name="q28">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12 mb-1">
+                    <div class="input-group mb-3">
                         <span class="input-group-text" id="signature_date">Date de centrifugation :</span>
-                        <input type="date" class="form-control" placeholder="20/02/2020"
+                        <input type="text" class="form-control" placeholder="20/02/2020" value="--/--/----"
                                aria-label="signature_date" aria-describedby="signature_date"
                                name="signature_date">
                     </div>
@@ -1317,7 +1260,7 @@
                         <input type="number" class="form-control" placeholder="..."
                                aria-label="q31" aria-describedby="q31"
                                name="q31">
-                        <span class="input-group-text">120 mg/dL</span>
+                        <span class="input-group-text">mg/dL</span>
                     </div>
                 </div>
             </div>
@@ -1329,13 +1272,10 @@
                         <input type="number" class="form-control" placeholder="..."
                                aria-label="q31" aria-describedby="q31"
                                name="q31">
-                        <span class="input-group-text">118 mg/dL</span>
+                        <span class="input-group-text">mg/dL</span>
                     </div>
                 </div>
             </div>
-            <br>
-            <br>
-            <br>
             <br>
             <br>
             <div class="table-responsive">
@@ -1349,7 +1289,7 @@
                     <tr>
                         <td colspan="4">Etude Vital Check® 2021/ISO</td>
                         <td colspan="4">VISITE D’INCLUSION</td>
-                        <td colspan="4">N° Patient {{$dmPatient->identification}}</td>
+                        <td colspan="4">N° Patient --</td>
                     </tr>
                     </tbody>
                 </table>
@@ -1374,7 +1314,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q37"
-                               @if($dmPatient->consent->crf->q37 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q37 == "oui")  @endif
                                id="q371" value="oui">
                         <label class="form-check-label" for="q371">
                             Oui
@@ -1384,7 +1324,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q37"
-                               @if($dmPatient->consent->crf->q37 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q37 == "non")  @endif
                                id="q372" value="non">
                         <label class="form-check-label" for="q372">
                             Non
@@ -1412,7 +1352,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q38"
-                               @if($dmPatient->consent->crf->q38 == "oui") checked @endif
+                               @if($dmPatient->consent->crf->q38 == "oui")  @endif
                                id="q381" value="oui">
                         <label class="form-check-label" for="q381">
                             Oui
@@ -1422,7 +1362,7 @@
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q38"
-                               @if($dmPatient->consent->crf->q38 == "non") checked @endif
+                               @if($dmPatient->consent->crf->q38 == "non")  @endif
                                id="q382" value="non">
                         <label class="form-check-label" for="q382">
                             Non
@@ -1445,7 +1385,7 @@
                                         <span class="input-group-text"
                                               id="investigator_name">Nom de l’Investigateur :</span>
                         <input type="text" class="form-control" placeholder="..."
-                               value="{{$dmPatient->consent->crf->investigator_name}}"
+                               value=""
                                aria-label="investigator_name"
                                aria-describedby="investigator_name"
                                name="investigator_name">
@@ -1457,8 +1397,8 @@
                 <div class="col-lg-12 mb-1">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="signature_date">Date :</span>
-                        <input type="date" class="form-control" placeholder="..."
-                               value="{{\Carbon\Carbon::parse($dmPatient->consent->crf->signature_date)->toDateString()}}"
+                        <input type="text" class="form-control" placeholder="..."
+                               value="--/--/----"
                                aria-label="signature_date" aria-describedby="signature_date"
                                name="signature_date">
                     </div>

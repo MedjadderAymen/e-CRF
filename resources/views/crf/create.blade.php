@@ -222,6 +222,14 @@
                             <br>
                             <div class="row">
                                 <div class="col-lg-6 mb-1">
+                                    <p class="text-gray-600">
+                                        <strong>NB: </strong>Un seul « NON » pour les critères d’inclusion ou un seul « OUI » pour les critères de non inclusion exclut le volontaire
+                                    </p>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-6 mb-1">
                                     <h6>
                                         Patient présentant un handicap physique à l’utilisation dun lecteur de glycémie
                                         (ex : maladie de parkinson)
@@ -296,6 +304,70 @@
                                             Non
                                         </label>
                                     </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-6 mb-1">
+                                    <h6>
+                                        Patient ayant déjà participé ou participant  à une étude de recherche bio médicale
+                                    </h6>
+                                </div>
+                                <div class="col-lg-3 mb-1">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="q39"
+                                               @if($dmPatient->consent->crf->q39 == "oui") checked @endif
+                                               id="q391" value="oui">
+                                        <label class="form-check-label" for="q391">
+                                            Oui
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 mb-1">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="q39"
+                                               @if($dmPatient->consent->crf->q39 == "non") checked @endif
+                                               id="q392" value="non">
+                                        <label class="form-check-label" for="q392">
+                                            Non
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-6 mb-1">
+                                    <h6>
+                                        Patient ayant reçu dans les 48 heures avant le prélèvement capillaire de la vitamine C ou acide ascorbique, ibuprofène et acétaminophène
+                                    </h6>
+                                </div>
+                                <div class="col-lg-3 mb-1">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="q40"
+                                               @if($dmPatient->consent->crf->q40 == "oui") checked @endif
+                                               id="q401" value="oui">
+                                        <label class="form-check-label" for="q401">
+                                            Oui
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 mb-1">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="q40"
+                                               @if($dmPatient->consent->crf->q40 == "non") checked @endif
+                                               id="q402" value="non">
+                                        <label class="form-check-label" for="q402">
+                                            Non
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-6 mb-1">
+                                    <p class="text-gray-600">
+                                        <strong>NB: </strong>Un seul « NON » pour les critères d’inclusion ou un seul « OUI » pour les critères de non inclusion exclut le volontaire
+                                    </p>
                                 </div>
                             </div>
                             <br>
@@ -541,7 +613,7 @@
                                 Si oui,
                             </h6>
                             <div class="row">
-                                <div class="col-lg-4 mb-1">
+                                <div class="col-lg-3 mb-1">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="q18"
                                                id="q181" value="Insuline Lente">
@@ -550,7 +622,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 mb-1">
+                                <div class="col-lg-3 mb-1">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="q18"
                                                id="q182" value="Insuline Semi Lente">
@@ -559,12 +631,21 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 mb-1">
+                                <div class="col-lg-3 mb-1">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="q18"
                                                id="q183" value="Insuline rapide">
                                         <label class="form-check-label" for="q183">
                                             Insuline rapide
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 mb-1">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="q18"
+                                               id="q184" value="Insuline rapide">
+                                        <label class="form-check-label" for="q184">
+                                            Insuline pré mélangée
                                         </label>
                                     </div>
                                 </div>
@@ -903,6 +984,49 @@
                                         <label class="form-check-label" for="q322">
                                             Non
                                         </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h6 style="font-style: initial">
+                                        Les analyses en duplicata
+                                    </h6>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-12 mb-1">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="signature_date">Date de centrifugation :</span>
+                                        <input type="date" class="form-control" placeholder="..."
+                                               aria-label="signature_date" aria-describedby="signature_date"
+                                               name="signature_date">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-12 mb-1">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="q31">Glycémie capillaire  lue avec lecteur VITAL CHECK® MM-1200 : </span>
+                                        <input type="number" class="form-control" placeholder="..."
+                                               aria-label="q31" aria-describedby="q31"
+                                               name="q31">
+                                        <span class="input-group-text">mg/dL</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-12 mb-1">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="q31">Glycémie capillaire lue avec YSI 2500 : </span>
+                                        <input type="number" class="form-control" placeholder="..."
+                                               aria-label="q31" aria-describedby="q31"
+                                               name="q31">
+                                        <span class="input-group-text">mg/dL</span>
                                     </div>
                                 </div>
                             </div>
