@@ -16,6 +16,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call(PermissionsSeed::class);
         $this->call(SuperAdminSeed::class);
-        //$this->call(doctorSeed::class);
+        $this->call(doctorSeed::class);
     }
 }

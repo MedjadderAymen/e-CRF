@@ -487,20 +487,20 @@
                 </div>
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q9"
-                               @if($dmPatient->consent->crf->q9 == "oui") checked @endif
-                               id="q91" value="oui">
-                        <label class="form-check-label" for="q91">
+                        <input class="form-check-input" type="radio" name="q39"
+                               @if($dmPatient->consent->crf->q39 == "oui") checked @endif
+                               id="q391" value="oui">
+                        <label class="form-check-label" for="q391">
                             Oui
                         </label>
                     </div>
                 </div>
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q9"
-                               @if($dmPatient->consent->crf->q9 == "non") checked @endif
-                               id="q92" value="non">
-                        <label class="form-check-label" for="q92">
+                        <input class="form-check-input" type="radio" name="q39"
+                               @if($dmPatient->consent->crf->q39 == "non") checked @endif
+                               id="q392" value="non">
+                        <label class="form-check-label" for="q392">
                             Non
                         </label>
                     </div>
@@ -515,20 +515,20 @@
                 </div>
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q9"
-                               @if($dmPatient->consent->crf->q9 == "oui") checked @endif
-                               id="q91" value="oui">
-                        <label class="form-check-label" for="q91">
+                        <input class="form-check-input" type="radio" name="q40"
+                               @if($dmPatient->consent->crf->q40 == "oui") checked @endif
+                               id="q401" value="oui">
+                        <label class="form-check-label" for="q401">
                             Oui
                         </label>
                     </div>
                 </div>
                 <div class="col-lg-3 mb-1">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q9"
-                               @if($dmPatient->consent->crf->q9 == "non") checked @endif
-                               id="q92" value="non">
-                        <label class="form-check-label" for="q92">
+                        <input class="form-check-input" type="radio" name="q40"
+                               @if($dmPatient->consent->crf->q40 == "non") checked @endif
+                               id="q402" value="non">
+                        <label class="form-check-label" for="q402">
                             Non
                         </label>
                     </div>
@@ -1302,10 +1302,12 @@
             <div class="row">
                 <div class="col-lg-12 mb-1">
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="signature_date">Date de centrifugation :</span>
-                        <input type="date" class="form-control" placeholder="20/02/2020"
-                               aria-label="signature_date" aria-describedby="signature_date"
-                               name="signature_date">
+                                        <span class="input-group-text"
+                                              id="q41">Date du prélèvement :</span>
+                        <input type="date" class="form-control" placeholder="..."
+                               value="{{$dmPatient->consent->crf->q41}}"
+                               aria-label="q41" aria-describedby="q41"
+                               name="q41">
                     </div>
                 </div>
             </div>
@@ -1313,11 +1315,10 @@
             <div class="row">
                 <div class="col-lg-12 mb-1">
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="q31">Glycémie capillaire  lue avec lecteur VITAL CHECK® MM-1200 : </span>
-                        <input type="number" class="form-control" placeholder="..."
-                               aria-label="q31" aria-describedby="q31"
-                               name="q31">
-                        <span class="input-group-text">120 mg/dL</span>
+                        <span class="input-group-text" id="q42">Date de centrifugation :</span>
+                        <input type="date" class="form-control" value="{{$dmPatient->consent->crf->q42}}"
+                               aria-label="q42" aria-describedby="q42"
+                               name="q42">
                     </div>
                 </div>
             </div>
@@ -1325,11 +1326,23 @@
             <div class="row">
                 <div class="col-lg-12 mb-1">
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="q31">Glycémie capillaire lue avec YSI 2500 : </span>
+                        <span class="input-group-text" id="q43">Glycémie capillaire  lue avec lecteur VITAL CHECK® MM-1200 : </span>
                         <input type="number" class="form-control" placeholder="..."
-                               aria-label="q31" aria-describedby="q31"
-                               name="q31">
-                        <span class="input-group-text">118 mg/dL</span>
+                               aria-label="q43" aria-describedby="q43" value="{{$dmPatient->consent->crf->q43}}"
+                               name="q43">
+                        <span class="input-group-text">mg/dL</span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12 mb-1">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="q44">Glycémie capillaire lue avec YSI 2500 : </span>
+                        <input type="number" class="form-control"  value="{{$dmPatient->consent->crf->q44}}"
+                               aria-label="q44" aria-describedby="q44"
+                               name="q44">
+                        <span class="input-group-text">mg/dL</span>
                     </div>
                 </div>
             </div>
