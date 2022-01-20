@@ -1511,10 +1511,6 @@
                                                     de glycémie et bandelettes Log</a>
                                             @endif
                                         @endcan
-                                        @if($dmPatient->consent->consent_state && isset($dmPatient->consent->crf))
-                                            <a href="{{route('crfs.print',["dmPatient"=>$dmPatient])}}"
-                                               class="btn me-1 mb-1 text-white" style="background-color: #20a49a">Imprimer</a>
-                                        @endif
                                         <button type="submit" class="btn btn-primary me-1 mb-1"
                                                 style="background-color: #0d4c92">
                                             Modifier les informations

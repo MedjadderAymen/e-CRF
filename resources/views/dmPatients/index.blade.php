@@ -50,6 +50,7 @@
                                     <th>Date</th>
                                     <th>heure</th>
                                     <th></th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -66,6 +67,11 @@
                                             <td>{{\Carbon\Carbon::parse($dmPatient->consent->signature_hour)->toTimeString()}}</td>
                                             <td><a href="{{route('dmPatients.show',['dmPatient'=>$dmPatient])}}"><i
                                                         class="fa fa-database "></i>voir</a></td>
+
+                                            @if($dmPatient->consent->consent_state && isset($dmPatient->consent->crf))
+                                                <td><a href="{{route('crfs.print',["dmPatient"=>$dmPatient])}}"><i
+                                                            class="bi bi-printer"></i></a></td>
+                                            @endif
                                         </tr>
                                     @endforeach
                                 @else
