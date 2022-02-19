@@ -66,8 +66,8 @@ class CreateCrvesTable extends Migration
             $table->string("q42")->nullable();
             $table->string("q43")->nullable();
             $table->string("q44")->nullable();
-            $table->string("signature_date");
-            $table->string("investigator_name");
+            $table->string("signature_date")->nullable();
+            $table->string("investigator_name")->nullable();
             $table->foreign("consent_id")->on("consents")->references("id")->onDelete("cascade");
             $table->timestamps();
         });

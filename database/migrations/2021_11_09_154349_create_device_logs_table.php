@@ -19,6 +19,7 @@ class CreateDeviceLogsTable extends Migration
             $table->string("q1")->nullable();
             $table->string("q2")->nullable();
             $table->string("q3")->nullable();
+            $table->string("q3_1")->nullable();
             $table->string("q4")->nullable();
             $table->string("q5")->nullable();
             $table->string("q6")->nullable();

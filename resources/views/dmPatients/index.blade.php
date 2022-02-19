@@ -47,6 +47,7 @@
                                         <th>Docteur</th>
                                     @endcan
                                     <th>Consentement éclairé</th>
+                                    <th>Eligibilité</th>
                                     <th>Date</th>
                                     <th>heure</th>
                                     <th></th>
@@ -62,13 +63,14 @@
                                             @if(auth()->user()->hasRole(['Admin', 'Super Admin']))
                                                 <td class="text-bold-500">{{$dmPatient->doctor->user->name}}</td>
                                             @endcan
-                                            <td class="text-bold-500">{{$dmPatient->consent->consent_state ? "oui" : "non"}}</td>
+                                            <td class="text-bold-500">{{$dmPatient->consent->consent_state ? "Accepté" : "Refusé"}}</td>
+                                            <td class="text-bold-500">{{$dmPatient->eligible ? "Oui" : "Non"}}</td>
                                             <td>{{\Carbon\Carbon::parse($dmPatient->consent->signature_date)->toDateString()}}</td>
                                             <td>{{\Carbon\Carbon::parse($dmPatient->consent->signature_hour)->toTimeString()}}</td>
                                             <td><a href="{{route('dmPatients.show',['dmPatient'=>$dmPatient])}}"><i
                                                         class="fa fa-database "></i>voir</a></td>
 
-                                            @if($dmPatient->consent->consent_state && isset($dmPatient->consent->crf))
+                                            @if($dmPatient->consent->consent_state && isset($dmPatient->consent->crf) && $dmPatient->eligible)
                                                 <td><a href="{{route('crfs.print',["dmPatient"=>$dmPatient])}}" target="_blank"><i
                                                             class="bi bi-printer"></i></a></td>
                                             @endif

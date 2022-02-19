@@ -42,7 +42,7 @@
                             <a class="nav-link active" id="consent-tab" data-bs-toggle="tab" href="#consent"
                                role="tab" aria-controls="consent" aria-selected="true">Consentement éclairé</a>
                         </li>
-                        @if($dmPatient->consent->consent_state && isset($dmPatient->consent->crf))
+                        @if($dmPatient->consent->consent_state && isset($dmPatient->consent->crf) && $dmPatient->eligible)
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link " id="crf-tab" data-bs-toggle="tab" href="#crf"
                                    role="tab" aria-controls="crf" aria-selected="false">Cahier d'observation</a>
@@ -330,7 +330,7 @@
                                 <hr>
                             </form>
                         </div>
-                        @if($dmPatient->consent->crf != null)
+                        @if($dmPatient->consent->crf != null && $dmPatient->eligible)
                             <div class="tab-pane fade " id="crf" role="tabpanel"
                                  aria-labelledby="crf-tab">
                                 <form action="{{route('crfs.update',['crf'=>$dmPatient->consent->crf])}}" method="POST"
@@ -1528,16 +1528,15 @@
                                             <div class="input-group mb-3">
                                         <span class="input-group-text"
                                               id="q2">Type de lecteur :</span>
-                                                <input type="text" class="form-control" placeholder="..."
+                                                <input type="text" class="form-control" value="VITAL CHECK® MM-1200" disabled
                                                        aria-label="q2" aria-describedby="q2"
-                                                       value="{{$dmPatient->consent->deviceLog->q2}}"
                                                        name="q2">
                                             </div>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-lg-12 mb-1">
+                                        <div class="col-lg-6 mb-1">
                                             <div class="input-group mb-3">
                                         <span class="input-group-text"
                                               id="q3">Numéro de série :</span>
@@ -1547,6 +1546,18 @@
                                                        name="q3">
                                             </div>
                                         </div>
+
+                                        <div class="col-lg-6 mb-1">
+                                            <div class="input-group mb-3">
+                                        <span class="input-group-text"
+                                              id="q3_1">Numéro de série :</span>
+                                                <input type="text" class="form-control" placeholder="..."
+                                                       aria-label="q3_1" aria-describedby="q3_1"
+                                                       value="{{$dmPatient->consent->deviceLog->q3_1}}"
+                                                       name="q3_1">
+                                            </div>
+                                        </div>
+
                                     </div>
                                     <br>
                                     <div class="row">
@@ -1643,7 +1654,7 @@
                                             <div class="input-group mb-3">
                                         <span class="input-group-text"
                                               id="q8">Numéro du lot :</span>
-                                                <input type="number" class="form-control" placeholder="..."
+                                                <input type="text" class="form-control" placeholder="..."
                                                        aria-label="q8" aria-describedby="q8"
                                                        value="{{$dmPatient->consent->deviceLog->q8}}"
                                                        name="q8">

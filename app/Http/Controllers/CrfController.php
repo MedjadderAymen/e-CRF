@@ -46,8 +46,28 @@ class CrfController extends Controller
             $request->all()
         );
 
+        if ($request['q1'] == "non" || $request['q2'] == "non" || $request['q3'] == "non" || $request['q4'] == "non") {
+            $dmPatient->eligible = false;
+            $dmPatient->save();
+
+            $dmPatient->consent->crf->q5 = null;
+            $dmPatient->consent->crf->q6 = null;
+            $dmPatient->consent->crf->q7 = null;
+            $dmPatient->consent->crf->q8 = null;
+            $dmPatient->consent->crf->q9 = null;
+            $dmPatient->consent->crf->q39 = null;
+            $dmPatient->consent->crf->q40 = null;
+            $dmPatient->consent->crf->save();
+
+        }
+
+        if ($request['q5'] == "oui" || $request['q6'] == "oui" || $request['q7'] == "oui" || $request['q9'] == "oui" || $request['q39'] == "oui" || $request['q40'] == "oui") {
+            $dmPatient->eligible = false;
+            $dmPatient->save();
+        }
+
         if ($request['q18'] != null) {
-            foreach ($request['q18'] as $key=>$value) {
+            foreach ($request['q18'] as $key => $value) {
 
                 $dmPatient->consent->crf->insulines()->create([
                     'tag' => $value
@@ -80,8 +100,8 @@ class CrfController extends Controller
     {
         abort_if(Gate::denies("crf_show"), 403);
 
-        $date=[
-          "dmPatient"=>$dmPatient
+        $date = [
+            "dmPatient" => $dmPatient
         ];
 
         return view('crf.print', $date);
@@ -117,7 +137,7 @@ class CrfController extends Controller
         $crf->insulines()->delete();
 
         if ($request['q18'] != null) {
-            foreach ($request['q18'] as $key=>$value) {
+            foreach ($request['q18'] as $key => $value) {
 
                 $crf->insulines()->create([
                     'tag' => $value
