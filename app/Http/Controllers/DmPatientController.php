@@ -61,7 +61,6 @@ class DmPatientController extends Controller
 
         $data = Validator::make($request->all(), [
             'initial' => ['string', 'required', 'max:255'],
-            'identification' => ['string', 'required', 'max:255'],
             'consent_state' => ['string', 'required', 'max:255'],
             'signature_date' => ['string', 'required', 'max:255'],
             'signature_hour' => ['string', 'required', 'max:255'],
@@ -79,7 +78,6 @@ class DmPatientController extends Controller
             $dm_patient = dmPatient::create([
                 "doctor_id" => Auth::user()->doctor->id,
                 "initial" => $request["initial"],
-                "identification" => $request["identification"],
             ]);
 
             switch ($request['consent_state']) {
@@ -167,7 +165,6 @@ class DmPatientController extends Controller
 
         $data = Validator::make($request->all(), [
             'initial' => ['string', 'required', 'max:255'],
-            'identification' => ['string', 'required', 'max:255'],
             'consent_state' => ['string', 'required', 'max:255'],
             'signature_date' => ['string', 'required', 'max:255'],
             'signature_hour' => ['string', 'required', 'max:255'],
@@ -184,7 +181,6 @@ class DmPatientController extends Controller
 
             $dmPatient->doctor_id = Auth::user()->doctor->id;
             $dmPatient->initial = $request["initial"];
-            $dmPatient->identification = $request["identification"];
 
             $dmPatient->save();
 

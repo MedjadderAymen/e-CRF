@@ -103,7 +103,7 @@
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="identification">identification</span>
                                             <input type="text" class="form-control" placeholder="..."
-                                                   value="{{$dmPatient->identification}}"
+                                                   value="{{$dmPatient->id}}" disabled
                                                    aria-label="identification" aria-describedby="identification"
                                                    required
                                                    name="identification">
@@ -1620,7 +1620,7 @@
                                               id="identification">Identité du patient participant :</span>
                                                 <input type="text" class="form-control" placeholder="..."
                                                        aria-label="identification" aria-describedby="identification"
-                                                       disabled value="{{$dmPatient->identification}}">
+                                                       disabled value="{{$dmPatient->id}}">
                                             </div>
                                         </div>
                                     </div>
@@ -1770,7 +1770,7 @@
                                         <span class="input-group-text"
                                               id="identification">ID Patient :</span>
                                                     <input type="text" class="form-control" placeholder="..." disabled
-                                                           value="{{$dmPatient->identification}}"
+                                                           value="{{$dmPatient->id}}"
                                                            aria-label="identification"
                                                            aria-describedby="identification">
                                                 </div>

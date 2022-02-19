@@ -24,7 +24,7 @@
             <div class="row justify-content-end align-right">
                 <div class="col-6 text-center">
                     <h5>
-                        N° Patient :{{$dmPatient->identification}}
+                        N° Patient :{{$dmPatient->id}}
                     </h5>
                 </div>
             </div>
@@ -171,7 +171,7 @@
                     <tr>
                         <td colspan="4">Etude Vital Check® 2021/ISO</td>
                         <td colspan="4">VISITE D’INCLUSION</td>
-                        <td colspan="4">N° Patient {{$dmPatient->identification}}</td>
+                        <td colspan="4">N° Patient {{$dmPatient->id}}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -387,7 +387,7 @@
                     <tr>
                         <td colspan="4">Etude Vital Check® 2021/ISO</td>
                         <td colspan="4">VISITE D’INCLUSION</td>
-                        <td colspan="4">N° Patient {{$dmPatient->identification}}</td>
+                        <td colspan="4">N° Patient {{$dmPatient->id}}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -584,7 +584,7 @@
                     <tr>
                         <td colspan="4">Etude Vital Check® 2021/ISO</td>
                         <td colspan="4">VISITE D’INCLUSION</td>
-                        <td colspan="4">N° Patient {{$dmPatient->identification}}</td>
+                        <td colspan="4">N° Patient {{$dmPatient->id}}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -761,7 +761,7 @@
                     <tr>
                         <td colspan="4">Etude Vital Check® 2021/ISO</td>
                         <td colspan="4">VISITE D’INCLUSION</td>
-                        <td colspan="4">N° Patient {{$dmPatient->identification}}</td>
+                        <td colspan="4">N° Patient {{$dmPatient->id}}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -1005,7 +1005,7 @@
                     <tr>
                         <td colspan="4">Etude Vital Check® 2021/ISO</td>
                         <td colspan="4">VISITE D’INCLUSION</td>
-                        <td colspan="4">N° Patient {{$dmPatient->identification}}</td>
+                        <td colspan="4">N° Patient {{$dmPatient->id}}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -1187,7 +1187,7 @@
                     <tr>
                         <td colspan="4">Etude Vital Check® 2021/ISO</td>
                         <td colspan="4">VISITE D’INCLUSION</td>
-                        <td colspan="4">N° Patient {{$dmPatient->identification}}</td>
+                        <td colspan="4">N° Patient {{$dmPatient->id}}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -1362,7 +1362,7 @@
                     <tr>
                         <td colspan="4">Etude Vital Check® 2021/ISO</td>
                         <td colspan="4">VISITE D’INCLUSION</td>
-                        <td colspan="4">N° Patient {{$dmPatient->identification}}</td>
+                        <td colspan="4">N° Patient {{$dmPatient->id}}</td>
                     </tr>
                     </tbody>
                 </table>

@@ -58,7 +58,7 @@
                                     @foreach($dmPatients as $dmPatient)
                                         <tr>
                                             <td class="text-bold-500">{{$dmPatient->initial}}</td>
-                                            <td>{{$dmPatient->identification}}</td>
+                                            <td>{{$dmPatient->id}}</td>
                                             @if(auth()->user()->hasRole(['Admin', 'Super Admin']))
                                                 <td class="text-bold-500">{{$dmPatient->doctor->user->name}}</td>
                                             @endcan
@@ -69,7 +69,7 @@
                                                         class="fa fa-database "></i>voir</a></td>
 
                                             @if($dmPatient->consent->consent_state && isset($dmPatient->consent->crf))
-                                                <td><a href="{{route('crfs.print',["dmPatient"=>$dmPatient])}}"><i
+                                                <td><a href="{{route('crfs.print',["dmPatient"=>$dmPatient])}}" target="_blank"><i
                                                             class="bi bi-printer"></i></a></td>
                                             @endif
                                         </tr>

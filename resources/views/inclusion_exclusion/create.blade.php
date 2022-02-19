@@ -17,7 +17,7 @@
                         <li class="breadcrumb-item"><a href="{{route("dmPatients.show",['dmPatient'=>$dmPatient])}}">DM
                                 Patient</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Critères Inclusion/Exclusion
-                            [{{$dmPatient->identification}}]
+                            [N° Patient : {{$dmPatient->id}}]
                         </li>
                     </ol>
                 </nav>

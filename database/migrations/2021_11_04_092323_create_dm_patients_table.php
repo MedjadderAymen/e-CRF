@@ -17,7 +17,6 @@ class CreateDmPatientsTable extends Migration
             $table->bigIncrements("id");
             $table->unsignedBigInteger("doctor_id")->nullable();
             $table->string("initial");
-            $table->string("identification");
             $table->foreign("doctor_id")->on("doctors")->references("id")->onDelete("set null");
             $table->timestamps();
         });

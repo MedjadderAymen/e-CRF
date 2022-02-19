@@ -16,7 +16,7 @@
                         <li class="breadcrumb-item"><a href="{{route("dmPatients.index")}}">List DMs</a></li>
                         <li class="breadcrumb-item"><a href="{{route("dmPatients.show",['dmPatient'=>$dmPatient])}}">DM
                                 Patient</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Analyses Glycémie [{{$dmPatient->identification}}]
+                        <li class="breadcrumb-item active" aria-current="page">Analyses Glycémie [N° Patient : {{$dmPatient->id}}]
                         </li>
                     </ol>
                 </nav>

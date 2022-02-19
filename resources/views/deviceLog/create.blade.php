@@ -17,7 +17,7 @@
                         <li class="breadcrumb-item"><a href="{{route("dmPatients.show",['dmPatient'=>$dmPatient])}}">DM
                                 Patient</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Lecteur de glycémie et bandelettes - Log
-                            [{{$dmPatient->identification}}]
+                            [N° Patient : {{$dmPatient->id}}]
                         </li>
                     </ol>
                 </nav>
@@ -130,7 +130,7 @@
                                         <span class="input-group-text"
                                               id="identification">Identité du patient participant :</span>
                                         <input type="text" class="form-control" placeholder="..."
-                                               aria-label="identification" aria-describedby="identification" disabled value="{{$dmPatient->identification}}">
+                                               aria-label="identification" aria-describedby="identification" disabled value="{{$dmPatient->id}}">
                                     </div>
                                 </div>
                             </div>

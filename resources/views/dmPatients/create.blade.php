@@ -46,20 +46,12 @@
                             <hr>
                             <br>
                             <div class="row">
-                                <div class="col-lg-6 mb-1">
+                                <div class="col-lg-12 mb-1">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="initial">Initials du patient</span>
                                         <input type="text" class="form-control" placeholder="..."
                                                aria-label="initial" aria-describedby="initial" required
                                                name="initial">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-1">
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="identification">identification</span>
-                                        <input type="text" class="form-control" placeholder="..."
-                                               aria-label="identification" aria-describedby="identification"  required
-                                               name="identification">
                                     </div>
                                 </div>
                             </div>

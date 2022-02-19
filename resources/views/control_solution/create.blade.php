@@ -16,7 +16,7 @@
                         <li class="breadcrumb-item"><a href="{{route("dmPatients.index")}}">List DMs</a></li>
                         <li class="breadcrumb-item"><a href="{{route("dmPatients.show",['dmPatient'=>$dmPatient])}}">DM
                                 Patient</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Solution de contrôle et vérification pré test [{{$dmPatient->identification}}]
+                        <li class="breadcrumb-item active" aria-current="page">Solution de contrôle et vérification pré test [N° Patient : {{$dmPatient->id}}]
                         </li>
                     </ol>
                 </nav>
@@ -74,7 +74,7 @@
                                     <div class="input-group mb-3">
                                         <span class="input-group-text"
                                               id="identification">ID Patient :</span>
-                                        <input type="text" class="form-control" placeholder="..." disabled value="{{$dmPatient->identification}}"
+                                        <input type="text" class="form-control" placeholder="..." disabled value="{{$dmPatient->id}}"
                                                aria-label="identification" aria-describedby="identification">
                                     </div>
                                 </div>
