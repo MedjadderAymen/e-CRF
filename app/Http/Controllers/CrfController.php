@@ -42,11 +42,19 @@ class CrfController extends Controller
 
         abort_if(Gate::denies("crf_create"), 403);
 
-        // $request['q14'] = $request['q141'] ?? $request['q142'];
-
         $dmPatient->consent->crf()->create(
             $request->all()
         );
+
+        if ($request['q18'] != null) {
+            foreach ($request['q18'] as $key=>$value) {
+
+                $dmPatient->consent->crf->insulines()->create([
+                    'tag' => $value
+                ]);
+
+            }
+        }
 
         return redirect()->route('dmPatients.show', ['dmPatient' => $dmPatient]);
     }
@@ -105,6 +113,18 @@ class CrfController extends Controller
 
         $crf->updateOrFail($request->all());
         $crf->save();
+
+        $crf->insulines()->delete();
+
+        if ($request['q18'] != null) {
+            foreach ($request['q18'] as $key=>$value) {
+
+                $crf->insulines()->create([
+                    'tag' => $value
+                ]);
+
+            }
+        }
 
         return redirect()->route('dmPatients.show', ['dmPatient' => $crf->consent->dmPatient]);
 

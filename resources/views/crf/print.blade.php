@@ -834,50 +834,22 @@
                 Si oui,
             </h6>
             <div class="row">
-                <div class="col-lg-4 mb-1">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q18"
-                               @if($dmPatient->consent->crf->q18 == "Insuline Lente") checked
-                               @endif
-                               id="q181" value="Insuline Lente">
-                        <label class="form-check-label" for="q181">
-                            Insuline Lente
-                        </label>
+                @foreach(["Insuline Lente","Insuline Semi Lente","Insuline rapide","Insuline pré mélangée"] as $array)
+                    <div class="col-lg-3 mb-1">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="q18[]"
+                                   @foreach($dmPatient->consent->crf->insulines as $insuline)
+                                   @if(strcasecmp($insuline->tag,$array)==0)
+                                   checked
+                                   @endif
+                                   @endforeach
+                                   id="q18{{$array}}" value="{{$array}}">
+                            <label class="form-check-label" for="q18{{$array}}">
+                                {{$array}}
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 mb-1">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q18"
-                               @if($dmPatient->consent->crf->q18 == "Insuline Semi Lente") checked
-                               @endif
-                               id="q182" value="Insuline Semi Lente">
-                        <label class="form-check-label" for="q182">
-                            Insuline Semi Lente
-                        </label>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-1">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q18"
-                               @if($dmPatient->consent->crf->q18 == "Insuline rapide") checked
-                               @endif
-                               id="q183" value="Insuline rapide">
-                        <label class="form-check-label" for="q183">
-                            Insuline rapide
-                        </label>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-1">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q18"
-                               @if($dmPatient->consent->crf->q18 == "Insuline pré mélangée ") checked
-                               @endif
-                               id="q183" value="Insuline pré mélangée ">
-                        <label class="form-check-label" for="q183">
-                            Insuline pré mélangée
-                        </label>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <h6>
                 Si oui, nombre d’injection d’insuline par jour :

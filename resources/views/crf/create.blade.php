@@ -611,7 +611,7 @@
                             <div class="row">
                                 <div class="col-lg-3 mb-1">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="q18"
+                                        <input class="form-check-input" type="checkbox" name="q18[]"
                                                id="q181" value="Insuline Lente">
                                         <label class="form-check-label" for="q181">
                                             Insuline Lente
@@ -620,7 +620,7 @@
                                 </div>
                                 <div class="col-lg-3 mb-1">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="q18"
+                                        <input class="form-check-input" type="checkbox" name="q18[]"
                                                id="q182" value="Insuline Semi Lente">
                                         <label class="form-check-label" for="q182">
                                             Insuline Semi Lente
@@ -629,7 +629,7 @@
                                 </div>
                                 <div class="col-lg-3 mb-1">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="q18"
+                                        <input class="form-check-input" type="checkbox" name="q18[]"
                                                id="q183" value="Insuline rapide">
                                         <label class="form-check-label" for="q183">
                                             Insuline rapide
@@ -638,7 +638,7 @@
                                 </div>
                                 <div class="col-lg-3 mb-1">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="q18"
+                                        <input class="form-check-input" type="checkbox" name="q18[]"
                                                id="q184" value="Insuline pré mélangée">
                                         <label class="form-check-label" for="q184">
                                             Insuline pré mélangée
