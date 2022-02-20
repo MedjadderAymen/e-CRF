@@ -538,7 +538,7 @@
                                             <div class="input-group mb-3">
                                         <span class="input-group-text"
                                               id="q152">Hématocrite :</span>
-                                                <input type="number" class="form-control" placeholder="..."
+                                                <input type="number" class="form-control" placeholder="..." step="0.1"
                                                        aria-label="q152" aria-describedby="q152"
                                                        name="q152">
                                                 <span class="input-group-text">%</span>
