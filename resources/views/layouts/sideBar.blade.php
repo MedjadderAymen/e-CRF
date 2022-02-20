@@ -27,7 +27,7 @@
                     <li class="sidebar-item has-sub  {{request()->routeIs('dmPatients*') ? "active" : ""}} ">
                         <a href="#" class='sidebar-link'>
                             <i class="bi bi-file-break"></i>
-                            <span>Dossiers médiceaux</span>
+                            <span>Dossiers médicaux</span>
                         </a>
                         <ul class="submenu {{request()->routeIs('dmPatients*') ? "active" : ""}} ">
 
@@ -35,7 +35,7 @@
                                 <a href="{{route("dmPatients.create")}}">Nouveau Dossier</a>
                             </li>
                             <li class="submenu-item  {{request()->routeIs('dmPatients.index') ? "active" : ""}} ">
-                                <a href="{{route("dmPatients.index")}}">List des dossiers</a>
+                                <a href="{{route("dmPatients.index")}}">Liste des dossiers</a>
                             </li>
                         </ul>
                     </li>

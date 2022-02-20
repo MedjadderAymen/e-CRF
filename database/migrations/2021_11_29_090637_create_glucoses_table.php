@@ -25,22 +25,40 @@ class CreateGlucosesTable extends Migration
             $table->string("analyse_date");
 
             $table->string("ysi_one_value")->nullable();
+
             $table->string("ysi_one_value_lot_a_gluco_a_bandelette")->nullable();
             $table->string("ysi_one_value_lot_a_gluco_a_bandelette_result")->nullable();
             $table->string("ysi_one_value_lot_a_gluco_b_bandelette")->nullable();
             $table->string("ysi_one_value_lot_a_gluco_b_bandelette_result")->nullable();
 
-            $table->string("ysi_two_value")->nullable();
             $table->string("ysi_two_value_lot_b_gluco_a_bandelette")->nullable();
             $table->string("ysi_two_value_lot_b_gluco_a_bandelette_result")->nullable();
             $table->string("ysi_two_value_lot_b_gluco_b_bandelette")->nullable();
             $table->string("ysi_two_value_lot_b_gluco_b_bandelette_result")->nullable();
 
-            $table->string("ysi_three_value")->nullable();
             $table->string("ysi_three_value_lot_c_gluco_a_bandelette")->nullable();
             $table->string("ysi_three_value_lot_c_gluco_a_bandelette_result")->nullable();
             $table->string("ysi_three_value_lot_c_gluco_b_bandelette")->nullable();
             $table->string("ysi_three_value_lot_c_gluco_b_bandelette_result")->nullable();
+
+            //*****************************************************************************************************************************************
+
+            $table->string("edited_sample_value")->nullable();
+
+            $table->string("edited_sample_value_lot_a_gluco_a_bandelette")->nullable();
+            $table->string("edited_sample_value_lot_a_gluco_a_bandelette_result")->nullable();
+            $table->string("edited_sample_value_lot_a_gluco_b_bandelette")->nullable();
+            $table->string("edited_sample_value_lot_a_gluco_b_bandelette_result")->nullable();
+
+            $table->string("edited_sample_value_lot_b_gluco_a_bandelette")->nullable();
+            $table->string("edited_sample_value_lot_b_gluco_a_bandelette_result")->nullable();
+            $table->string("edited_sample_value_lot_b_gluco_b_bandelette")->nullable();
+            $table->string("edited_sample_value_lot_b_gluco_b_bandelette_result")->nullable();
+
+            $table->string("edited_sample_value_lot_c_gluco_a_bandelette")->nullable();
+            $table->string("edited_sample_value_lot_c_gluco_a_bandelette_result")->nullable();
+            $table->string("edited_sample_value_lot_c_gluco_b_bandelette")->nullable();
+            $table->string("edited_sample_value_lot_c_gluco_b_bandelette_result")->nullable();
 
             $table->string("identity")->default("glyc vitalcheck");
             $table->foreign("consent_id")->on("consents")->references("id")->onDelete("cascade");

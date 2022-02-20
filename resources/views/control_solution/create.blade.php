@@ -62,8 +62,8 @@
                                         <label class="input-group-text"
                                                for="inputGroupSelect01" >Glucomètre ( préciser A ou B) :</label>
                                         <select class="form-select" id="inputGroupSelect01" name="q1">
-                                            <option value="Numéro de série A">Numéro de série A</option>
-                                            <option value="Numéro de série B">Numéro de série B</option>
+                                            <option value="Glucomètre A">Glucomètre A</option>
+                                            <option value="Glucomètre B">Glucomètre B</option>
                                         </select>
                                     </div>
                                 </div>

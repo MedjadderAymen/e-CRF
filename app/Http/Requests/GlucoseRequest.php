@@ -32,23 +32,39 @@ class GlucoseRequest extends FormRequest
             'solution_control_b' => ['required', 'string'],
             'analyse_date' => ['required', 'string'],
 
-            "ysi_one_value" => ['required', 'string'],
-            "ysi_one_value_lot_a_gluco_a_bandelette" => ['required', 'string'],
-            "ysi_one_value_lot_a_gluco_a_bandelette_result" => ['required', 'string'],
-            "ysi_one_value_lot_a_gluco_b_bandelette" => ['required', 'string'],
-            "ysi_one_value_lot_a_gluco_b_bandelette_result" => ['required', 'string'],
+            "ysi_one_value" => [],
+            "ysi_one_value_lot_a_gluco_a_bandelette" => [],
+            "ysi_one_value_lot_a_gluco_a_bandelette_result" => [],
+            "ysi_one_value_lot_a_gluco_b_bandelette" => [],
+            "ysi_one_value_lot_a_gluco_b_bandelette_result" => [],
 
-            "ysi_two_value" => ['required', 'string'],
-            "ysi_two_value_lot_b_gluco_a_bandelette" => ['required', 'string'],
-            "ysi_two_value_lot_b_gluco_a_bandelette_result" => ['required', 'string'],
-            "ysi_two_value_lot_b_gluco_b_bandelette" => ['required', 'string'],
-            "ysi_two_value_lot_b_gluco_b_bandelette_result" => ['required', 'string'],
+            "ysi_two_value_lot_b_gluco_a_bandelette" => [],
+            "ysi_two_value_lot_b_gluco_a_bandelette_result" => [],
+            "ysi_two_value_lot_b_gluco_b_bandelette" => [],
+            "ysi_two_value_lot_b_gluco_b_bandelette_result" => [],
 
-            "ysi_three_value" => ['required', 'string'],
-            "ysi_three_value_lot_c_gluco_a_bandelette" => ['required', 'string'],
-            "ysi_three_value_lot_c_gluco_a_bandelette_result" => ['required', 'string'],
-            "ysi_three_value_lot_c_gluco_b_bandelette" => ['required', 'string'],
-            "ysi_three_value_lot_c_gluco_b_bandelette_result" => ['required', 'string'],
+            "ysi_three_value_lot_c_gluco_a_bandelette" => [],
+            "ysi_three_value_lot_c_gluco_a_bandelette_result" => [],
+            "ysi_three_value_lot_c_gluco_b_bandelette" => [],
+            "ysi_three_value_lot_c_gluco_b_bandelette_result" => [],
+
+            //***************************************************************************************************
+
+            "edited_sample_value" => [],
+            "edited_sample_value_lot_a_gluco_a_bandelette" => [],
+            "edited_sample_value_lot_a_gluco_a_bandelette_result" => [],
+            "edited_sample_value_lot_a_gluco_b_bandelette" => [],
+            "edited_sample_value_lot_a_gluco_b_bandelette_result" => [],
+
+            "edited_sample_value_lot_b_gluco_a_bandelette" => [],
+            "edited_sample_value_lot_b_gluco_a_bandelette_result" => [],
+            "edited_sample_value_lot_b_gluco_b_bandelette" => [],
+            "edited_sample_value_lot_b_gluco_b_bandelette_result" => [],
+
+            "edited_sample_value_lot_c_gluco_a_bandelette" => [],
+            "edited_sample_value_lot_c_gluco_a_bandelette_result" => [],
+            "edited_sample_value_lot_c_gluco_b_bandelette" => [],
+            "edited_sample_value_lot_c_gluco_b_bandelette_result" => [],
 
         ];
     }

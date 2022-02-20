@@ -33,6 +33,26 @@ class Glucose extends Model
         "ysi_three_value_lot_c_gluco_a_bandelette_result",
         "ysi_three_value_lot_c_gluco_b_bandelette",
         "ysi_three_value_lot_c_gluco_b_bandelette_result",
+
+        //******************************************************************************
+
+        "edited_sample_value",
+
+        "edited_sample_value_lot_a_gluco_a_bandelette",
+        "edited_sample_value_lot_a_gluco_a_bandelette_result",
+        "edited_sample_value_lot_a_gluco_b_bandelette",
+        "edited_sample_value_lot_a_gluco_b_bandelette_result",
+
+        "edited_sample_value_lot_b_gluco_a_bandelette",
+        "edited_sample_value_lot_b_gluco_a_bandelette_result",
+        "edited_sample_value_lot_b_gluco_b_bandelette",
+        "edited_sample_value_lot_b_gluco_b_bandelette_result",
+
+        "edited_sample_value_lot_c_gluco_a_bandelette",
+        "edited_sample_value_lot_c_gluco_a_bandelette_result",
+        "edited_sample_value_lot_c_gluco_b_bandelette",
+        "edited_sample_value_lot_c_gluco_b_bandelette_result",
+
     ];
 
     public function consent(){

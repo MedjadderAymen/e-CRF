@@ -48,7 +48,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <h6>
-                                        CRITERE D'INCLUSION
+                                        CRITERES D'INCLUSION
                                     </h6>
                                 </div>
                             </div>
@@ -175,7 +175,7 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <h6>
-                                            CRITERE DE NON INCLUSION
+                                            CRITERES DE NON INCLUSION
                                         </h6>
                                     </div>
                                 </div>

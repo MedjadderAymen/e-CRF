@@ -134,7 +134,7 @@
                                 <div class="col-lg-6 mb-1">
                                     <div class="input-group mb-3">
                                         <label class="input-group-text"
-                                               for="inputGroupSelect01" >Lot A - Gluco A :</label>
+                                               for="inputGroupSelect01" >Lot 1 - Gluco A :</label>
                                         <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11"
                                                aria-label="text" aria-describedby="ysi_one_value_lot_a_gluco_a_bandelette"
                                                name="ysi_one_value_lot_a_gluco_a_bandelette">
@@ -156,7 +156,7 @@
                                 <div class="col-lg-6 mb-1">
                                     <div class="input-group mb-3">
                                         <label class="input-group-text"
-                                               for="inputGroupSelect01" >Lot A - Gluco B :</label>
+                                               for="inputGroupSelect01" >Lot 1 - Gluco B :</label>
                                         <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11"
                                                aria-label="text" aria-describedby="ysi_one_value_lot_a_gluco_b_bandelette"
                                                name="ysi_one_value_lot_a_gluco_b_bandelette">
@@ -174,32 +174,11 @@
                                 </div>
                             </div>
                             <br>
-                            <hr>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <h6>
-                                        YSI 2
-                                    </h6>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-12 mb-1">
-                                    <div class="input-group mb-3">
-                                        <label class="input-group-text"
-                                               for="inputGroupSelect01">Valeur YSI 2:</label>
-                                        <input type="number" class="form-control" placeholder="..."
-                                               aria-label="text" aria-describedby="ysi_two_value"
-                                               name="ysi_two_value">
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
                             <div class="row">
                                 <div class="col-lg-6 mb-1">
                                     <div class="input-group mb-3">
                                         <label class="input-group-text"
-                                               for="inputGroupSelect01" >Lot B - Gluco A :</label>
+                                               for="inputGroupSelect01" >Lot 2 - Gluco A :</label>
                                         <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11"
                                                aria-label="text" aria-describedby="ysi_two_value_lot_b_gluco_a_bandelette"
                                                name="ysi_two_value_lot_b_gluco_a_bandelette">
@@ -221,7 +200,7 @@
                                 <div class="col-lg-6 mb-1">
                                     <div class="input-group mb-3">
                                         <label class="input-group-text"
-                                               for="inputGroupSelect01" >Lot B - Gluco B :</label>
+                                               for="inputGroupSelect01" >Lot 2 - Gluco B :</label>
                                         <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11"
                                                aria-label="text" aria-describedby="ysi_two_value_lot_b_gluco_b_bandelette"
                                                name="ysi_two_value_lot_b_gluco_b_bandelette">
@@ -239,32 +218,11 @@
                                 </div>
                             </div>
                             <br>
-                            <hr>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <h6>
-                                        YSI 3
-                                    </h6>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-12 mb-1">
-                                    <div class="input-group mb-3">
-                                        <label class="input-group-text"
-                                               for="inputGroupSelect01">Valeur YSI 3:</label>
-                                        <input type="number" class="form-control" placeholder="..."
-                                               aria-label="text" aria-describedby="ysi_three_value"
-                                               name="ysi_three_value">
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
                             <div class="row">
                                 <div class="col-lg-6 mb-1">
                                     <div class="input-group mb-3">
                                         <label class="input-group-text"
-                                               for="inputGroupSelect01" >Lot C - Gluco A :</label>
+                                               for="inputGroupSelect01" >Lot 3 - Gluco A :</label>
                                         <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11"
                                                aria-label="text" aria-describedby="ysi_three_value_lot_c_gluco_a_bandelette"
                                                name="ysi_three_value_lot_c_gluco_a_bandelette">
@@ -286,7 +244,7 @@
                                 <div class="col-lg-6 mb-1">
                                     <div class="input-group mb-3">
                                         <label class="input-group-text"
-                                               for="inputGroupSelect01" >Lot C - Gluco B :</label>
+                                               for="inputGroupSelect01" >Lot 3 - Gluco B :</label>
                                         <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11"
                                                aria-label="text" aria-describedby="ysi_three_value_lot_c_gluco_b_bandelette"
                                                name="ysi_three_value_lot_c_gluco_b_bandelette">
@@ -304,6 +262,164 @@
                                 </div>
                             </div>
                             <br>
+                            <hr>
+
+                            <div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h6>
+                                            Echantillon Modifié
+                                        </h6>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-12 mb-1">
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text"
+                                                   for="inputGroupSelect01">Valeur YSI:</label>
+                                            <input type="number" class="form-control" placeholder="..."
+                                                   aria-label="text" aria-describedby="edited_sample_value"
+                                                   name="edited_sample_value">
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-6 mb-1">
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text"
+                                                   for="inputGroupSelect01" >Lot 1 - Gluco A :</label>
+                                            <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11"
+                                                   aria-label="text" aria-describedby="edited_sample_value_lot_a_gluco_a_bandelette"
+                                                   name="edited_sample_value_lot_a_gluco_a_bandelette">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-1">
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text"
+                                                   for="inputGroupSelect01">Résultat :</label>
+                                            <input type="number" class="form-control" placeholder="..."
+                                                   aria-label="text" aria-describedby="edited_sample_value_lot_a_gluco_a_bandelette_result"
+                                                   name="edited_sample_value_lot_a_gluco_a_bandelette_result">
+                                            <span class="input-group-text">mg/dL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-6 mb-1">
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text"
+                                                   for="inputGroupSelect01" >Lot 1 - Gluco B :</label>
+                                            <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11"
+                                                   aria-label="text" aria-describedby="edited_sample_value_lot_a_gluco_b_bandelette"
+                                                   name="edited_sample_value_lot_a_gluco_b_bandelette">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-1">
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text"
+                                                   for="inputGroupSelect01">Résultat :</label>
+                                            <input type="number" class="form-control" placeholder="..."
+                                                   aria-label="text" aria-describedby="edited_sample_value_lot_a_gluco_b_bandelette_result"
+                                                   name="edited_sample_value_lot_a_gluco_b_bandelette_result">
+                                            <span class="input-group-text">mg/dL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-6 mb-1">
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text"
+                                                   for="inputGroupSelect01" >Lot 2 - Gluco A :</label>
+                                            <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11"
+                                                   aria-label="text" aria-describedby="edited_sample_value_lot_b_gluco_a_bandelette"
+                                                   name="edited_sample_value_lot_b_gluco_a_bandelette">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-1">
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text"
+                                                   for="inputGroupSelect01">Résultat :</label>
+                                            <input type="number" class="form-control" placeholder="..."
+                                                   aria-label="text" aria-describedby="edited_sample_value_lot_b_gluco_a_bandelette_result"
+                                                   name="edited_sample_value_lot_b_gluco_a_bandelette_result">
+                                            <span class="input-group-text">mg/dL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-6 mb-1">
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text"
+                                                   for="inputGroupSelect01" >Lot 2 - Gluco B :</label>
+                                            <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11"
+                                                   aria-label="text" aria-describedby="edited_sample_value_lot_b_gluco_b_bandelette"
+                                                   name="edited_sample_value_lot_b_gluco_b_bandelette">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-1">
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text"
+                                                   for="inputGroupSelect01">Résultat :</label>
+                                            <input type="number" class="form-control" placeholder="..."
+                                                   aria-label="text" aria-describedby="edited_sample_value_lot_b_gluco_b_bandelette_result"
+                                                   name="edited_sample_value_lot_b_gluco_b_bandelette_result">
+                                            <span class="input-group-text">mg/dL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-6 mb-1">
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text"
+                                                   for="inputGroupSelect01" >Lot 3 - Gluco A :</label>
+                                            <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11"
+                                                   aria-label="text" aria-describedby="edited_sample_value_lot_c_gluco_a_bandelette"
+                                                   name="edited_sample_value_lot_c_gluco_a_bandelette">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-1">
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text"
+                                                   for="inputGroupSelect01">Résultat :</label>
+                                            <input type="number" class="form-control" placeholder="..."
+                                                   aria-label="text" aria-describedby="edited_sample_value_lot_c_gluco_a_bandelette_result"
+                                                   name="edited_sample_value_lot_c_gluco_a_bandelette_result">
+                                            <span class="input-group-text">mg/dL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-6 mb-1">
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text"
+                                                   for="inputGroupSelect01" >Lot 3 - Gluco B :</label>
+                                            <input type="number" class="form-control" placeholder="N° Bandelette" min="1" max="11"
+                                                   aria-label="text" aria-describedby="edited_sample_value_lot_c_gluco_b_bandelette"
+                                                   name="edited_sample_value_lot_c_gluco_b_bandelette">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-1">
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text"
+                                                   for="inputGroupSelect01">Résultat :</label>
+                                            <input type="number" class="form-control" placeholder="..."
+                                                   aria-label="text" aria-describedby="edited_sample_value_lot_c_gluco_b_bandelette_result"
+                                                   name="edited_sample_value_lot_c_gluco_b_bandelette_result">
+                                            <span class="input-group-text">mg/dL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+
                             <hr>
                             <div class="col-sm-12 d-flex justify-content-end">
                                 <button type="submit" class="btn btn-primary me-1 mb-1">

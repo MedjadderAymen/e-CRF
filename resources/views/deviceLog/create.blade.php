@@ -149,11 +149,9 @@
                                     <div class="input-group mb-3">
                                         <label class="input-group-text"
                                                for="q6">Realisation de la lecture :</label>
-                                        <select class="form-select" id="q6" name="q6">
-                                            @foreach($doctors as $doctor)
-                                                <option value="{{$doctor->user->name}}">{{$doctor->user->name}}</option>
-                                            @endforeach
-                                        </select>
+                                        <input type="text" class="form-control" placeholder="..."
+                                               aria-label="q6" aria-describedby="q6"
+                                               name="q6">
                                     </div>
                                 </div>
                             </div>
@@ -210,7 +208,7 @@
                                 <div class="col-lg-12 mb-1">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text"
-                                              id="q10">Date d'ouverture' :</span>
+                                              id="q10">Date d'ouverture :</span>
                                         <input type="date" class="form-control" placeholder="..."
                                                aria-label="q10" aria-describedby="q10"
                                                name="q10">
