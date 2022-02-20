@@ -16,9 +16,9 @@ class doctorSeed extends Seeder
     public function run()
     {
         $user= User::create([
-            'name'=>"medjadder amar",
-            'email'=>"amar.medjadder@vitalcareprod.com",
-            'password'=>Hash::make("password"),
+            'name'=>"doctor",
+            'email'=>"thisis.doctor@vitalcareprod.com",
+            'password'=>Hash::make("vitalcare@dev2022"),
         ]);
 
         $user->doctor()->create([
@@ -26,5 +26,17 @@ class doctorSeed extends Seeder
         ]);
 
         $user->assignRole('Doctor');
+
+        $user= User::create([
+            'name'=>"admin doctor",
+            'email'=>"thisis.admindoctor@vitalcareprod.com",
+            'password'=>Hash::make("vitalcare@dev2022"),
+        ]);
+
+        $user->doctor()->create([
+
+        ]);
+
+        $user->assignRole('Admin');
     }
 }
