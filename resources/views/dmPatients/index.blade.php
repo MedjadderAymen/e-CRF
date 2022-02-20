@@ -34,7 +34,7 @@
                          style="height: 150px; object-fit: cover;" class="card-img-top img-fluid"
                          alt="vitalcare">
                     <div class="card-body">
-                        <h5 class="card-title">List des DM patients</h5>
+                        <h5 class="card-title">Liste des DM patients</h5>
                         <br>
                         <!-- table hover -->
                         <div class="table-responsive">
