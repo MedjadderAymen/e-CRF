@@ -1085,7 +1085,7 @@
                                             <div class="row">
                                                 <div class="col-lg-6 mb-1">
                                                     <h6>
-                                                        Utilisation antérieure du lecteur Vital Check
+                                                        Utilisation antérieure du lecteur Vital Check®
                                                     </h6>
                                                 </div>
                                                 <div class="col-lg-3 mb-1">
@@ -1128,7 +1128,7 @@
                                             <div class="row">
                                                 <div class="col-lg-6 mb-1">
                                                     <h6>
-                                                        Utilisation d’une autre lecteur glycémique
+                                                        Utilisation d’un autre lecteur glycémique
                                                     </h6>
                                                 </div>
                                                 <div class="col-lg-3 mb-1">
@@ -1228,20 +1228,6 @@
                                             </div>
                                             <br>
                                             <div class="row">
-                                                <div class="col-lg-12 mb-1">
-                                                    <div class="input-group mb-3">
-                                        <span class="input-group-text"
-                                              id="q27">Glycémie capillaire lue avec lecteur <strong> VITAL CHECK® MM-1200</strong> : </span>
-                                                        <input type="number" class="form-control" placeholder="..."
-                                                               value="{{$dmPatient->consent->crf->q27}}"
-                                                               aria-label="q27" aria-describedby="q27"
-                                                               name="q27">
-                                                        <span class="input-group-text">mg/dL</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <br>
-                                            <div class="row">
                                                 <div class="col-lg-12">
                                                     <h6 style="font-style: initial">
                                                         Echantillon du tube 01 (La centrifugation doit se faire dans un
@@ -1261,20 +1247,6 @@
                                                                value="{{\Carbon\Carbon::parse($dmPatient->consent->crf->q28)->toTimeString()}}"
                                                                aria-label="q28" aria-describedby="q28"
                                                                name="q28">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <br>
-                                            <div class="row">
-                                                <div class="col-lg-12 mb-1">
-                                                    <div class="input-group mb-3">
-                                        <span class="input-group-text"
-                                              id="q29">Glycémie capillaire lue avec lecteur <strong> VITAL CHECK® MM-1200</strong> : </span>
-                                                        <input type="number" class="form-control" placeholder="..."
-                                                               value="{{$dmPatient->consent->crf->q29}}"
-                                                               aria-label="q29" aria-describedby="q29"
-                                                               name="q29">
-                                                        <span class="input-group-text">mg/dL</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1381,20 +1353,7 @@
                                             <div class="row">
                                                 <div class="col-lg-12 mb-1">
                                                     <div class="input-group mb-3">
-                                                        <span class="input-group-text" id="q43">Glycémie capillaire  lue avec lecteur VITAL CHECK® MM-1200 : </span>
-                                                        <input type="number" class="form-control" placeholder="..."
-                                                               aria-label="q43" aria-describedby="q43"
-                                                               value="{{$dmPatient->consent->crf->q43}}"
-                                                               name="q43">
-                                                        <span class="input-group-text">mg/dL</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <br>
-                                            <div class="row">
-                                                <div class="col-lg-12 mb-1">
-                                                    <div class="input-group mb-3">
-                                                        <span class="input-group-text" id="q44">Glycémie capillaire lue avec YSI 2500 : </span>
+                                                        <span class="input-group-text" id="q44">Glycémie plasmatique lue avec YSI 2500 : </span>
                                                         <input type="number" class="form-control"
                                                                value="{{$dmPatient->consent->crf->q44}}"
                                                                aria-label="q44" aria-describedby="q44"
@@ -1978,7 +1937,7 @@
                                                 <label class="input-group-text"
                                                        for="inputGroupSelect01">Lot 1 - Gluco A :</label>
                                                 <input type="number" class="form-control" placeholder="N° Bandelette"
-                                                       min="1" max="11"
+                                                       min="1" max="12"
                                                        aria-label="text"
                                                        aria-describedby="ysi_one_value_lot_a_gluco_a_bandelette"
                                                        value="{{$dmPatient->consent->glucose->ysi_one_value_lot_a_gluco_a_bandelette}}"
@@ -2005,7 +1964,7 @@
                                                 <label class="input-group-text"
                                                        for="inputGroupSelect01">Lot 1 - Gluco B :</label>
                                                 <input type="number" class="form-control" placeholder="N° Bandelette"
-                                                       min="1" max="11"
+                                                       min="1" max="12"
                                                        aria-label="text"
                                                        aria-describedby="ysi_one_value_lot_a_gluco_b_bandelette"
                                                        value="{{$dmPatient->consent->glucose->ysi_one_value_lot_a_gluco_b_bandelette}}"
@@ -2032,7 +1991,7 @@
                                                 <label class="input-group-text"
                                                        for="inputGroupSelect01">Lot 2 - Gluco A :</label>
                                                 <input type="number" class="form-control" placeholder="N° Bandelette"
-                                                       min="1" max="11"
+                                                       min="1" max="12"
                                                        value="{{$dmPatient->consent->glucose->ysi_two_value_lot_b_gluco_a_bandelette}}"
                                                        aria-label="text"
                                                        aria-describedby="ysi_two_value_lot_b_gluco_a_bandelette"
@@ -2059,7 +2018,7 @@
                                                 <label class="input-group-text"
                                                        for="inputGroupSelect01">Lot 2 - Gluco B :</label>
                                                 <input type="number" class="form-control" placeholder="N° Bandelette"
-                                                       min="1" max="11"
+                                                       min="1" max="12"
                                                        value="{{$dmPatient->consent->glucose->ysi_two_value_lot_b_gluco_b_bandelette}}"
                                                        aria-label="text"
                                                        aria-describedby="ysi_two_value_lot_b_gluco_b_bandelette"
@@ -2086,7 +2045,7 @@
                                                 <label class="input-group-text"
                                                        for="inputGroupSelect01">Lot 3 - Gluco A :</label>
                                                 <input type="number" class="form-control" placeholder="N° Bandelette"
-                                                       min="1" max="11"
+                                                       min="1" max="12"
                                                        value="{{$dmPatient->consent->glucose->ysi_three_value_lot_c_gluco_a_bandelette}}"
                                                        aria-label="text"
                                                        aria-describedby="ysi_three_value_lot_c_gluco_a_bandelette"
@@ -2113,7 +2072,7 @@
                                                 <label class="input-group-text"
                                                        for="inputGroupSelect01">Lot 3 - Gluco B :</label>
                                                 <input type="number" class="form-control" placeholder="N° Bandelette"
-                                                       min="1" max="11"
+                                                       min="1" max="12"
                                                        value="{{$dmPatient->consent->glucose->ysi_three_value_lot_c_gluco_b_bandelette}}"
                                                        aria-label="text"
                                                        aria-describedby="ysi_three_value_lot_c_gluco_b_bandelette"
@@ -2165,7 +2124,7 @@
                                                 <label class="input-group-text"
                                                        for="inputGroupSelect01">Lot 1 - Gluco A :</label>
                                                 <input type="number" class="form-control" placeholder="N° Bandelette"
-                                                       min="1" max="11"
+                                                       min="1" max="12"
                                                        aria-label="text"
                                                        aria-describedby="edited_sample_value_lot_a_gluco_a_bandelette"
                                                        value="{{$dmPatient->consent->glucose->edited_sample_value_lot_a_gluco_a_bandelette}}"
@@ -2192,7 +2151,7 @@
                                                 <label class="input-group-text"
                                                        for="inputGroupSelect01">Lot 1 - Gluco B :</label>
                                                 <input type="number" class="form-control" placeholder="N° Bandelette"
-                                                       min="1" max="11"
+                                                       min="1" max="12"
                                                        aria-label="text"
                                                        aria-describedby="edited_sample_value_lot_a_gluco_b_bandelette"
                                                        value="{{$dmPatient->consent->glucose->edited_sample_value_lot_a_gluco_b_bandelette}}"
@@ -2219,7 +2178,7 @@
                                                 <label class="input-group-text"
                                                        for="inputGroupSelect01">Lot 2 - Gluco A :</label>
                                                 <input type="number" class="form-control" placeholder="N° Bandelette"
-                                                       min="1" max="11"
+                                                       min="1" max="12"
                                                        value="{{$dmPatient->consent->glucose->edited_sample_value_lot_b_gluco_a_bandelette}}"
                                                        aria-label="text"
                                                        aria-describedby="edited_sample_value_lot_b_gluco_a_bandelette"
@@ -2246,7 +2205,7 @@
                                                 <label class="input-group-text"
                                                        for="inputGroupSelect01">Lot 2 - Gluco B :</label>
                                                 <input type="number" class="form-control" placeholder="N° Bandelette"
-                                                       min="1" max="11"
+                                                       min="1" max="12"
                                                        value="{{$dmPatient->consent->glucose->edited_sample_value_lot_b_gluco_b_bandelette}}"
                                                        aria-label="text"
                                                        aria-describedby="edited_sample_value_lot_b_gluco_b_bandelette"
@@ -2273,7 +2232,7 @@
                                                 <label class="input-group-text"
                                                        for="inputGroupSelect01">Lot 3 - Gluco A :</label>
                                                 <input type="number" class="form-control" placeholder="N° Bandelette"
-                                                       min="1" max="11"
+                                                       min="1" max="12"
                                                        value="{{$dmPatient->consent->glucose->edited_sample_value_lot_c_gluco_a_bandelette}}"
                                                        aria-label="text"
                                                        aria-describedby="edited_sample_value_lot_c_gluco_a_bandelette"
@@ -2300,7 +2259,7 @@
                                                 <label class="input-group-text"
                                                        for="inputGroupSelect01">Lot 3 - Gluco B :</label>
                                                 <input type="number" class="form-control" placeholder="N° Bandelette"
-                                                       min="1" max="11"
+                                                       min="1" max="12"
                                                        value="{{$dmPatient->consent->glucose->edited_sample_value_lot_c_gluco_b_bandelette}}"
                                                        aria-label="text"
                                                        aria-describedby="edited_sample_value_lot_c_gluco_b_bandelette"

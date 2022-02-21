@@ -22,33 +22,39 @@ class PatientsExport implements FromCollection, WithHeadings, WithMapping
     public function headings(): array
     {
         return [
-            '#',
             'ID Patient',
             'Age',
             'Durée Diabète',
-            'Schéma Insuline',
             'Profil Glycémique ',
             'HBA1C',
             "Hématocrite",
             "Triglycérides",
 
             "YSI1",
+
             "GLUCO 1 Lot A",
             "Delta",
+            "%Delta",
+
             "GLUCO 2 Lot A",
             "Delta",
+            "%Delta",
 
-            "YSI2",
             "GLUCO 1 Lot B",
             "Delta",
+            "%Delta",
+
             "GLUCO 2 Lot B",
             "Delta",
+            "%Delta",
 
-            "YSI3",
             "GLUCO 1 Lot C",
             "Delta",
+            "%Delta",
+
             "GLUCO 2 Lot C",
             "Delta",
+            "%Delta",
         ];
     }
 
@@ -56,33 +62,39 @@ class PatientsExport implements FromCollection, WithHeadings, WithMapping
     {
 
         return [
-            $row->dmPatient->id,
             $row->dmPatient->identification,
             $row->crf->q141 . " ans" ?? $row->crf->q142 . " mois",
             Carbon::parse($row->crf->q13)->toDateString() ?? "N/A",
-            $row->crf->q18 ?? "",
             $row->crf->q19b. " points" ?? "",
             $row->crf->q151 . " %" ?? "",
             $row->crf->q152 . " %" ?? "",
             $row->crf->q153 . " mg/dL" ?? "",
 
             $row->glucose->ysi_one_value . " mg/dL" ?? "",
+
             $row->glucose->ysi_one_value_lot_a_gluco_a_bandelette_result . " mg/dL" ?? "",
             $row->glucose->ysi_one_value_lot_a_gluco_a_bandelette_result - $row->glucose->ysi_one_value . " mg/dL" ?? "",
+            (($row->glucose->ysi_one_value_lot_a_gluco_a_bandelette_result - $row->glucose->ysi_one_value)/$row->glucose->ysi_one_value)*100 ." %",
+
             $row->glucose->ysi_one_value_lot_a_gluco_b_bandelette_result . " mg/dL" ?? "",
             $row->glucose->ysi_one_value_lot_a_gluco_b_bandelette_result - $row->glucose->ysi_one_value . " mg/dL" ?? "",
+            (($row->glucose->ysi_one_value_lot_a_gluco_b_bandelette_result - $row->glucose->ysi_one_value)/$row->glucose->ysi_one_value)*100 ." %",
 
-            $row->glucose->ysi_two_value . " mg/dL" ?? "",
             $row->glucose->ysi_two_value_lot_b_gluco_a_bandelette_result . " mg/dL" ?? "",
-            $row->glucose->ysi_two_value_lot_b_gluco_a_bandelette_result - $row->glucose->ysi_two_value . " mg/dL" ?? "",
-            $row->glucose->ysi_two_value_lot_b_gluco_b_bandelette_result . " mg/dL" ?? "",
-            $row->glucose->ysi_two_value_lot_b_gluco_b_bandelette_result - $row->glucose->ysi_two_value . " mg/dL" ?? "",
+            $row->glucose->ysi_two_value_lot_b_gluco_a_bandelette_result - $row->glucose->ysi_one_value . " mg/dL" ?? "",
+            (($row->glucose->ysi_two_value_lot_b_gluco_a_bandelette_result - $row->glucose->ysi_one_value)/$row->glucose->ysi_one_value)*100 ." %",
 
-            $row->glucose->ysi_three_value . " mg/dL" ?? "",
+            $row->glucose->ysi_two_value_lot_b_gluco_b_bandelette_result . " mg/dL" ?? "",
+            $row->glucose->ysi_two_value_lot_b_gluco_b_bandelette_result - $row->glucose->ysi_one_value . " mg/dL" ?? "",
+            (($row->glucose->ysi_two_value_lot_b_gluco_b_bandelette_result - $row->glucose->ysi_one_value)/$row->glucose->ysi_one_value)*100 ." %",
+
             $row->glucose->ysi_three_value_lot_c_gluco_a_bandelette_result . " mg/dL" ?? "",
-            $row->glucose->ysi_three_value_lot_c_gluco_a_bandelette_result - $row->glucose->ysi_three_value . " mg/dL" ?? "",
+            $row->glucose->ysi_three_value_lot_c_gluco_a_bandelette_result - $row->glucose->ysi_one_value . " mg/dL" ?? "",
+            (($row->glucose->ysi_three_value_lot_c_gluco_a_bandelette_result - $row->glucose->ysi_one_value)/$row->glucose->ysi_one_value)*100 ." %",
+
             $row->glucose->ysi_three_value_lot_c_gluco_b_bandelette_result . " mg/dL" ?? "",
-            $row->glucose->ysi_three_value_lot_c_gluco_b_bandelette_result - $row->glucose->ysi_three_value . " mg/dL" ?? "",
+            $row->glucose->ysi_three_value_lot_c_gluco_b_bandelette_result - $row->glucose->ysi_one_value . " mg/dL" ?? "",
+            (($row->glucose->ysi_three_value_lot_c_gluco_b_bandelette_result - $row->glucose->ysi_one_value)/$row->glucose->ysi_one_value)*100 ." %",
         ];
     }
 }

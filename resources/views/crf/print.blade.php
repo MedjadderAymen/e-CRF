@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h1>
-                        <p>CAHIER D’OBSERVATION</p>
+                        <p>CAHIER D’OBSERVATION ELECTRONIQUE</p>
                         <p>e-CRF</p>
                     </h1>
                 </div>
@@ -97,7 +97,7 @@
             <div class="row justify-content-center align-center">
                 <div class="col-6 text-center">
                     <h5>
-                        INSTRUCTIONS DE REMPLISSAGE DU CAHIER D’OBSERVATION
+                        INSTRUCTIONS DE REMPLISSAGE DU CAHIER D’OBSERVATION ELECTRONIQUE
                     </h5>
                 </div>
             </div>
@@ -372,10 +372,6 @@
                     </p>
                 </div>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
@@ -542,6 +538,8 @@
                     </p>
                 </div>
             </div>
+            <br>
+            <br>
             <br>
             <div class="row">
                 <div class="col-lg-12 text-center bg-dark">
@@ -994,7 +992,7 @@
             <div class="row">
                 <div class="col-lg-6 mb-1">
                     <h6>
-                        Utilisation antérieure du lecteur Vital Check
+                        Utilisation antérieure du lecteur Vital Check®
                     </h6>
                 </div>
                 <div class="col-lg-3 mb-1">
@@ -1036,7 +1034,7 @@
             <div class="row">
                 <div class="col-lg-6 mb-1">
                     <h6>
-                        Utilisation d’une autre lecteur glycémique
+                        Utilisation d’un autre lecteur glycémique
                     </h6>
                 </div>
                 <div class="col-lg-3 mb-1">
@@ -1130,19 +1128,8 @@
                 </div>
             </div>
             <br>
-            <div class="row">
-                <div class="col-lg-12 mb-1">
-                    <div class="input-group mb-3">
-                                        <span class="input-group-text"
-                                              id="q27">Glycémie capillaire lue avec lecteur <strong> VITAL CHECK® MM-1200</strong> : </span>
-                        <input type="number" class="form-control" placeholder="..."
-                               value="{{$dmPatient->consent->crf->q27}}"
-                               aria-label="q27" aria-describedby="q27"
-                               name="q27">
-                        <span class="input-group-text">mg/dL</span>
-                    </div>
-                </div>
-            </div>
+            <br>
+            <br>
             <br>
             <br>
             <br>
@@ -1183,20 +1170,6 @@
                                value="{{\Carbon\Carbon::parse($dmPatient->consent->crf->q28)->toTimeString()}}"
                                aria-label="q28" aria-describedby="q28"
                                name="q28">
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-lg-12 mb-1">
-                    <div class="input-group mb-3">
-                                        <span class="input-group-text"
-                                              id="q29">Glycémie capillaire lue avec lecteur <strong> VITAL CHECK® MM-1200</strong> : </span>
-                        <input type="number" class="form-control" placeholder="..."
-                               value="{{$dmPatient->consent->crf->q29}}"
-                               aria-label="q29" aria-describedby="q29"
-                               name="q29">
-                        <span class="input-group-text">mg/dL</span>
                     </div>
                 </div>
             </div>
@@ -1298,19 +1271,7 @@
             <div class="row">
                 <div class="col-lg-12 mb-1">
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="q43">Glycémie capillaire  lue avec lecteur VITAL CHECK® MM-1200 : </span>
-                        <input type="number" class="form-control" placeholder="..."
-                               aria-label="q43" aria-describedby="q43" value="{{$dmPatient->consent->crf->q43}}"
-                               name="q43">
-                        <span class="input-group-text">mg/dL</span>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-lg-12 mb-1">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="q44">Glycémie capillaire lue avec YSI 2500 : </span>
+                        <span class="input-group-text" id="q44">Glycémie plasmatique lue avec YSI 2500 : </span>
                         <input type="number" class="form-control"  value="{{$dmPatient->consent->crf->q44}}"
                                aria-label="q44" aria-describedby="q44"
                                name="q44">
@@ -1318,6 +1279,9 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <br>
+            <br>
             <br>
             <br>
             <br>
