@@ -122,7 +122,7 @@
                                 <div class="col-lg-12 mb-1">
                                     <div class="input-group mb-3">
                                         <label class="input-group-text"
-                                               for="inputGroupSelect01">Valeur YSI 1:</label>
+                                               for="inputGroupSelect01">Valeur pré-test:</label>
                                         <input type="number" class="form-control" placeholder="..."
                                                aria-label="text" aria-describedby="ysi_one_value"
                                                name="ysi_one_value">
@@ -262,8 +262,19 @@
                                 </div>
                             </div>
                             <br>
+                            <div class="row">
+                                <div class="col-lg-12 mb-1">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text"
+                                               for="inputGroupSelect01">Valeur post-test:</label>
+                                        <input type="number" class="form-control" placeholder="..."
+                                               aria-label="text" aria-describedby="post_ysi_value"
+                                               name="post_ysi_value">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
                             <hr>
-
                             <div>
                                 <br>
                                 <div class="row">

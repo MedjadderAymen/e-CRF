@@ -48,6 +48,8 @@ class GlucoseRequest extends FormRequest
             "ysi_three_value_lot_c_gluco_b_bandelette" => [],
             "ysi_three_value_lot_c_gluco_b_bandelette_result" => [],
 
+            "post_ysi_value" => [],
+
             //***************************************************************************************************
 
             "edited_sample_value" => [],

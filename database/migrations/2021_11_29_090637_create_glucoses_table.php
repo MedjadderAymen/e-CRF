@@ -41,6 +41,8 @@ class CreateGlucosesTable extends Migration
             $table->string("ysi_three_value_lot_c_gluco_b_bandelette")->nullable();
             $table->string("ysi_three_value_lot_c_gluco_b_bandelette_result")->nullable();
 
+            $table->string("post_ysi_value")->nullable();
+
             //*****************************************************************************************************************************************
 
             $table->string("edited_sample_value")->nullable();
